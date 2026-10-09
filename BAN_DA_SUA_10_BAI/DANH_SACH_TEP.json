@@ -1,0 +1,104 @@
+{
+  "files": [
+    {
+      "file": "MATLAB/BAI_01_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "25069e2be046a86669e034bdd2d1b7e225f1463c143a2a40c340cbfba5cb8767"
+    },
+    {
+      "file": "MATLAB/BAI_02_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "b8997d3ee5d3823898ada439e16254e5c7d3dcd05fecf15fbca543f626d0423e"
+    },
+    {
+      "file": "MATLAB/BAI_03_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "6c6868cd5c7ed7891a0a56909fb9a1a7dfe424494f451484408eda5df5748a82"
+    },
+    {
+      "file": "MATLAB/BAI_04_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "5c5072fcd95af65dc5edbe03bb19a1386297397359818dc3b3079ec87408be0a"
+    },
+    {
+      "file": "MATLAB/BAI_05_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "7bed1b51fa83a3273f0a3a98548c904e698b1f95e4c085ead4b5159bf4120cc2"
+    },
+    {
+      "file": "MATLAB/BAI_06_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "00a640f0d42508223aeed8c6fb4a216bbf7a6dcc8cfcd2507fa7c24db6917fca"
+    },
+    {
+      "file": "MATLAB/BAI_07_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "8892acd5cde3d6922ae729c516074c977ccae29dd312a81d40e2727785012a3e"
+    },
+    {
+      "file": "MATLAB/BAI_08_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "1639c9b53546659cac0d7cf701ae14e6a715cfa0fa207f5170739ab6c09f1ca5"
+    },
+    {
+      "file": "MATLAB/BAI_09_CODE_MATLAB.m",
+      "bytes": 24302,
+      "sha256": "e82db7acd9cb978240703a27edb4b90ab7090c93756af6aef95f30363ea33ecd"
+    },
+    {
+      "file": "MATLAB/BAI_10_CODE_MATLAB.m",
+      "bytes": 24304,
+      "sha256": "1ad5a022eae0c8888d63f8f4aefa668b9cd6d24b03dbcb6956db34333823692a"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_01_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2203417,
+      "sha256": "9610ec0c60cb6b3473ccff2e80dfe3e0bbe02a0b58bf6b09c7b3ed28c063917b"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_02_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2217696,
+      "sha256": "c7bceb04c6852194a2f0cf6c07a2b7e820ec0951965f72e03c5c9d2e035b3794"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_03_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2159273,
+      "sha256": "771d8bd55c59a934f46448b2cf4c566e0f63112091c17228e00f4a925283d492"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_04_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2215264,
+      "sha256": "6ed8f675912353d445b1a7d58ee1f2f2d14a168dd6a46c711c26549049584e3c"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_05_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2221833,
+      "sha256": "04a8840c57fb750ddcbf975bc7816a550e3ab88ba560648500d9ae4dc5fa6170"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_06_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2209775,
+      "sha256": "685a8a5c4b4d362dbd93bd431e85ce8e1dba38fd0af312b576895233fac86600"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_07_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2225686,
+      "sha256": "2f1cc6f6c58011700f2a3239a8e2062b05ef7a76caa90bf254e33caf10baa54a"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_08_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2221045,
+      "sha256": "e7ebdffbb7ef9213e1b932fbea2603d4b1a72e0dd29cba92a6b703094608683d"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_09_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2175480,
+      "sha256": "01834f7d85162c58656eddc7133dc18e659fb772add11984186d144a82d6fa74"
+    },
+    {
+      "file": "LOI_GIAI_WORD/Bai_10_Loi_giai_chi_tiet_HWW2.docx",
+      "bytes": 2212950,
+      "sha256": "c2f7cbfb4db3745412b5dbf1d1adf75a793f84c502044553dd6995dfd0b82a75"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+KIEM TRA MO HINH HANH VI PYTHON DOC LAP
+Khong phai ket qua bien dich SCL / S7-PLCSIM / PLC that.
+Python: 3.12.14
+
+test_01_all_daily_minutes_match_assigned_windows (test_plc_behavior.FountainRequirementTests.test_01_all_daily_minutes_match_assigned_windows) ... ok
+test_02_boundaries_with_seconds (test_plc_behavior.FountainRequirementTests.test_02_boundaries_with_seconds) ... ok
+test_03_bad_clock_values_rejected (test_plc_behavior.FountainRequirementTests.test_03_bad_clock_values_rejected) ... ok
+test_04_rtc_standard_and_daylight_success_codes (test_plc_behavior.FountainRequirementTests.test_04_rtc_standard_and_daylight_success_codes) ... ok
+test_05_powerup_auto_held_stays_off_until_off_seen (test_plc_behavior.FountainRequirementTests.test_05_powerup_auto_held_stays_off_until_off_seen) ... ok
+test_06_off_always_disables_all_outputs (test_plc_behavior.FountainRequirementTests.test_06_off_always_disables_all_outputs) ... ok
+test_07_two_cycles_correct_masks_and_nominal_duration (test_plc_behavior.FountainRequirementTests.test_07_two_cycles_correct_masks_and_nominal_duration) ... ok
+test_08_no_transition_before_ten_seconds (test_plc_behavior.FountainRequirementTests.test_08_no_transition_before_ten_seconds) ... ok
+test_09_each_protective_input_stops_every_step_same_scan (test_plc_behavior.FountainRequirementTests.test_09_each_protective_input_stops_every_step_same_scan) ... ok
+test_10_releasing_stop_does_not_restart (test_plc_behavior.FountainRequirementTests.test_10_releasing_stop_does_not_restart) ... ok
+test_11_reset_in_auto_cannot_restart_or_acknowledge (test_plc_behavior.FountainRequirementTests.test_11_reset_in_auto_cannot_restart_or_acknowledge) ... ok
+test_12_valid_fault_recovery_requires_off_reset_auto (test_plc_behavior.FountainRequirementTests.test_12_valid_fault_recovery_requires_off_reset_auto) ... ok
+test_13_stop_recovery_requires_off_reset_auto (test_plc_behavior.FountainRequirementTests.test_13_stop_recovery_requires_off_reset_auto) ... ok
+test_14_reset_while_cause_present_cannot_clear (test_plc_behavior.FountainRequirementTests.test_14_reset_while_cause_present_cannot_clear) ... ok
+test_15_held_reset_does_not_acknowledge_when_cause_recovers (test_plc_behavior.FountainRequirementTests.test_15_held_reset_does_not_acknowledge_when_cause_recovers) ... ok
+test_16_all_simultaneous_causes_are_retained (test_plc_behavior.FountainRequirementTests.test_16_all_simultaneous_causes_are_retained) ... ok
+test_17_outside_schedule_stops_every_step_without_fault (test_plc_behavior.FountainRequirementTests.test_17_outside_schedule_stops_every_step_without_fault) ... ok
+test_18_next_schedule_restarts_step_one_without_reset (test_plc_behavior.FountainRequirementTests.test_18_next_schedule_restarts_step_one_without_reset) ... ok
+test_19_select_auto_before_schedule_arms_then_waits (test_plc_behavior.FountainRequirementTests.test_19_select_auto_before_schedule_arms_then_waits) ... ok
+test_20_restart_resets_timers (test_plc_behavior.FountainRequirementTests.test_20_restart_resets_timers) ... ok
+test_21_fault_then_toggle_auto_without_reset_cannot_start (test_plc_behavior.FountainRequirementTests.test_21_fault_then_toggle_auto_without_reset_cannot_start) ... ok
+test_22_rtc_failure_latches_and_stops_same_scan (test_plc_behavior.FountainRequirementTests.test_22_rtc_failure_latches_and_stops_same_scan) ... ok
+test_23_first_scan_resets_old_state_and_all_timers (test_plc_behavior.FountainRequirementTests.test_23_first_scan_resets_old_state_and_all_timers) ... ok
+test_24_rtc_invalid_in_off_does_not_create_rtc_trip (test_plc_behavior.FountainRequirementTests.test_24_rtc_invalid_in_off_does_not_create_rtc_trip) ... ok
+test_25_reset_pressed_at_boot_not_a_new_edge (test_plc_behavior.FountainRequirementTests.test_25_reset_pressed_at_boot_not_a_new_edge) ... ok
+test_26_irregular_scan_duration_keeps_required_order (test_plc_behavior.FountainRequirementTests.test_26_irregular_scan_duration_keeps_required_order) ... ok
+test_27_all_alarm_combinations_keep_bits_and_summary_priority (test_plc_behavior.FountainRequirementTests.test_27_all_alarm_combinations_keep_bits_and_summary_priority) ... ok
+test_28_reset_permitted_only_off_with_all_valid_inputs (test_plc_behavior.FountainRequirementTests.test_28_reset_permitted_only_off_with_all_valid_inputs) ... ok
+test_29_stop_conditions_override_exact_timer_deadline (test_plc_behavior.FountainRequirementTests.test_29_stop_conditions_override_exact_timer_deadline) ... ok
+test_30_separate_fault_events_accumulate_until_valid_reset (test_plc_behavior.FountainRequirementTests.test_30_separate_fault_events_accumulate_until_valid_reset) ... ok
+test_31_random_input_sequences_preserve_output_invariants (test_plc_behavior.FountainRequirementTests.test_31_random_input_sequences_preserve_output_invariants) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.233s
+
+OK

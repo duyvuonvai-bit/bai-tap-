@@ -1,0 +1,56 @@
+{
+  "scope": "Independent Python scan model; not Siemens execution",
+  "python": "3.12.14",
+  "tests_run": 31,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "fixed_scan_ms": 10,
+  "event_times_ms": [
+    0,
+    10,
+    10010,
+    20020,
+    30030,
+    40040,
+    50050,
+    60060,
+    70070,
+    80080,
+    90090,
+    100100
+  ],
+  "event_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    1,
+    2,
+    3,
+    4,
+    5,
+    1
+  ],
+  "event_masks": [
+    0,
+    1,
+    3,
+    7,
+    15,
+    10,
+    1,
+    3,
+    7,
+    15,
+    10,
+    1
+  ],
+  "sha256": {
+    "plc_behavior_model.py": "09a3a5b1f30dbb9d953fcb7951eb55e6fdbdad3ae2ee34e46e2fb1c7e8d03bf1",
+    "test_plc_behavior.py": "82472924f6ba251bf80d398a27a18cc9108b2c8816c8ac9cf57a9ef0187a6fba",
+    "Fountain_Auto_4Van.scl": "71bc51414d794be084868778a3702d03e07852eed1b19159bc79d46f3fd0632f"
+  }
+}

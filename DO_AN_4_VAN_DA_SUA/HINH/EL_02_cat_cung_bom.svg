@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="804.24pt" height="533.088pt" viewBox="0 0 804.24 533.088" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-09T22:47:27.639992</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 533.088 
+L 804.24 533.088 
+L 804.24 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 47.79 170.6328 
+L 198.45 170.6328 
+Q 202.356 170.6328 202.356 166.752 
+L 202.356 111.312 
+Q 202.356 107.4312 198.45 107.4312 
+L 47.79 107.4312 
+Q 43.884 107.4312 43.884 111.312 
+L 43.884 166.752 
+Q 43.884 170.6328 47.79 170.6328 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #feecec; stroke: #c73e3e; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 262.62 181.7208 
+L 449.55 181.7208 
+Q 453.456 181.7208 453.456 177.84 
+L 453.456 100.224 
+Q 453.456 96.3432 449.55 96.3432 
+L 262.62 96.3432 
+Q 258.714 96.3432 258.714 100.224 
+L 258.714 177.84 
+Q 258.714 181.7208 262.62 181.7208 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 111.96 298.1448 
+L 187.29 298.1448 
+Q 191.196 298.1448 191.196 294.264 
+L 191.196 244.368 
+Q 191.196 240.4872 187.29 240.4872 
+L 111.96 240.4872 
+Q 108.054 240.4872 108.054 244.368 
+L 108.054 294.264 
+Q 108.054 298.1448 111.96 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 223.56 298.1448 
+L 298.89 298.1448 
+Q 302.796 298.1448 302.796 294.264 
+L 302.796 244.368 
+Q 302.796 240.4872 298.89 240.4872 
+L 223.56 240.4872 
+Q 219.654 240.4872 219.654 244.368 
+L 219.654 294.264 
+Q 219.654 298.1448 223.56 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 335.16 298.1448 
+L 410.49 298.1448 
+Q 414.396 298.1448 414.396 294.264 
+L 414.396 244.368 
+Q 414.396 240.4872 410.49 240.4872 
+L 335.16 240.4872 
+Q 331.254 240.4872 331.254 244.368 
+L 331.254 294.264 
+Q 331.254 298.1448 335.16 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 446.76 298.1448 
+L 522.09 298.1448 
+Q 525.996 298.1448 525.996 294.264 
+L 525.996 244.368 
+Q 525.996 240.4872 522.09 240.4872 
+L 446.76 240.4872 
+Q 442.854 240.4872 442.854 244.368 
+L 442.854 294.264 
+Q 442.854 298.1448 446.76 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 558.36 298.1448 
+L 633.69 298.1448 
+Q 637.596 298.1448 637.596 294.264 
+L 637.596 244.368 
+Q 637.596 240.4872 633.69 240.4872 
+L 558.36 240.4872 
+Q 554.454 240.4872 554.454 244.368 
+L 554.454 294.264 
+Q 554.454 298.1448 558.36 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 669.96 298.1448 
+L 745.29 298.1448 
+Q 749.196 298.1448 749.196 294.264 
+L 749.196 244.368 
+Q 749.196 240.4872 745.29 240.4872 
+L 669.96 240.4872 
+Q 666.054 240.4872 666.054 244.368 
+L 666.054 294.264 
+Q 666.054 298.1448 669.96 298.1448 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 47.79 411.7968 
+L 365.85 411.7968 
+Q 369.756 411.7968 369.756 407.916 
+L 369.756 356.9112 
+Q 369.756 353.0304 365.85 353.0304 
+L 47.79 353.0304 
+Q 43.884 353.0304 43.884 356.9112 
+L 43.884 407.916 
+Q 43.884 411.7968 47.79 411.7968 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 413.28 431.2008 
+L 742.5 431.2008 
+Q 746.406 431.2008 746.406 427.32 
+L 746.406 338.616 
+Q 746.406 334.7352 742.5 334.7352 
+L 413.28 334.7352 
+Q 409.374 334.7352 409.374 338.616 
+L 409.374 427.32 
+Q 409.374 431.2008 413.28 431.2008 
+z
+" clip-path="url(#p32c7d117d4)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 68.994 269.316 
+L 109.17 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 190.08 269.316 
+L 220.77 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 301.68 269.316 
+L 332.37 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 413.28 269.316 
+L 443.97 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 524.88 269.316 
+L 555.57 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 636.48 269.316 
+L 667.17 269.316 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 748.08 269.316 
+L 767.61 269.316 
+L 767.61 323.0928 
+L 42.21 323.0928 
+" clip-path="url(#p32c7d117d4)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #123247" x="33.84" y="51.580012" transform="rotate(-0 33.84 51.580012)">EL-02 | MẠCH NGẮT CỨNG BƠM VÀ GIÁM SÁT LIÊN ĐỘNG</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #61727e" x="33.84" y="69.7672" transform="rotate(-0 33.84 69.7672)">Tiếp điểm được mô tả theo chức năng; lựa chọn rơle an toàn và số đầu nối theo manual/model thực tế.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(101.349375 134.256844)">E-STOP</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(86.218125 150.429656)">Hai kênh NC</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(294.366562 126.170437)">KSR: RƠLE AN TOÀN</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(303.636562 142.34325)">Đầu vào hai kênh</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(280.099687 158.516062)">Reset / EDM theo manual</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 203.239012 139.032 
+Q 230.534561 139.032 256.15306 139.032 
+" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 251.35306 136.632 
+L 256.15306 139.032 
+L 251.35306 141.432 
+" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(483.03 135.702187)">KSR cắt nguồn coil KM1</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(483.03 150.368062)">và nguồn cấp coil van (EL-04).</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 454.33782 139.032 
+Q 462.104456 139.032 468.194041 139.032 
+" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 463.394041 136.632 
+L 468.194041 139.032 
+L 463.394041 141.432 
+" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #123247" x="42.21" y="219.42" transform="rotate(-0 42.21 219.42)">CHUỖI CẤP COIL CONTACTOR — NGẮT ĐỘC LẬP VỚI CHƯƠNG TRÌNH PLC</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="35.514" y="273.460112" transform="rotate(-0 35.514 273.460112)">+24 V</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="149.625" y="272.213344" transform="rotate(-0 149.625 272.213344)">F-KM</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(250.801289 265.137738)">KSR</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(231.468164 279.288949)">NO an toàn</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(358.987148 265.137738)">STOP</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(365.231367 279.288949)">NC</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(474.026719 265.137738)">OL1</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(459.176602 279.288949)">NC 95–96</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(585.742383 265.018383)">KA0</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(574.952812 279.408305)">NO lệnh</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(696.31207 265.137738)">KM1</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(677.291484 279.288949)">coil 24 VDC</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="42.21" y="333.072" transform="rotate(-0 42.21 333.072)">0 VDC</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(116.843437 377.210084)">Q0.0 → coil KA0 (rơle trung gian)</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(85.543281 393.687741)">Tiếp điểm KA0 NO chỉ mang lệnh chạy bơm.</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(473.023312 364.235477)">TIẾP ĐIỂM GIÁM SÁT ĐỘC LẬP → DI PLC</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(483.085492 378.726453)">KSR OK → I0.3     |     OL1 OK → I0.4</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(484.191438 394.249813)">STOP OK → I0.5   |   Đủ nước → I0.1</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(475.878039 410.33743)">Bình thường: 1; tác động / mất dây: 0.</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #61727e" transform="translate(33.84 481.446481)">Phản hồi PLC dùng tiếp điểm phụ tách khỏi chuỗi coil; phải bổ sung khối tiếp điểm nếu thiết bị chưa đủ cực.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #61727e" transform="translate(33.84 496.203513)">Dập xung coil theo manual. STOP thường không thay thế E-STOP; sơ đồ chưa xác lập cấp SIL/PL.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p32c7d117d4">
+   <rect x="11.52" y="11.52" width="781.2" height="510.048"/>
+  </clipPath>
+ </defs>
+</svg>

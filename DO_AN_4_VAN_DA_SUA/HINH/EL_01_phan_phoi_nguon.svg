@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="804.24pt" height="494.28pt" viewBox="0 0 804.24 494.28" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-09T22:47:27.147416</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 494.28 
+L 804.24 494.28 
+L 804.24 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 39.42 300.9168 
+L 131.49 300.9168 
+Q 135.396 300.9168 135.396 297.036 
+L 135.396 236.052 
+Q 135.396 232.1712 131.49 232.1712 
+L 39.42 232.1712 
+Q 35.514 232.1712 35.514 236.052 
+L 35.514 297.036 
+Q 35.514 300.9168 39.42 300.9168 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 164.97 300.9168 
+L 254.25 300.9168 
+Q 258.156 300.9168 258.156 297.036 
+L 258.156 236.052 
+Q 258.156 232.1712 254.25 232.1712 
+L 164.97 232.1712 
+Q 161.064 232.1712 161.064 236.052 
+L 161.064 297.036 
+Q 161.064 300.9168 164.97 300.9168 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 315.63 165.0888 
+L 393.75 165.0888 
+Q 397.656 165.0888 397.656 161.208 
+L 397.656 122.4 
+Q 397.656 118.5192 393.75 118.5192 
+L 315.63 118.5192 
+Q 311.724 118.5192 311.724 122.4 
+L 311.724 161.208 
+Q 311.724 165.0888 315.63 165.0888 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 424.44 175.068 
+L 745.29 175.068 
+Q 749.196 175.068 749.196 171.1872 
+L 749.196 112.4208 
+Q 749.196 108.54 745.29 108.54 
+L 424.44 108.54 
+Q 420.534 108.54 420.534 112.4208 
+L 420.534 171.1872 
+Q 420.534 175.068 424.44 175.068 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 315.63 289.8288 
+L 393.75 289.8288 
+Q 397.656 289.8288 397.656 285.948 
+L 397.656 247.14 
+Q 397.656 243.2592 393.75 243.2592 
+L 315.63 243.2592 
+Q 311.724 243.2592 311.724 247.14 
+L 311.724 285.948 
+Q 311.724 289.8288 315.63 289.8288 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 424.44 299.808 
+L 745.29 299.808 
+Q 749.196 299.808 749.196 295.9272 
+L 749.196 237.1608 
+Q 749.196 233.28 745.29 233.28 
+L 424.44 233.28 
+Q 420.534 233.28 420.534 237.1608 
+L 420.534 295.9272 
+Q 420.534 299.808 424.44 299.808 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 315.63 414.5688 
+L 393.75 414.5688 
+Q 397.656 414.5688 397.656 410.688 
+L 397.656 371.88 
+Q 397.656 367.9992 393.75 367.9992 
+L 315.63 367.9992 
+Q 311.724 367.9992 311.724 371.88 
+L 311.724 410.688 
+Q 311.724 414.5688 315.63 414.5688 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 424.44 424.548 
+L 745.29 424.548 
+Q 749.196 424.548 749.196 420.6672 
+L 749.196 361.9008 
+Q 749.196 358.02 745.29 358.02 
+L 424.44 358.02 
+Q 420.534 358.02 420.534 361.9008 
+L 420.534 420.6672 
+Q 420.534 424.548 424.44 424.548 
+z
+" clip-path="url(#p51fc5eec28)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 134.28 266.544 
+L 162.18 266.544 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 257.04 266.544 
+L 284.94 266.544 
+L 284.94 141.804 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 284.94 266.544 
+L 284.94 391.284 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 284.94 141.804 
+L 312.84 141.804 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 396.54 141.804 
+L 421.65 141.804 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 284.94 266.544 
+L 312.84 266.544 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 396.54 266.544 
+L 421.65 266.544 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 284.94 391.284 
+L 312.84 391.284 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 396.54 391.284 
+L 421.65 391.284 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 39.42 432.864 
+L 748.08 432.864 
+" clip-path="url(#p51fc5eec28)" style="fill: none; stroke: #087f5b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #123247" x="33.84" y="51.580013" transform="rotate(-0 33.84 51.580013)">EL-01 | NGUYÊN LÝ PHÂN PHỐI NGUỒN</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #61727e" x="33.84" y="69.933919" transform="rotate(-0 33.84 69.933919)">Sơ đồ khối nguồn. Điện áp, số pha, định mức bảo vệ và terminal chốt theo thiết bị lắp thật.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(53.109375 254.530875)">LƯỚI ĐIỆN</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(59.245312 270.703688)">L/N hoặc</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(59.930625 286.8765)">L1/L2/L3</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(198.617734 254.215406)">QF0</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(185.757188 269.700484)">Cách ly /</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(174.238125 284.943219)">bảo vệ chính</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="354.69" y="145.11525" transform="rotate(-0 354.69 145.11525)">QF-PLC</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(517.948906 136.722945)">CPU 1214C AC/DC/Relay</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(467.637656 152.95568)">Nguồn CPU AC; không cấp 24 VDC vào L/N</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="354.69" y="269.85525" transform="rotate(-0 354.69 269.85525)">QF-PS</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(509.082734 261.803688)">PS1: 24 VDC / 5 A (đề xuất)</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(474.689687 277.456344)">HMI, DI, rơle và coil van; tải phải tính lại</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="354.69" y="394.59525" transform="rotate(-0 354.69 394.59525)">QF-M</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(494.479375 386.98068)">KM1 → OL1 → ĐỘNG CƠ BƠM P1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(462.056016 403.213414)">Nguồn 1/3 pha và bảo vệ theo nhãn động cơ</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f5b" x="39.42" y="426.2112" transform="rotate(-0 39.42 426.2112)">PE: nối trực tiếp vỏ tủ / vỏ bơm / phần kim loại cần bảo vệ; không đi qua KM1 hay OL1.</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #61727e" x="33.84" y="467.374713" transform="rotate(-0 33.84 467.374713)">Mạch điều khiển KM1 xem EL-02; mạch coil van xem EL-04. Đây là bản nguyên lý, chưa phải hồ sơ thi công.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p51fc5eec28">
+   <rect x="11.52" y="11.52" width="781.2" height="471.24"/>
+  </clipPath>
+ </defs>
+</svg>

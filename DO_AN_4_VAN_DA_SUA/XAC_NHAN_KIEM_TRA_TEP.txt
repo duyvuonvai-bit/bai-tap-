@@ -1,0 +1,13 @@
+BẢN ĐỒ ÁN ĐÀI PHUN NƯỚC 4 VAN ĐÃ RÀ SOÁT — 10/10/2026
+
+1. Word mở được bằng python-docx; cấu trúc ZIP/XML không lỗi.
+2. PDF thuyết minh mở được: 50 trang; không có trang gần trắng hoặc chữ ra ngoài trang theo phép kiểm tra tọa độ.
+3. Mục lục đủ 72 đề mục/tiểu mục, danh mục 9 hình và 31 bảng; kiểm tra 112 trường tham chiếu trang.
+4. Các đoạn SCL trong phụ lục được so khớp với tệp nguồn đầy đủ. 24 trường DB_HMI khớp mã, hướng dẫn và báo cáo.
+5. Bộ bản vẽ nguyên lý A0: 7 trang, 1189 x 841 mm.
+6. Đã rà nội dung XML, PDF, tài liệu chữ và tên tệp để loại tên/MSSV được yêu cầu ẩn; metadata tác giả Word để trống. Không xuất hai tệp gốc.
+7. Kiểm thử mô hình Python: 31/31 ca đạt. Có mã kiểm tra, log, CSV và đồ thị để chạy lại.
+8. Chưa biên dịch TIA, chạy PLCSIM, tạo project HMI hoặc thử điện/thủy lực thật; các phần này được ghi rõ trong báo cáo.
+
+CHECKSUMS_SHA256.txt chứa mã kiểm tra từng tệp trong gói (không tự chứa hash của chính nó và tệp ZIP).
+Các sơ đồ là nguyên lý thiết kế; cần chốt model, chân nối và định mức trước thi công.

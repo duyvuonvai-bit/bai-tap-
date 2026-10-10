@@ -1,0 +1,330 @@
+// AUTO/TAT fountain: 5 steps x T#10s. S7-1200 / STEP 7 (TIA Portal).
+// Source reviewed and model-tested; NOT compiled in TIA or tested on a PLC.
+// New project: generate these blocks; set OB1 cyclic, OB100 startup.
+// All control state and timers must be NON_RETAIN.
+// I0.0 Auto, I0.1 water OK, I0.2 Reset, I0.3 EStop OK,
+// I0.4 overload OK, I0.5 Stop OK. Healthy protective inputs = TRUE.
+// Q0.0 pump, Q0.1..Q0.4 valves 1..4, Q0.5 fault lamp.
+
+FUNCTION "FC_ReadLocalClock" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+   VAR_OUTPUT
+      RTCValid : Bool;
+      Hour : Int;
+      Minute : Int;
+      ReturnCode : Int;
+   END_VAR
+   VAR_TEMP
+      LocalTime : DTL;
+   END_VAR
+BEGIN
+   #ReturnCode := RD_LOC_T(OUT => #LocalTime);
+   // 0 = standard time; 1 = daylight-saving time; both are success.
+   #RTCValid := (#ReturnCode = 0) OR (#ReturnCode = 1);
+   #Hour := 0;
+   #Minute := 0;
+   IF #RTCValid THEN
+      // Do not consume an undefined OUT value after a failed RTC read.
+      #Hour := USINT_TO_INT(#LocalTime.HOUR);
+      #Minute := USINT_TO_INT(#LocalTime.MINUTE);
+      #RTCValid := (#Hour >= 0) AND (#Hour <= 23)
+         AND (#Minute >= 0) AND (#Minute <= 59)
+         AND (#LocalTime.SECOND <= 59);
+   END_IF;
+   IF NOT #RTCValid THEN
+      #Hour := 0;
+      #Minute := 0;
+   END_IF;
+END_FUNCTION
+
+FUNCTION_BLOCK "FB_Fountain"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+   VAR_INPUT
+      FirstScan : Bool;
+      AutoMode : Bool;
+      ResetCmd : Bool;
+      StopOK : Bool;
+      EStopOK : Bool;
+      LevelOK : Bool;
+      OverloadOK : Bool;
+      RTCValid : Bool;
+      RTC_Hour : Int;
+      RTC_Minute : Int;
+   END_VAR
+   VAR_OUTPUT
+      Pump : Bool;
+      YV1 : Bool;
+      YV2 : Bool;
+      YV3 : Bool;
+      YV4 : Bool;
+      Running : Bool;
+      InSchedule : Bool;
+      Armed : Bool;
+      StepNo : Int;
+      StepElapsed : Time;
+      Fault : Bool;
+      FaultCode : Int;
+      AlarmWord : Word;
+      StopLatched : Bool;
+      ResetAllowed : Bool;
+   END_VAR
+   VAR
+      State : Int := 0;
+      AutoArmed : Bool := FALSE;
+      OffObserved : Bool := FALSE;
+      StopMemory : Bool := FALSE;
+      FaultMemory : Word := W#16#0000;
+      PrevAuto : Bool := FALSE;
+      PrevReset : Bool := FALSE;
+      T1 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      T2 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      T3 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      T4 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      T5 {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+   END_VAR
+   VAR_TEMP
+      AutoRise : Bool;
+      ResetRise : Bool;
+      SafeInputs : Bool;
+      ClockOK : Bool;
+      MinuteOfDay : Int;
+      CurrentFaults : Word;
+      Expired : Bool;
+      TimerQ1 : Bool;
+      TimerQ2 : Bool;
+      TimerQ3 : Bool;
+      TimerQ4 : Bool;
+      TimerQ5 : Bool;
+      TimerET1 : Time;
+      TimerET2 : Time;
+      TimerET3 : Time;
+      TimerET4 : Time;
+      TimerET5 : Time;
+   END_VAR
+BEGIN
+   IF #FirstScan THEN
+      #State := 0;
+      #AutoArmed := FALSE;
+      #OffObserved := NOT #AutoMode;
+      #StopMemory := FALSE;
+      #FaultMemory := W#16#0000;
+      // Suppress artificial edges if a button is held during startup.
+      #PrevAuto := #AutoMode;
+      #PrevReset := #ResetCmd;
+   END_IF;
+
+   #AutoRise := #AutoMode AND NOT #PrevAuto AND NOT #FirstScan;
+   #ResetRise := #ResetCmd AND NOT #PrevReset AND NOT #FirstScan;
+   #PrevAuto := #AutoMode;
+   #PrevReset := #ResetCmd;
+   #SafeInputs := #StopOK AND #EStopOK AND #LevelOK AND #OverloadOK;
+   #ClockOK := #RTCValid AND (#RTC_Hour >= 0) AND (#RTC_Hour <= 23)
+      AND (#RTC_Minute >= 0) AND (#RTC_Minute <= 59);
+   // Do not multiply unvalidated INT input values.
+   #MinuteOfDay := 0;
+   IF #ClockOK THEN
+      #MinuteOfDay := #RTC_Hour * 60 + #RTC_Minute;
+   END_IF;
+   #InSchedule := #ClockOK AND
+      (((#MinuteOfDay >= 360) AND (#MinuteOfDay < 480)) OR
+       ((#MinuteOfDay >= 1020) AND (#MinuteOfDay < 1230)));
+
+   // Bit 0: E-STOP, 1: low water, 2: overload, 3: RTC, 4: STOP.
+   #CurrentFaults := W#16#0000;
+   IF NOT #EStopOK THEN #CurrentFaults := #CurrentFaults OR W#16#0001; END_IF;
+   IF NOT #LevelOK THEN #CurrentFaults := #CurrentFaults OR W#16#0002; END_IF;
+   IF NOT #OverloadOK THEN #CurrentFaults := #CurrentFaults OR W#16#0004; END_IF;
+   IF #AutoMode AND NOT #ClockOK THEN
+      #CurrentFaults := #CurrentFaults OR W#16#0008;
+   END_IF;
+   #FaultMemory := #FaultMemory OR #CurrentFaults;
+   IF NOT #StopOK THEN #StopMemory := TRUE; END_IF;
+
+   // Selected restart policy (an extension to the assignment):
+   // OFF -> repair/release protective device -> fresh RESET -> AUTO.
+   // Powerup with AUTO held also requires observing OFF then AUTO.
+   IF NOT #AutoMode THEN
+      #AutoArmed := FALSE;
+      #OffObserved := TRUE;
+   END_IF;
+   IF (#FaultMemory <> W#16#0000) OR #StopMemory THEN
+      #AutoArmed := FALSE;
+   END_IF;
+   #ResetAllowed := NOT #AutoMode AND #SafeInputs AND #ClockOK
+      AND NOT #FirstScan;
+   IF #ResetRise AND #ResetAllowed THEN
+      #FaultMemory := W#16#0000;
+      #StopMemory := FALSE;
+   END_IF;
+   IF #AutoRise AND #OffObserved AND #SafeInputs AND #ClockOK
+      AND (#FaultMemory = W#16#0000) AND NOT #StopMemory THEN
+      #AutoArmed := TRUE;
+   END_IF;
+
+   #Running := NOT #FirstScan AND #AutoMode AND #AutoArmed AND #InSchedule
+      AND #SafeInputs AND (#FaultMemory = W#16#0000) AND NOT #StopMemory;
+   IF NOT #Running THEN
+      #State := 0;
+   ELSIF (#State < 1) OR (#State > 5) THEN
+      #State := 1;
+   END_IF;
+
+   // Every instance is called ONCE in EVERY scan. Inactive steps reset.
+   // No ReArmTimer state; pump and valve mask remain defined at transitions.
+   #T1.TON(IN := #Running AND (#State = 1), PT := T#10s, Q => #TimerQ1, ET => #TimerET1);
+   #T2.TON(IN := #Running AND (#State = 2), PT := T#10s, Q => #TimerQ2, ET => #TimerET2);
+   #T3.TON(IN := #Running AND (#State = 3), PT := T#10s, Q => #TimerQ3, ET => #TimerET3);
+   #T4.TON(IN := #Running AND (#State = 4), PT := T#10s, Q => #TimerQ4, ET => #TimerET4);
+   #T5.TON(IN := #Running AND (#State = 5), PT := T#10s, Q => #TimerQ5, ET => #TimerET5);
+   #Expired := FALSE;
+   #StepElapsed := T#0ms;
+   CASE #State OF
+      1: #Expired := #TimerQ1; #StepElapsed := #TimerET1;
+      2: #Expired := #TimerQ2; #StepElapsed := #TimerET2;
+      3: #Expired := #TimerQ3; #StepElapsed := #TimerET3;
+      4: #Expired := #TimerQ4; #StepElapsed := #TimerET4;
+      5: #Expired := #TimerQ5; #StepElapsed := #TimerET5;
+   END_CASE;
+   IF #Running AND #Expired THEN
+      IF #State = 5 THEN #State := 1; ELSE #State := #State + 1; END_IF;
+      #StepElapsed := T#0ms;
+   END_IF;
+
+   // Exactly one final mapping; no manual control hidden under OFF.
+   #Pump := #Running;
+   #YV1 := #Running AND (#State >= 1) AND (#State <= 4);
+   #YV2 := #Running AND (#State >= 2) AND (#State <= 5);
+   #YV3 := #Running AND ((#State = 3) OR (#State = 4));
+   #YV4 := #Running AND ((#State = 4) OR (#State = 5));
+   #StepNo := #State;
+   #Armed := #AutoArmed;
+   #Fault := #FaultMemory <> W#16#0000;
+   #StopLatched := #StopMemory;
+   #AlarmWord := #FaultMemory;
+   IF #StopMemory THEN #AlarmWord := #AlarmWord OR W#16#0010; END_IF;
+   // Summary priority; AlarmWord preserves simultaneous causes.
+   #FaultCode := 0;
+   IF (#FaultMemory AND W#16#0001) <> W#16#0000 THEN #FaultCode := 1;
+   ELSIF (#FaultMemory AND W#16#0002) <> W#16#0000 THEN #FaultCode := 2;
+   ELSIF (#FaultMemory AND W#16#0004) <> W#16#0000 THEN #FaultCode := 3;
+   ELSIF (#FaultMemory AND W#16#0008) <> W#16#0000 THEN #FaultCode := 4;
+   END_IF;
+END_FUNCTION_BLOCK
+
+DATA_BLOCK "DB_Fountain"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+NON_RETAIN
+"FB_Fountain"
+BEGIN
+END_DATA_BLOCK
+
+DATA_BLOCK "DB_Runtime"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+NON_RETAIN
+   VAR
+      InitPending : Bool := TRUE;
+      RTCValid : Bool;
+      Hour : Int;
+      Minute : Int;
+      ReturnCode : Int;
+   END_VAR
+BEGIN
+END_DATA_BLOCK
+
+// Assign DB number 200 in TIA if using the DB200 addresses in the README.
+// Standard access; all fields are 16-bit words, no ambiguous packed Bool offsets.
+DATA_BLOCK "DB_HMI"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 1.0
+NON_RETAIN
+   VAR
+      AutoSelect : Int;
+      WaterOK : Int;
+      EStopOK : Int;
+      OverloadOK : Int;
+      StopOK : Int;
+      RTCValid : Int;
+      RTCStatus : Int;
+      Hour : Int;
+      Minute : Int;
+      InSchedule : Int;
+      AutoArmed : Int;
+      Running : Int;
+      StepNo : Int;
+      StepElapsed_ds : Int;
+      PumpCmd : Int;
+      Valve1Cmd : Int;
+      Valve2Cmd : Int;
+      Valve3Cmd : Int;
+      Valve4Cmd : Int;
+      Fault : Int;
+      FaultCode : Int;
+      AlarmBits : Word;
+      StopLatched : Int;
+      ResetAllowed : Int;
+   END_VAR
+BEGIN
+END_DATA_BLOCK
+
+ORGANIZATION_BLOCK OB100
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+BEGIN
+   // Startup OB; also protects restart if a download preserved DB values.
+   "DB_Runtime".InitPending := TRUE;
+END_ORGANIZATION_BLOCK
+
+ORGANIZATION_BLOCK OB1
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 1.0
+BEGIN
+   "FC_ReadLocalClock"(
+      RTCValid => "DB_Runtime".RTCValid,
+      Hour => "DB_Runtime".Hour,
+      Minute => "DB_Runtime".Minute,
+      ReturnCode => "DB_Runtime".ReturnCode);
+   "DB_Fountain"(
+      FirstScan := "DB_Runtime".InitPending,
+      AutoMode := %I0.0, LevelOK := %I0.1, ResetCmd := %I0.2,
+      EStopOK := %I0.3, OverloadOK := %I0.4, StopOK := %I0.5,
+      RTCValid := "DB_Runtime".RTCValid,
+      RTC_Hour := "DB_Runtime".Hour, RTC_Minute := "DB_Runtime".Minute);
+   "DB_Runtime".InitPending := FALSE;
+
+   %Q0.0 := "DB_Fountain".Pump;
+   %Q0.1 := "DB_Fountain".YV1;
+   %Q0.2 := "DB_Fountain".YV2;
+   %Q0.3 := "DB_Fountain".YV3;
+   %Q0.4 := "DB_Fountain".YV4;
+   %Q0.5 := "DB_Fountain".Fault;
+
+   // Read-only HMI mirror. These are COMMANDS, not physical feedback.
+   "DB_HMI".AutoSelect := BOOL_TO_INT(%I0.0);
+   "DB_HMI".WaterOK := BOOL_TO_INT(%I0.1);
+   "DB_HMI".EStopOK := BOOL_TO_INT(%I0.3);
+   "DB_HMI".OverloadOK := BOOL_TO_INT(%I0.4);
+   "DB_HMI".StopOK := BOOL_TO_INT(%I0.5);
+   "DB_HMI".RTCValid := BOOL_TO_INT("DB_Runtime".RTCValid);
+   "DB_HMI".RTCStatus := "DB_Runtime".ReturnCode;
+   "DB_HMI".Hour := "DB_Runtime".Hour;
+   "DB_HMI".Minute := "DB_Runtime".Minute;
+   "DB_HMI".InSchedule := BOOL_TO_INT("DB_Fountain".InSchedule);
+   "DB_HMI".AutoArmed := BOOL_TO_INT("DB_Fountain".Armed);
+   "DB_HMI".Running := BOOL_TO_INT("DB_Fountain".Running);
+   "DB_HMI".StepNo := "DB_Fountain".StepNo;
+   "DB_HMI".StepElapsed_ds := DINT_TO_INT(TIME_TO_DINT("DB_Fountain".StepElapsed) / 100);
+   "DB_HMI".PumpCmd := BOOL_TO_INT("DB_Fountain".Pump);
+   "DB_HMI".Valve1Cmd := BOOL_TO_INT("DB_Fountain".YV1);
+   "DB_HMI".Valve2Cmd := BOOL_TO_INT("DB_Fountain".YV2);
+   "DB_HMI".Valve3Cmd := BOOL_TO_INT("DB_Fountain".YV3);
+   "DB_HMI".Valve4Cmd := BOOL_TO_INT("DB_Fountain".YV4);
+   "DB_HMI".Fault := BOOL_TO_INT("DB_Fountain".Fault);
+   "DB_HMI".FaultCode := "DB_Fountain".FaultCode;
+   "DB_HMI".AlarmBits := "DB_Fountain".AlarmWord;
+   "DB_HMI".StopLatched := BOOL_TO_INT("DB_Fountain".StopLatched);
+   "DB_HMI".ResetAllowed := BOOL_TO_INT("DB_Fountain".ResetAllowed);
+END_ORGANIZATION_BLOCK

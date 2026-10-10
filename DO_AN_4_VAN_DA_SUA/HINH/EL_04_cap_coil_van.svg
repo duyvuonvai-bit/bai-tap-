@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="804.24pt" height="533.088pt" viewBox="0 0 804.24 533.088" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-09T22:47:28.693660</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 533.088 
+L 804.24 533.088 
+L 804.24 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 142.65 135.1512 
+L 223.56 135.1512 
+Q 227.466 135.1512 227.466 131.2704 
+L 227.466 100.7784 
+Q 227.466 96.8976 223.56 96.8976 
+L 142.65 96.8976 
+Q 138.744 96.8976 138.744 100.7784 
+L 138.744 131.2704 
+Q 138.744 135.1512 142.65 135.1512 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 265.41 135.1512 
+L 402.12 135.1512 
+Q 406.026 135.1512 406.026 131.2704 
+L 406.026 100.7784 
+Q 406.026 96.8976 402.12 96.8976 
+L 265.41 96.8976 
+Q 261.504 96.8976 261.504 100.7784 
+L 261.504 131.2704 
+Q 261.504 135.1512 265.41 135.1512 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 64.53 223.3008 
+L 137.07 223.3008 
+Q 140.976 223.3008 140.976 219.42 
+L 140.976 187.2648 
+Q 140.976 183.384 137.07 183.384 
+L 64.53 183.384 
+Q 60.624 183.384 60.624 187.2648 
+L 60.624 219.42 
+Q 60.624 223.3008 64.53 223.3008 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 50.58 291.492 
+L 151.02 291.492 
+Q 154.926 291.492 154.926 287.6112 
+L 154.926 249.912 
+Q 154.926 246.0312 151.02 246.0312 
+L 50.58 246.0312 
+Q 46.674 246.0312 46.674 249.912 
+L 46.674 287.6112 
+Q 46.674 291.492 50.58 291.492 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 53.37 372.9888 
+L 148.23 372.9888 
+Q 152.136 372.9888 152.136 369.108 
+L 152.136 323.6472 
+Q 152.136 319.7664 148.23 319.7664 
+L 53.37 319.7664 
+Q 49.464 319.7664 49.464 323.6472 
+L 49.464 369.108 
+Q 49.464 372.9888 53.37 372.9888 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 259.83 223.3008 
+L 332.37 223.3008 
+Q 336.276 223.3008 336.276 219.42 
+L 336.276 187.2648 
+Q 336.276 183.384 332.37 183.384 
+L 259.83 183.384 
+Q 255.924 183.384 255.924 187.2648 
+L 255.924 219.42 
+Q 255.924 223.3008 259.83 223.3008 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 245.88 291.492 
+L 346.32 291.492 
+Q 350.226 291.492 350.226 287.6112 
+L 350.226 249.912 
+Q 350.226 246.0312 346.32 246.0312 
+L 245.88 246.0312 
+Q 241.974 246.0312 241.974 249.912 
+L 241.974 287.6112 
+Q 241.974 291.492 245.88 291.492 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 248.67 372.9888 
+L 343.53 372.9888 
+Q 347.436 372.9888 347.436 369.108 
+L 347.436 323.6472 
+Q 347.436 319.7664 343.53 319.7664 
+L 248.67 319.7664 
+Q 244.764 319.7664 244.764 323.6472 
+L 244.764 369.108 
+Q 244.764 372.9888 248.67 372.9888 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 455.13 223.3008 
+L 527.67 223.3008 
+Q 531.576 223.3008 531.576 219.42 
+L 531.576 187.2648 
+Q 531.576 183.384 527.67 183.384 
+L 455.13 183.384 
+Q 451.224 183.384 451.224 187.2648 
+L 451.224 219.42 
+Q 451.224 223.3008 455.13 223.3008 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 441.18 291.492 
+L 541.62 291.492 
+Q 545.526 291.492 545.526 287.6112 
+L 545.526 249.912 
+Q 545.526 246.0312 541.62 246.0312 
+L 441.18 246.0312 
+Q 437.274 246.0312 437.274 249.912 
+L 437.274 287.6112 
+Q 437.274 291.492 441.18 291.492 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 443.97 372.9888 
+L 538.83 372.9888 
+Q 542.736 372.9888 542.736 369.108 
+L 542.736 323.6472 
+Q 542.736 319.7664 538.83 319.7664 
+L 443.97 319.7664 
+Q 440.064 319.7664 440.064 323.6472 
+L 440.064 369.108 
+Q 440.064 372.9888 443.97 372.9888 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 650.43 223.3008 
+L 722.97 223.3008 
+Q 726.876 223.3008 726.876 219.42 
+L 726.876 187.2648 
+Q 726.876 183.384 722.97 183.384 
+L 650.43 183.384 
+Q 646.524 183.384 646.524 187.2648 
+L 646.524 219.42 
+Q 646.524 223.3008 650.43 223.3008 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 636.48 291.492 
+L 736.92 291.492 
+Q 740.826 291.492 740.826 287.6112 
+L 740.826 249.912 
+Q 740.826 246.0312 736.92 246.0312 
+L 636.48 246.0312 
+Q 632.574 246.0312 632.574 249.912 
+L 632.574 287.6112 
+Q 632.574 291.492 636.48 291.492 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 639.27 372.9888 
+L 734.13 372.9888 
+Q 738.036 372.9888 738.036 369.108 
+L 738.036 323.6472 
+Q 738.036 319.7664 734.13 319.7664 
+L 639.27 319.7664 
+Q 635.364 319.7664 635.364 323.6472 
+L 635.364 369.108 
+Q 635.364 372.9888 639.27 372.9888 
+z
+" clip-path="url(#p86871bdb23)" style="fill: #eaf3f8; stroke: #246a93; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 96.894 116.0244 
+L 139.86 116.0244 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 226.35 116.0244 
+L 262.62 116.0244 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 404.91 116.0244 
+L 750.87 116.0244 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 39.42 161.208 
+L 753.66 161.208 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 728.55 116.0244 
+L 728.55 161.208 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 100.8 161.208 
+L 100.8 184.4928 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 100.8 222.192 
+L 100.8 247.14 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 100.8 290.3832 
+L 100.8 320.8752 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 100.8 371.88 
+L 100.8 403.4808 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 296.1 161.208 
+L 296.1 184.4928 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 296.1 222.192 
+L 296.1 247.14 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 296.1 290.3832 
+L 296.1 320.8752 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 296.1 371.88 
+L 296.1 403.4808 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 491.4 161.208 
+L 491.4 184.4928 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 491.4 222.192 
+L 491.4 247.14 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 491.4 290.3832 
+L 491.4 320.8752 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 491.4 371.88 
+L 491.4 403.4808 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 686.7 161.208 
+L 686.7 184.4928 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #087f5b; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 686.7 222.192 
+L 686.7 247.14 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 686.7 290.3832 
+L 686.7 320.8752 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 686.7 371.88 
+L 686.7 403.4808 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 39.42 403.4808 
+L 753.66 403.4808 
+" clip-path="url(#p86871bdb23)" style="fill: none; stroke: #246a93; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #123247" x="33.84" y="51.580012" transform="rotate(-0 33.84 51.580012)">EL-04 | CẤP COIL BỐN VAN QUA RƠLE TRUNG GIAN</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #61727e" x="33.84" y="69.603919" transform="rotate(-0 33.84 69.603919)">Van YV1–YV4: thường đóng, coil 24 VDC theo phương án thiết kế. Các nhánh vẽ tương tự nhau.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="42.21" y="114.084" transform="rotate(-0 42.21 114.084)">+24 VDC</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="183.105" y="119.059712" transform="rotate(-0 183.105 119.059712)">F-VAN</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="333.765" y="119.059712" transform="rotate(-0 333.765 119.059712)">KSR NO an toàn</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f5b" x="457.92" y="104.6592" transform="rotate(-0 457.92 104.6592)">NGUỒN VAN SAU KSR</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="100.8" y="206.65365" transform="rotate(-0 100.8 206.65365)">F1</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(90.223594 263.652694)">KA1</text>
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(64.185469 279.830756)">Tiếp điểm NO</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(90.178984 342.000373)">YV1</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(68.205625 356.825452)">Coil 24 VDC</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="100.8" y="428.4288" transform="rotate(-0 100.8 428.4288)">%Q0.1 → coil KA1</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="296.1" y="206.65365" transform="rotate(-0 296.1 206.65365)">F2</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(285.523594 263.652694)">KA2</text>
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(259.485469 279.830756)">Tiếp điểm NO</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(285.478984 342.000373)">YV2</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(263.505625 356.825452)">Coil 24 VDC</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="296.1" y="428.4288" transform="rotate(-0 296.1 428.4288)">%Q0.2 → coil KA2</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="491.4" y="206.65365" transform="rotate(-0 491.4 206.65365)">F3</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(480.823594 263.652694)">KA3</text>
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(454.785469 279.830756)">Tiếp điểm NO</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(480.778984 342.000373)">YV3</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(458.805625 356.825452)">Coil 24 VDC</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="491.4" y="428.4288" transform="rotate(-0 491.4 428.4288)">%Q0.3 → coil KA3</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="686.7" y="206.65365" transform="rotate(-0 686.7 206.65365)">F4</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(676.123594 263.652694)">KA4</text>
+    <text style="font-size: 10.8px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(650.085469 279.830756)">Tiếp điểm NO</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(676.078984 342.000373)">YV4</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #123247" transform="translate(654.105625 356.825452)">Coil 24 VDC</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #123247" x="686.7" y="428.4288" transform="rotate(-0 686.7 428.4288)">%Q0.4 → coil KA4</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start" x="39.42" y="395.1648" transform="rotate(-0 39.42 395.1648)">0 VDC</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #61727e" transform="translate(33.84 473.724488)">Mạch lệnh: +24 V điều khiển → common DO → tiếp điểm Q0.1…Q0.4 → coil KA1…KA4 → 0 V.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #61727e" transform="translate(33.84 488.704175)">Dập xung song song từng coil DC: diode/TVS theo manual; diode thường có thể làm tăng thời gian nhả.</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #61727e" transform="translate(33.84 503.965113)">KSR cắt nguồn van khi E-STOP; HMI/đèn lỗi dùng nguồn chưa cắt. Chọn cầu chì theo dòng và dây dẫn.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p86871bdb23">
+   <rect x="11.52" y="11.52" width="781.2" height="510.048"/>
+  </clipPath>
+ </defs>
+</svg>

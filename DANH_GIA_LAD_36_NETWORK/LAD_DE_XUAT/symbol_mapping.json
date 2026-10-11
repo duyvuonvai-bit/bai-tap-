@@ -1,0 +1,380 @@
+[
+  {
+    "alias": "AutoSelected",
+    "target": "\"chon auto\" / %I0.0",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=AUTO",
+    "new": ""
+  },
+  {
+    "alias": "WaterOK",
+    "target": "\"du nuoc\" / %I0.1",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=du nuoc",
+    "new": ""
+  },
+  {
+    "alias": "ResetButton",
+    "target": "\"nut reset\" / %I0.2",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=nhan, NO",
+    "new": ""
+  },
+  {
+    "alias": "EStopOK",
+    "target": "\"dung khan ok\" / %I0.3",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=binh thuong",
+    "new": ""
+  },
+  {
+    "alias": "OverloadOK",
+    "target": "\"qua tai\" / %I0.4",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=khong trip; doi comment *_OK",
+    "new": ""
+  },
+  {
+    "alias": "StopOK",
+    "target": "\"stop\" / %I0.5",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "1=chua nhan STOP, NC",
+    "new": ""
+  },
+  {
+    "alias": "Pump",
+    "target": "\"bom nuoc\" / %Q0.0",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Lenh bom",
+    "new": ""
+  },
+  {
+    "alias": "Valve1",
+    "target": "\"van 1\" / %Q0.1",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Lenh van1",
+    "new": ""
+  },
+  {
+    "alias": "Valve2",
+    "target": "\"van 2\" / %Q0.2",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Lenh van2",
+    "new": ""
+  },
+  {
+    "alias": "Valve3",
+    "target": "\"van 3\" / %Q0.3",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Lenh van3",
+    "new": ""
+  },
+  {
+    "alias": "Valve4",
+    "target": "\"van 4\" / %Q0.4",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Lenh van4",
+    "new": ""
+  },
+  {
+    "alias": "Alarm",
+    "target": "\"den bao loi\" / %Q0.5",
+    "type": "Bool",
+    "start": "I/O",
+    "retain": "FALSE",
+    "comment": "Den loi",
+    "new": ""
+  },
+  {
+    "alias": "PLC_LocalTime",
+    "target": "\"daiphunnuoc\".\"gio plc\"",
+    "type": "DTL",
+    "start": "DTL default",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "RTC_Status",
+    "target": "\"daiphunnuoc\".\"trangthai rtc\"",
+    "type": "Int",
+    "start": "0",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "RTC_OK",
+    "target": "\"daiphunnuoc\".\"rtc_ok\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "Morning",
+    "target": "\"daiphunnuoc\".\"ca_sang\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "Evening",
+    "target": "\"daiphunnuoc\".\"ca_toi\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "InSchedule",
+    "target": "\"daiphunnuoc\".\"trong_gio\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "Safe",
+    "target": "\"daiphunnuoc\".\"an_toan\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "FaultNow",
+    "target": "\"daiphunnuoc\".\"loi_hientai\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "FaultLatched",
+    "target": "\"daiphunnuoc\".\"nho_loi\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "StopLatched",
+    "target": "\"daiphunnuoc\".\"nho_stop\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "ResetEdge",
+    "target": "\"daiphunnuoc\".\"xung_reset\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "AutoEdge",
+    "target": "\"daiphunnuoc\".\"xung_auto\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "OffSeen",
+    "target": "\"daiphunnuoc\".\"da_gat_tat\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "CancelAuto",
+    "target": "\"daiphunnuoc\".\"huy_phep_chay\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "AutoArmed",
+    "target": "\"daiphunnuoc\".\"cho_phep_auto\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "Run",
+    "target": "\"daiphunnuoc\".\"tu_dong_chay\"",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "CurrentStep",
+    "target": "\"daiphunnuoc\".\"buoc_hientai\"",
+    "type": "Int",
+    "start": "0",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "NextStep",
+    "target": "\"daiphunnuoc\".\"buoc_tieptheo\"",
+    "type": "Int",
+    "start": "0",
+    "retain": "FALSE",
+    "comment": "Truong hien co",
+    "new": ""
+  },
+  {
+    "alias": "FirstScan",
+    "target": "\"daiphunnuoc\".vong_quet_dau",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Them cho ban26",
+    "new": "YES"
+  },
+  {
+    "alias": "InitPending",
+    "target": "\"daiphunnuoc\".khoi_tao_cho",
+    "type": "Bool",
+    "start": "TRUE",
+    "retain": "FALSE",
+    "comment": "Them cho ban26",
+    "new": "YES"
+  },
+  {
+    "alias": "BadStep",
+    "target": "\"daiphunnuoc\".loi_buoc",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Them cho ban26",
+    "new": "YES"
+  },
+  {
+    "alias": "Ack",
+    "target": "\"daiphunnuoc\".xac_nhan_loi",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Them cho ban26",
+    "new": "YES"
+  },
+  {
+    "alias": "OutputEnable",
+    "target": "\"daiphunnuoc\".cho_phep_ngo_ra",
+    "type": "Bool",
+    "start": "FALSE",
+    "retain": "FALSE",
+    "comment": "Them cho ban26",
+    "new": "YES"
+  },
+  {
+    "alias": "ResetTrigger",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "R_TRIG",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "AutoTrigger",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "R_TRIG",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "Timer1",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "TON",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "Timer2",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "TON",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "Timer3",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "TON",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "Timer4",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "TON",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  },
+  {
+    "alias": "Timer5",
+    "target": "Instance do TIA tao rieng / Static multi-instance",
+    "type": "TON",
+    "start": "Mac dinh instance",
+    "retain": "FALSE",
+    "comment": "Khong dung chung instance; goi moi scan",
+    "new": "CHECK/CREATE"
+  }
+]

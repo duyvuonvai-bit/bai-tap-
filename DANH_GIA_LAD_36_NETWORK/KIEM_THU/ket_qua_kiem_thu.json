@@ -1,0 +1,813 @@
+{
+  "scope": "Independent Python model of scan-order logic, not TIA compilation or PLCSIM/hardware test",
+  "assumptions": [
+    "Each R_TRIG is called every scan with its own state",
+    "All five independent TONs are called every scan; IN false resets",
+    "Non-retentive startup values follow documentation; revised model adds first-scan handling",
+    "Healthy-high field inputs; process-image values stable within a scan",
+    "Monotonic timer time is independent of RTC schedule",
+    "Original model follows illustrative images, not unseen native PLC project"
+  ],
+  "total_cases": 31,
+  "passed": 31,
+  "failed": 0,
+  "original_logic_defect_reproduced": "Out-of-range step yields silent stall; is not dangerous energized output in this model",
+  "policy_difference": "Revised RTC fault in AUTO is latched and requires RESET while OFF; original only requires OFF→AUTO after RTC recovers",
+  "results": [
+    {
+      "name": "original36: all 1440 minutes",
+      "passed": true,
+      "evidence": {
+        "sampled_times": 1440,
+        "operating_seconds": 19800,
+        "boundary_rule": "start included, end excluded"
+      }
+    },
+    {
+      "name": "original36: every second of 24-hour day",
+      "passed": true,
+      "evidence": {
+        "sampled_times": 86400,
+        "operating_seconds": 19800,
+        "boundary_rule": "start included, end excluded"
+      }
+    },
+    {
+      "name": "revised26: all 1440 minutes",
+      "passed": true,
+      "evidence": {
+        "sampled_times": 1440,
+        "operating_seconds": 19800,
+        "boundary_rule": "start included, end excluded"
+      }
+    },
+    {
+      "name": "revised26: every second of 24-hour day",
+      "passed": true,
+      "evidence": {
+        "sampled_times": 86400,
+        "operating_seconds": 19800,
+        "boundary_rule": "start included, end excluded"
+      }
+    },
+    {
+      "name": "original36: startup AUTO cannot self-start",
+      "passed": true,
+      "evidence": "AUTO at startup blocked; fresh OFF→AUTO starts at step 1"
+    },
+    {
+      "name": "revised26: startup AUTO cannot self-start",
+      "passed": true,
+      "evidence": "AUTO at startup blocked; fresh OFF→AUTO starts at step 1"
+    },
+    {
+      "name": "original36: 2 cycles, masks, no early transition, scan 1ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 1,
+        "samples": 100010,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "original36: 2 cycles, masks, no early transition, scan 10ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 10,
+        "samples": 10010,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "original36: 2 cycles, masks, no early transition, scan 37ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 37,
+        "samples": 2720,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "revised26: 2 cycles, masks, no early transition, scan 1ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 1,
+        "samples": 100010,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "revised26: 2 cycles, masks, no early transition, scan 10ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 10,
+        "samples": 10010,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "revised26: 2 cycles, masks, no early transition, scan 37ms",
+      "passed": true,
+      "evidence": {
+        "scan_ms": 37,
+        "samples": 2720,
+        "transitions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            1
+          ]
+        ],
+        "step_durations_ms": [
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064
+        ],
+        "pump_command_continuous": true,
+        "note": "TON starts on first scan that observes committed new step"
+      }
+    },
+    {
+      "name": "original36: four stop inputs at all five steps",
+      "passed": true,
+      "evidence": [
+        {
+          "step": 1,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        }
+      ]
+    },
+    {
+      "name": "revised26: four stop inputs at all five steps",
+      "passed": true,
+      "evidence": [
+        {
+          "step": 1,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 1,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 2,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 3,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 4,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "water",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "estop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "overload_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        },
+        {
+          "step": 5,
+          "trip_input": "stop_ok",
+          "same_scan_stop": true,
+          "restart_requires_off_reset_auto": true
+        }
+      ]
+    },
+    {
+      "name": "original36: held RESET through recovery",
+      "passed": true,
+      "evidence": "Held RESET cannot acknowledge when water returns; release and press required"
+    },
+    {
+      "name": "revised26: held RESET through recovery",
+      "passed": true,
+      "evidence": "Held RESET cannot acknowledge when water returns; release and press required"
+    },
+    {
+      "name": "original36: normal OFF/ON",
+      "passed": true,
+      "evidence": "Normal OFF→AUTO needs no RESET and restarts step 1"
+    },
+    {
+      "name": "revised26: normal OFF/ON",
+      "passed": true,
+      "evidence": "Normal OFF→AUTO needs no RESET and restarts step 1"
+    },
+    {
+      "name": "original36: automatic next scheduled shift",
+      "passed": true,
+      "evidence": "Scheduled stop preserves AUTO permission for next shift; no alarm"
+    },
+    {
+      "name": "revised26: automatic next scheduled shift",
+      "passed": true,
+      "evidence": "Scheduled stop preserves AUTO permission for next shift; no alarm"
+    },
+    {
+      "name": "original36: RTC error and recovery policy",
+      "passed": true,
+      "evidence": "Original policy: RTC recovery requires OFF→AUTO; RESET not required"
+    },
+    {
+      "name": "revised26: RTC error and recovery policy",
+      "passed": true,
+      "evidence": "Added policy: RTC fault latched, requires OFF→RESET→AUTO"
+    },
+    {
+      "name": "original36: invalid-step injection and diagnosis",
+      "passed": true,
+      "evidence": {
+        "injections": [
+          -1,
+          6,
+          100,
+          32767
+        ],
+        "original_outcome": "Silent stall, Run remains TRUE, outputs OFF, no alarm",
+        "revised_outcome": "Fault latched, Run FALSE, step zero, outputs OFF",
+        "assessed_revision": "original36"
+      }
+    },
+    {
+      "name": "revised26: invalid-step injection and diagnosis",
+      "passed": true,
+      "evidence": {
+        "injections": [
+          -1,
+          6,
+          100,
+          32767
+        ],
+        "original_outcome": "Silent stall, Run remains TRUE, outputs OFF, no alarm",
+        "revised_outcome": "Fault latched, Run FALSE, step zero, outputs OFF",
+        "assessed_revision": "revised26"
+      }
+    },
+    {
+      "name": "original36: STOP at timer expiry",
+      "passed": true,
+      "evidence": "STOP has priority when timer would expire; no stale timer transition"
+    },
+    {
+      "name": "revised26: STOP at timer expiry",
+      "passed": true,
+      "evidence": "STOP has priority when timer would expire; no stale timer transition"
+    },
+    {
+      "name": "RD_LOC_T success status 1 with DST",
+      "passed": true,
+      "evidence": "Revision accepts documented status 1; Vietnam normally uses 0 because DST is disabled"
+    },
+    {
+      "name": "revised26: DTL field bounds",
+      "passed": true,
+      "evidence": "Out-of-range HOUR/MINUTE/SECOND stops and diagnoses when AUTO is selected"
+    },
+    {
+      "name": "revised26: first-scan edge suppression",
+      "passed": true,
+      "evidence": "Startup-held RESET is ignored until released and pressed again"
+    },
+    {
+      "name": "original36: randomized scan invariants",
+      "passed": true,
+      "evidence": {
+        "seed": 20261011,
+        "scans": 15000,
+        "scope": "Reachable state/input invariants, no claim of exhaustive proof"
+      }
+    },
+    {
+      "name": "revised26: randomized scan invariants",
+      "passed": true,
+      "evidence": {
+        "seed": 20261011,
+        "scans": 15000,
+        "scope": "Reachable state/input invariants, no claim of exhaustive proof"
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schema": "semantic LAD specification; not TIA XML and not compiler input",
+  "revision": "26-network proposal",
+  "source": "Visual review of 36 supplied illustrative PNGs plus explicit diagnostic/startup refinements",
+  "symbols": {
+    "AutoSelected": "Chon_AUTO / I0.0",
+    "WaterOK": "Du_Nuoc / I0.1",
+    "ResetButton": "Nut_RESET / I0.2",
+    "EStopOK": "Dung_Khan_OK / I0.3",
+    "OverloadOK": "Qua_Tai_OK / I0.4",
+    "StopOK": "Nut_Dung_OK / I0.5",
+    "Pump": "Bom_Nuoc / Q0.0",
+    "Valve1": "Van_1 / Q0.1",
+    "Valve2": "Van_2 / Q0.2",
+    "Valve3": "Van_3 / Q0.3",
+    "Valve4": "Van_4 / Q0.4",
+    "Alarm": "Den_Bao_Loi / Q0.5"
+  },
+  "timer_assumption": "Five independent IEC TONs, called once each scan. CurrentStep committed after all five calls. Timing quantized to PLC scan; no exact sub-scan 10.000s claim.",
+  "networks": [
+    {
+      "number": 1,
+      "title_vi": "Khởi tạo ở vòng quét đầu",
+      "logic": [
+        "FirstScan := InitPending;",
+        "IF FirstScan THEN FaultLatched := FALSE; StopLatched := FALSE; OffSeen := FALSE; AutoArmed := FALSE; CurrentStep := 0; NextStep := 0; END_IF;"
+      ],
+      "notes_vi": "OB100 đặt InitPending := TRUE. InitPending và các trạng thái có start value phù hợp, không Retain. FirstScan phải giữ TRUE suốt vòng quét này, chỉ xóa InitPending ở NW26."
+    },
+    {
+      "number": 2,
+      "title_vi": "Đọc đồng hồ địa phương",
+      "logic": [
+        "RD_LOC_T(RET_VAL => RTC_Status, OUT => PLC_LocalTime);"
+      ],
+      "notes_vi": "Gọi vô điều kiện; múi giờ CPU UTC+7, DST tắt tại Việt Nam. DTL.HOUR/MINUTE/SECOND kiểu USInt; RET_VAL kiểu Int."
+    },
+    {
+      "number": 3,
+      "title_vi": "Kiểm tra RTC và miền thời gian",
+      "logic": [
+        "RTC_OK := ((RTC_Status = 0) OR (RTC_Status = 1)) AND (PLC_LocalTime.HOUR <= 23) AND (PLC_LocalTime.MINUTE <= 59) AND (PLC_LocalTime.SECOND <= 59);"
+      ],
+      "notes_vi": "Mã 1 là đọc thành công khi có DST. Kiểm tra miền không xác nhận đồng hồ đã được đặt đúng thực tế."
+    },
+    {
+      "number": 4,
+      "title_vi": "Ca sáng 06:00 đến trước 08:00",
+      "logic": [
+        "Morning := RTC_OK AND (PLC_LocalTime.HOUR >= 6) AND (PLC_LocalTime.HOUR < 8);"
+      ],
+      "notes_vi": ""
+    },
+    {
+      "number": 5,
+      "title_vi": "Ca chiều 17:00 đến trước 20:30",
+      "logic": [
+        "Evening := RTC_OK AND (((PLC_LocalTime.HOUR >= 17) AND (PLC_LocalTime.HOUR < 20)) OR ((PLC_LocalTime.HOUR = 20) AND (PLC_LocalTime.MINUTE < 30)));"
+      ],
+      "notes_vi": ""
+    },
+    {
+      "number": 6,
+      "title_vi": "Tổng hợp lịch vận hành",
+      "logic": [
+        "InSchedule := Morning OR Evening;"
+      ],
+      "notes_vi": ""
+    },
+    {
+      "number": 7,
+      "title_vi": "Điều kiện đầu vào cho phép chạy",
+      "logic": [
+        "Safe := WaterOK AND EStopOK AND OverloadOK AND StopOK;"
+      ],
+      "notes_vi": "Đầu vào healthy-high: 1 là bình thường. I0.4 cần đặt tên Qua_Tai_OK, I0.5 là Nut_Dung_OK; STOP/quá tải dùng tiếp điểm NC phù hợp."
+    },
+    {
+      "number": 8,
+      "title_vi": "Phát hiện lỗi hiện tại và bước bất hợp lệ",
+      "logic": [
+        "BadStep := (CurrentStep < 0) OR (CurrentStep > 5);",
+        "FaultNow := NOT WaterOK OR NOT EStopOK OR NOT OverloadOK OR (AutoSelected AND NOT RTC_OK) OR BadStep;"
+      ],
+      "notes_vi": "Bổ sung chẩn đoán bước sai. RTC lỗi khi đang AUTO được chốt, là chính sách bổ sung so với bản gốc."
+    },
+    {
+      "number": 9,
+      "title_vi": "Bắt cạnh RESET và AUTO mỗi vòng quét",
+      "logic": [
+        "ResetTrigger(CLK := ResetButton);",
+        "AutoTrigger(CLK := AutoSelected);",
+        "ResetEdge := ResetTrigger.Q AND NOT FirstScan;",
+        "AutoEdge := AutoTrigger.Q AND NOT FirstScan;"
+      ],
+      "notes_vi": "Hai R_TRIG có instance riêng, EN luôn được thực hiện; tín hiệu nút đưa vào CLK. Không chặn gọi block khi CLK=0. Không dùng xung vòng quét đầu để ACK/ARM."
+    },
+    {
+      "number": 10,
+      "title_vi": "Điều kiện xác nhận phục hồi",
+      "logic": [
+        "Ack := ResetEdge AND NOT AutoSelected AND Safe AND RTC_OK AND NOT BadStep AND NOT FirstScan;"
+      ],
+      "notes_vi": "RESET chỉ nhận khi TẮT, đã khắc phục lỗi và nhấn mới; RESET không chạy bơm."
+    },
+    {
+      "number": 11,
+      "title_vi": "Chốt lỗi, ưu tiên RESET",
+      "logic": [
+        "SR FaultLatched (S := FaultNow, R1 := Ack);"
+      ],
+      "notes_vi": "Siemens SR có R1 ưu tiên RESET. S và R1 loại trừ nhau do Ack đòi an toàn, RTC tốt, bước hợp lệ."
+    },
+    {
+      "number": 12,
+      "title_vi": "Chốt STOP riêng",
+      "logic": [
+        "SR StopLatched (S := NOT StopOK, R1 := Ack);"
+      ],
+      "notes_vi": "STOP không được gộp thành đèn lỗi công nghệ. Xem trạng thái STOP trên HMI."
+    },
+    {
+      "number": 13,
+      "title_vi": "Ghi nhận đã gạt về TẮT",
+      "logic": [
+        "IF NOT AutoSelected THEN SET OffSeen; END_IF;"
+      ],
+      "notes_vi": "Không Retain, khởi tạo FALSE. Đây là cuộn S, không phải cuộn thường."
+    },
+    {
+      "number": 14,
+      "title_vi": "Chốt quyền AUTO, ưu tiên thu hồi",
+      "logic": [
+        "CancelAuto := NOT AutoSelected OR NOT Safe OR NOT RTC_OK OR FaultLatched OR StopLatched OR FirstScan;",
+        "SR AutoArmed (S := AutoEdge AND OffSeen AND Safe AND RTC_OK AND NOT FaultLatched AND NOT StopLatched AND NOT FirstScan, R1 := CancelAuto);"
+      ],
+      "notes_vi": "Ngoài giờ không thu hồi quyền, cho phép tự chạy ca sau. Lỗi/STOP đòi OFF → RESET → AUTO."
+    },
+    {
+      "number": 15,
+      "title_vi": "Điều kiện vận hành cuối",
+      "logic": [
+        "Run := AutoArmed AND AutoSelected AND InSchedule AND Safe AND NOT FaultLatched AND NOT StopLatched AND NOT FirstScan;"
+      ],
+      "notes_vi": ""
+    },
+    {
+      "number": 16,
+      "title_vi": "Tạo bước tiếp theo mặc định",
+      "logic": [
+        "NextStep := CurrentStep;",
+        "IF NOT Run THEN NextStep := 0; END_IF;",
+        "IF Run AND CurrentStep = 0 THEN NextStep := 1; END_IF;"
+      ],
+      "notes_vi": "Giữ đúng thứ tự ba rung; chỉ NW22 ghi CurrentStep trong vận hành bình thường."
+    },
+    {
+      "number": 17,
+      "title_vi": "Bộ định thời và chuyển bước 1 → 2",
+      "logic": [
+        "Timer1(IN := Run AND (CurrentStep = 1), PT := T#10s);",
+        "IF Run AND CurrentStep = 1 AND Timer1.Q THEN NextStep := 2; END_IF;"
+      ],
+      "notes_vi": "Instance TON riêng, gọi ở mọi vòng quét, IN=0 phải reset timer. Không ghi CurrentStep tại network này."
+    },
+    {
+      "number": 18,
+      "title_vi": "Bộ định thời và chuyển bước 2 → 3",
+      "logic": [
+        "Timer2(IN := Run AND (CurrentStep = 2), PT := T#10s);",
+        "IF Run AND CurrentStep = 2 AND Timer2.Q THEN NextStep := 3; END_IF;"
+      ],
+      "notes_vi": "Instance TON riêng, gọi ở mọi vòng quét, IN=0 phải reset timer. Không ghi CurrentStep tại network này."
+    },
+    {
+      "number": 19,
+      "title_vi": "Bộ định thời và chuyển bước 3 → 4",
+      "logic": [
+        "Timer3(IN := Run AND (CurrentStep = 3), PT := T#10s);",
+        "IF Run AND CurrentStep = 3 AND Timer3.Q THEN NextStep := 4; END_IF;"
+      ],
+      "notes_vi": "Instance TON riêng, gọi ở mọi vòng quét, IN=0 phải reset timer. Không ghi CurrentStep tại network này."
+    },
+    {
+      "number": 20,
+      "title_vi": "Bộ định thời và chuyển bước 4 → 5",
+      "logic": [
+        "Timer4(IN := Run AND (CurrentStep = 4), PT := T#10s);",
+        "IF Run AND CurrentStep = 4 AND Timer4.Q THEN NextStep := 5; END_IF;"
+      ],
+      "notes_vi": "Instance TON riêng, gọi ở mọi vòng quét, IN=0 phải reset timer. Không ghi CurrentStep tại network này."
+    },
+    {
+      "number": 21,
+      "title_vi": "Bộ định thời và chuyển bước 5 → 1",
+      "logic": [
+        "Timer5(IN := Run AND (CurrentStep = 5), PT := T#10s);",
+        "IF Run AND CurrentStep = 5 AND Timer5.Q THEN NextStep := 1; END_IF;"
+      ],
+      "notes_vi": "Instance TON riêng, gọi ở mọi vòng quét, IN=0 phải reset timer. Không ghi CurrentStep tại network này."
+    },
+    {
+      "number": 22,
+      "title_vi": "Chốt bước một lần sau các timer",
+      "logic": [
+        "CurrentStep := NextStep;"
+      ],
+      "notes_vi": "Bảo toàn cơ chế current/next để không chuyển dây chuyền nhiều bước trong một scan."
+    },
+    {
+      "number": 23,
+      "title_vi": "Chặn ngõ ra khi bước không hợp lệ",
+      "logic": [
+        "OutputEnable := Run AND (CurrentStep >= 1) AND (CurrentStep <= 5);"
+      ],
+      "notes_vi": "Đầu ra được viết sau commit bước. Bước 0/dừng không có điện ra."
+    },
+    {
+      "number": 24,
+      "title_vi": "Xuất lệnh bơm và bốn van",
+      "logic": [
+        "Pump := OutputEnable;",
+        "Valve1 := OutputEnable AND (CurrentStep <= 4);",
+        "Valve2 := OutputEnable AND (CurrentStep >= 2);",
+        "Valve3 := OutputEnable AND (CurrentStep >= 3) AND (CurrentStep <= 4);",
+        "Valve4 := OutputEnable AND (CurrentStep >= 4);"
+      ],
+      "notes_vi": "Năm rung độc lập, mỗi ngõ ra chỉ ghi một lần. Mask YV1..4 theo bit thấp đến cao: 1,3,7,15,10. Pump là lệnh, không phải phản hồi motor đã chạy."
+    },
+    {
+      "number": 25,
+      "title_vi": "Đèn báo lỗi",
+      "logic": [
+        "Alarm := FaultLatched;"
+      ],
+      "notes_vi": "STOP có trạng thái riêng. RTC lỗi khi AUTO và bước sai đã vào chốt lỗi NW08/11."
+    },
+    {
+      "number": 26,
+      "title_vi": "Kết thúc vòng quét khởi tạo",
+      "logic": [
+        "InitPending := FALSE;"
+      ],
+      "notes_vi": "Gọi ở cuối cùng. Không xóa FirstScan ở giữa các network."
+    }
+  ]
+}

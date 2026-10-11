@@ -1,0 +1,452 @@
+{
+  "original36_invalid_step": [
+    {
+      "injected_step": -1,
+      "observed": {
+        "revision": "original36",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": false,
+        "bad_step_detected": true,
+        "fault_latched": false,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": true,
+        "run": true,
+        "step": -1,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": false,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 6,
+      "observed": {
+        "revision": "original36",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": false,
+        "bad_step_detected": true,
+        "fault_latched": false,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": true,
+        "run": true,
+        "step": 6,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": false,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 100,
+      "observed": {
+        "revision": "original36",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": false,
+        "bad_step_detected": true,
+        "fault_latched": false,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": true,
+        "run": true,
+        "step": 100,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": false,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 32767,
+      "observed": {
+        "revision": "original36",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": false,
+        "bad_step_detected": true,
+        "fault_latched": false,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": true,
+        "run": true,
+        "step": 32767,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": false,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "revised26_invalid_step": [
+    {
+      "injected_step": -1,
+      "observed": {
+        "revision": "revised26",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": true,
+        "bad_step_detected": true,
+        "fault_latched": true,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": false,
+        "run": false,
+        "step": 0,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": true,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 6,
+      "observed": {
+        "revision": "revised26",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": true,
+        "bad_step_detected": true,
+        "fault_latched": true,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": false,
+        "run": false,
+        "step": 0,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": true,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 100,
+      "observed": {
+        "revision": "revised26",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": true,
+        "bad_step_detected": true,
+        "fault_latched": true,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": false,
+        "run": false,
+        "step": 0,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": true,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "injected_step": 32767,
+      "observed": {
+        "revision": "revised26",
+        "time_ms": 20,
+        "first_scan": false,
+        "rtc_ok": true,
+        "in_schedule": true,
+        "safe": true,
+        "fault_now": true,
+        "bad_step_detected": true,
+        "fault_latched": true,
+        "stop_latched": false,
+        "off_seen": true,
+        "reset_edge": false,
+        "auto_edge": false,
+        "ack": false,
+        "armed": false,
+        "run": false,
+        "step": 0,
+        "pump": false,
+        "valves": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "mask": 0,
+        "alarm": true,
+        "timer_done": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "timer_et_ms": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "dst_status_one": {
+    "original36": {
+      "revision": "original36",
+      "time_ms": 10,
+      "first_scan": false,
+      "rtc_ok": false,
+      "in_schedule": false,
+      "safe": true,
+      "fault_now": false,
+      "bad_step_detected": false,
+      "fault_latched": false,
+      "stop_latched": false,
+      "off_seen": true,
+      "reset_edge": false,
+      "auto_edge": true,
+      "ack": false,
+      "armed": false,
+      "run": false,
+      "step": 0,
+      "pump": false,
+      "valves": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "mask": 0,
+      "alarm": true,
+      "timer_done": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "timer_et_ms": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "revised26": {
+      "revision": "revised26",
+      "time_ms": 10,
+      "first_scan": false,
+      "rtc_ok": true,
+      "in_schedule": true,
+      "safe": true,
+      "fault_now": false,
+      "bad_step_detected": false,
+      "fault_latched": false,
+      "stop_latched": false,
+      "off_seen": true,
+      "reset_edge": false,
+      "auto_edge": true,
+      "ack": false,
+      "armed": true,
+      "run": true,
+      "step": 1,
+      "pump": true,
+      "valves": [
+        true,
+        false,
+        false,
+        false
+      ],
+      "mask": 1,
+      "alarm": false,
+      "timer_done": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "timer_et_ms": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

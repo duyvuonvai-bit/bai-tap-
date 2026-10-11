@@ -1,0 +1,12 @@
+KIEM TRA GOI LAD — 11/10/2026
+
+DOCX doc duoc, 27 hinh LAD, 8 bang.
+PDF bao cao: 36 trang; PDF LAD vector: 27 trang.
+70 PNG mo duoc: 43 hinh goc va 27 hinh de xuat.
+43 hinh goc khop nguyen byte voi ZIP nguon.
+17 muc luc Word da cache so trang doi chieu PDF.
+Khong phat hien ten/MSSV can an, ky tu thay the U+FFFD hay chu tran bien trang.
+Kiem thu mo hinh Python: 31/31 nhom ca dat.
+Day KHONG phai xac nhan Compile TIA/PLCSIM/phan cung.
+
+Xem SHA256SUMS.txt de doi chieu cac tep. ZIP duoc kiem tra CRC va so sanh tung member voi thu muc nguon truoc khi gui.

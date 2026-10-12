@@ -1,0 +1,188 @@
+CHƯƠNG TRÌNH LAD ĐÀI PHUN NƯỚC — S7-1200 / TIA V16
+24 NETWORK OB1 + OB100 — 12/10/2026
+
+Đây là đặc tả từng rung để dựng LAD theo bộ hình, KHÔNG phải nguồn SCL/XML nhập trực tiếp hoặc dự án đã Compile.
+Các từ RD_LOC_T, TON, MOVE, SR, IN, PT, Q là tên lệnh/chân Siemens. Tên biến giữ đúng bảng người dùng.
+
+OB100 — KHỞI TẠO
+Các biến điều khiển và timer không Retain. Không đọc đầu vào tại OB100.
+Rung: RESET "daiphunnuoc".nho_loi
+Rung: RESET "daiphunnuoc".nho_stop
+Rung: RESET "daiphunnuoc".da_gat_tat
+Rung: RESET "daiphunnuoc".cho_phep_auto
+Rung: MOVE 0 -> "daiphunnuoc".buoc_hientai
+Rung: MOVE 0 -> "daiphunnuoc".buoc_tieptheo
+Rung: SET "daiphunnuoc".khoi_tao_cho
+
+Các biến trạng thái/timer không Retain; các biến tổ hợp được ghi mọi scan trước sử dụng. Hai xung được tính lại ở NW07, bị chặn trong scan đầu; hai Mbit nhận đầu vào hiện tại ở NW24 trước khi xóa khoi_tao_cho, nên không cần rung RESET riêng trong OB100.
+
+======================================================================
+NETWORK 01 — Đọc đồng hồ và kiểm tra giờ hợp lệ
+
+RD_LOC_T(RET_VAL => "daiphunnuoc"."trangthai rtc", OUT => "daiphunnuoc"."gio plc");
+"daiphunnuoc".rtc_ok := (("daiphunnuoc"."trangthai rtc" = 0) OR ("daiphunnuoc"."trangthai rtc" = 1)) AND ("daiphunnuoc"."gio plc".HOUR <= 23) AND ("daiphunnuoc"."gio plc".MINUTE <= 59) AND ("daiphunnuoc"."gio plc".SECOND <= 59);
+
+Lưu ý: RD_LOC_T gọi vô điều kiện, sau đó mới tính rtc_ok. Các trường DTL này kiểu USInt. UTC+7, DST tắt tại Việt Nam.
+
+======================================================================
+NETWORK 02 — Ca sáng
+
+"daiphunnuoc".ca_sang := "daiphunnuoc".rtc_ok AND ("daiphunnuoc"."gio plc".HOUR >= 6) AND ("daiphunnuoc"."gio plc".HOUR < 8);
+
+======================================================================
+NETWORK 03 — Ca chiều và tối
+
+"daiphunnuoc".ca_toi := "daiphunnuoc".rtc_ok AND ((("daiphunnuoc"."gio plc".HOUR >= 17) AND ("daiphunnuoc"."gio plc".HOUR < 20)) OR (("daiphunnuoc"."gio plc".HOUR = 20) AND ("daiphunnuoc"."gio plc".MINUTE < 30)));
+
+======================================================================
+NETWORK 04 — Tổng hợp lịch vận hành
+
+"daiphunnuoc".trong_gio := "daiphunnuoc".ca_sang OR "daiphunnuoc".ca_toi;
+
+======================================================================
+NETWORK 05 — Điều kiện đầu vào
+
+"daiphunnuoc".an_toan := "du nuoc" AND "dung khan ok" AND "qua tai" AND "stop";
+
+Lưu ý: I0.4 qua tai=1 là chưa quá tải; I0.5 stop=1 là chưa nhấn STOP. Giữ tên user, ghi comment để tránh đảo mức.
+
+======================================================================
+NETWORK 06 — Lỗi công nghệ, RTC và bước không hợp lệ
+
+"daiphunnuoc".loi_hientai := NOT "du nuoc" OR NOT "dung khan ok" OR NOT "qua tai" OR ("chon auto" AND NOT "daiphunnuoc".rtc_ok) OR ("daiphunnuoc".buoc_hientai < 0) OR ("daiphunnuoc".buoc_hientai > 5);
+
+======================================================================
+NETWORK 07 — Tạo xung cạnh bằng hai Mbit có sẵn
+
+"daiphunnuoc".xung_reset := "nut reset" AND NOT "nhocanh reset" AND NOT "daiphunnuoc".khoi_tao_cho;
+"daiphunnuoc".xung_auto := "chon auto" AND NOT "nhocanh auto" AND NOT "daiphunnuoc".khoi_tao_cho;
+
+Lưu ý: M0.0/M0.1 là trạng thái scan trước; chỉ cập nhật cuối NW24. Không dùng thêm R_TRIG/P_TRIG cho cùng bộ nhớ.
+
+======================================================================
+NETWORK 08 — Điều kiện xác nhận phục hồi lỗi
+
+"daiphunnuoc".xac_nhan_loi := "daiphunnuoc".xung_reset AND NOT "chon auto" AND "daiphunnuoc".an_toan AND "daiphunnuoc".rtc_ok AND NOT "daiphunnuoc".loi_hientai;
+
+======================================================================
+NETWORK 09 — Chốt lỗi
+
+SR "daiphunnuoc".nho_loi: S := "daiphunnuoc".loi_hientai; R1 := "daiphunnuoc".xac_nhan_loi;
+
+Lưu ý: SR/R1 ưu tiên RESET. S và R1 loại trừ nhau.
+
+======================================================================
+NETWORK 10 — Chốt STOP
+
+SR "daiphunnuoc".nho_stop: S := NOT "stop"; R1 := "daiphunnuoc".xac_nhan_loi;
+
+======================================================================
+NETWORK 11 — Ghi nhận đã gạt về TẮT
+
+IF NOT "chon auto" THEN SET "daiphunnuoc".da_gat_tat; END_IF;
+
+Lưu ý: Cuộn S, không phải cuộn thường.
+
+======================================================================
+NETWORK 12 — Thu hồi hoặc cấp quyền AUTO
+
+"daiphunnuoc".huy_phep_chay := NOT "chon auto" OR NOT "daiphunnuoc".an_toan OR NOT "daiphunnuoc".rtc_ok OR "daiphunnuoc".nho_loi OR "daiphunnuoc".nho_stop OR "daiphunnuoc".khoi_tao_cho;
+SR "daiphunnuoc".cho_phep_auto: S := "daiphunnuoc".xung_auto AND "daiphunnuoc".da_gat_tat AND NOT "daiphunnuoc".huy_phep_chay; R1 := "daiphunnuoc".huy_phep_chay;
+
+Lưu ý: Đúng thứ tự: tính hủy rồi chốt. Không đưa ngoài giờ vào hủy quyền.
+
+======================================================================
+NETWORK 13 — Cho phép chạy chu trình
+
+"daiphunnuoc".tu_dong_chay := "daiphunnuoc".cho_phep_auto AND "daiphunnuoc".trong_gio AND NOT "daiphunnuoc".huy_phep_chay;
+
+======================================================================
+NETWORK 14 — Bước tiếp theo mặc định
+
+"daiphunnuoc".buoc_tieptheo := "daiphunnuoc".buoc_hientai;
+IF NOT "daiphunnuoc".tu_dong_chay THEN "daiphunnuoc".buoc_tieptheo := 0; END_IF;
+IF "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 0) THEN "daiphunnuoc".buoc_tieptheo := 1; END_IF;
+
+Lưu ý: Giữ thứ tự ba rung.
+
+======================================================================
+NETWORK 15 — Định thời bước 1, chuyển sang bước 2
+
+"dem_buoc1".TON(IN := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 1), PT := T#10s);
+IF "dem_buoc1".Q THEN "daiphunnuoc".buoc_tieptheo := 2; END_IF;
+
+Lưu ý: Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây.
+
+======================================================================
+NETWORK 16 — Định thời bước 2, chuyển sang bước 3
+
+"dem_buoc2".TON(IN := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 2), PT := T#10s);
+IF "dem_buoc2".Q THEN "daiphunnuoc".buoc_tieptheo := 3; END_IF;
+
+Lưu ý: Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây.
+
+======================================================================
+NETWORK 17 — Định thời bước 3, chuyển sang bước 4
+
+"dem_buoc3".TON(IN := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 3), PT := T#10s);
+IF "dem_buoc3".Q THEN "daiphunnuoc".buoc_tieptheo := 4; END_IF;
+
+Lưu ý: Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây.
+
+======================================================================
+NETWORK 18 — Định thời bước 4, chuyển sang bước 5
+
+"dem_buoc4".TON(IN := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 4), PT := T#10s);
+IF "dem_buoc4".Q THEN "daiphunnuoc".buoc_tieptheo := 5; END_IF;
+
+Lưu ý: Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây.
+
+======================================================================
+NETWORK 19 — Định thời bước 5, chuyển sang bước 1
+
+"dem_buoc5".TON(IN := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai = 5), PT := T#10s);
+IF "dem_buoc5".Q THEN "daiphunnuoc".buoc_tieptheo := 1; END_IF;
+
+Lưu ý: Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây.
+
+======================================================================
+NETWORK 20 — Chốt bước sau năm TON
+
+"daiphunnuoc".buoc_hientai := "daiphunnuoc".buoc_tieptheo;
+
+======================================================================
+NETWORK 21 — Xác nhận có lệnh mở van ở bước hợp lệ
+
+"daiphunnuoc".co_van_mo := "daiphunnuoc".tu_dong_chay AND ("daiphunnuoc".buoc_hientai >= 1) AND ("daiphunnuoc".buoc_hientai <= 5);
+
+Lưu ý: Tái dùng biến có sẵn: đây là lệnh logic, không phải phản hồi van thật.
+
+======================================================================
+NETWORK 22 — Lệnh bơm và bốn van
+
+"bom nuoc" := "daiphunnuoc".co_van_mo;
+"van 1" := "daiphunnuoc".co_van_mo AND ("daiphunnuoc".buoc_hientai <= 4);
+"van 2" := "daiphunnuoc".co_van_mo AND ("daiphunnuoc".buoc_hientai >= 2);
+"van 3" := "daiphunnuoc".co_van_mo AND ("daiphunnuoc".buoc_hientai >= 3) AND ("daiphunnuoc".buoc_hientai <= 4);
+"van 4" := "daiphunnuoc".co_van_mo AND ("daiphunnuoc".buoc_hientai >= 4);
+
+Lưu ý: Mỗi Q một nơi ghi. YV1 là bit thấp: mask 1,3,7,15,10.
+
+======================================================================
+NETWORK 23 — Đèn báo lỗi
+
+"den bao loi" := "daiphunnuoc".nho_loi;
+
+======================================================================
+NETWORK 24 — Cập nhật bộ nhớ cạnh và kết thúc khởi tạo
+
+"nhocanh auto" := "chon auto";
+"nhocanh reset" := "nut reset";
+RESET "daiphunnuoc".khoi_tao_cho;
+
+Lưu ý: Bắt buộc đặt cuối OB1, sau mọi nơi dùng xung. Không ghi các Mbit ở nơi khác.
+
+Đầu vào bình thường: du nuoc = dung khan ok = qua tai = stop = TRUE.
+Khởi động thử: TẮT → AUTO; sau lỗi/STOP: khắc phục → TẮT → thả/nhấn RESET mới → AUTO.
+Giữ thứ tự 24 Network; mỗi Q chỉ một nơi ghi. Không chạy đồng thời chương trình cũ và mới.
+Kiểm tra phần cứng, Compile và chạy thử PLCSIM/CPU thực tế trước vận hành.

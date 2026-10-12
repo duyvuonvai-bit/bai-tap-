@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1190.88pt" height="786.24pt" viewBox="0 0 1190.88 786.24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-11T23:11:50.961487</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 786.24 
+L 1190.88 786.24 
+L 1190.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 0 0 
+L 1190.88 0 
+L 1190.88 65.52 
+L 0 65.52 
+z
+" clip-path="url(#pd1490f7097)" style="fill: #eaf2f7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 445.828182 204.303273 
+L 594.688182 204.303273 
+L 594.688182 284.118545 
+L 445.828182 284.118545 
+z
+" clip-path="url(#pd1490f7097)" style="fill: #eaf2f7; stroke: #a9bdcc; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 750.2544 190.603636 
+L 1000.3392 190.603636 
+L 1000.3392 339.512727 
+L 750.2544 339.512727 
+z
+" clip-path="url(#pd1490f7097)" style="fill: #eaf2f7; stroke: #a9bdcc; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 833.616 470.552727 
+L 1119.4272 470.552727 
+L 1119.4272 556.92 
+L 833.616 556.92 
+z
+" clip-path="url(#pd1490f7097)" style="fill: #eaf2f7; stroke: #a9bdcc; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 29.772 732.037091 
+L 1161.108 732.037091 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #b9cad6"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 38.7036 223.363636 
+L 38.7036 265.058182 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 3"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 38.7036 244.210909 
+L 156.742062 244.210909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 172.223502 244.210909 
+L 290.261964 244.210909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 156.742062 232.298182 
+L 156.742062 256.123636 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 172.223502 232.298182 
+L 172.223502 256.123636 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 290.261964 244.210909 
+L 445.828182 244.210909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 594.688182 244.210909 
+L 750.2544 244.210909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 649.0296 288.883636 
+L 750.2544 288.883636 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 38.7036 485.443636 
+L 38.7036 527.138182 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 3"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 38.7036 506.290909 
+L 428.41908 506.290909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 443.90052 506.290909 
+L 833.616 506.290909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 428.41908 494.378182 
+L 428.41908 518.203636 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 443.90052 494.378182 
+L 443.90052 518.203636 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 1119.4272 506.290909 
+L 1137.2904 506.290909 
+" clip-path="url(#pd1490f7097)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1467a0" x="32.7492" y="26.541068" transform="rotate(-0 32.7492 26.541068)">NETWORK 19 / 24</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="32.7492" y="55.221545" transform="rotate(-0 32.7492 55.221545)">Định thời bước 5 và chuyển 5 → 1</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="32.7492" y="750.889719" transform="rotate(-0 32.7492 750.889719)">THIẾT KẾ LAD ĐỀ XUẤT • S7-1200 / TIA V16 • CHƯA COMPILE / CHƯA CHẠY PLCSIM</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="32.7492" y="766.943642" transform="rotate(-0 32.7492 766.943642)">Tên biến đúng bảng gốc. Biến mới: khoi_tao_cho, xac_nhan_loi. Các chân/lệnh hệ thống giữ tên Siemens.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(118.111219 212.046051)">"daiphunnuoc".</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(122.906532 225.483426)">tu_dong_chay</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b53" x="520.258182" y="220.122886" transform="rotate(-0 520.258182 220.122886)">==  Int</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="450.591702" y="247.609682" transform="rotate(-0 450.591702 247.609682)">IN1</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(472.622982 242.423588)">"daiphunnuoc".</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(472.622982 253.621401)">buoc_hientai</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="450.591702" y="274.413318" transform="rotate(-0 450.591702 274.413318)">IN2</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1467a0" x="472.622982" y="275.241131" transform="rotate(-0 472.622982 275.241131)">5</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1467a0" x="875.2968" y="166.277165" transform="rotate(-0 875.2968 166.277165)">"dem_buoc5"</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b53" x="875.2968" y="218.204693" transform="rotate(-0 875.2968 218.204693)">TON</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="759.186" y="247.522159" transform="rotate(-0 759.186 247.522159)">IN</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183b53" x="991.4076" y="247.522159" transform="rotate(-0 991.4076 247.522159)">Q</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #5d6c79" transform="translate(1015.2252 241.099284)">Dùng Q của</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #5d6c79" transform="translate(1015.2252 253.944878)">instance này</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="759.186" y="292.194886" transform="rotate(-0 759.186 292.194886)">PT</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #1467a0" x="640.098" y="292.470824" transform="rotate(-0 640.098 292.470824)">T#10s</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183b53" x="991.4076" y="292.194886" transform="rotate(-0 991.4076 292.194886)">ET</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="1015.2252" y="292.388168" transform="rotate(-0 1015.2252 292.388168)">Không nối</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="41.6808" y="116.994034" transform="rotate(-0 41.6808 116.994034)">TON được thực hiện ở mọi scan; điều kiện bên trái cấp IN. IN = FALSE phải reset ET/Q.</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="41.6808" y="143.630795" transform="rotate(-0 41.6808 143.630795)">Năm instance độc lập: dem_buoc1…dem_buoc5. Không cần năm Bool xong_buoc1…5.</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1467a0" x="436.1598" y="480.844739" transform="rotate(-0 436.1598 480.844739)">"dem_buoc5".Q</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b53" x="976.5216" y="485.413244" transform="rotate(-0 976.5216 485.413244)">MOVE</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="842.5476" y="509.050284" transform="rotate(-0 842.5476 509.050284)">EN</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #183b53" x="1110.4956" y="509.050284" transform="rotate(-0 1110.4956 509.050284)">ENO</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="842.5476" y="522.74992" transform="rotate(-0 842.5476 522.74992)">IN</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1467a0" x="896.1372" y="524.217131" transform="rotate(-0 896.1372 524.217131)">1</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="842.5476" y="547.766648" transform="rotate(-0 842.5476 547.766648)">OUT1</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(896.1372 541.73082)">"daiphunnuoc".</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(896.1372 554.048413)">buoc_tieptheo</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="38.7036" y="687.005389" transform="rotate(-0 38.7036 687.005389)">PT = T#10s; chuyển bước chịu độ trễ vòng quét. Chỉ ghi buoc_tieptheo tại network này.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd1490f7097">
+   <rect x="0" y="0" width="1190.88" height="786.24"/>
+  </clipPath>
+ </defs>
+</svg>

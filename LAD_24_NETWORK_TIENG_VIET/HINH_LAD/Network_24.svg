@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1190.88pt" height="786.24pt" viewBox="0 0 1190.88 786.24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-11T23:11:51.929646</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 786.24 
+L 1190.88 786.24 
+L 1190.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 0 0 
+L 1190.88 0 
+L 1190.88 65.52 
+L 0 65.52 
+z
+" clip-path="url(#p32cad4d253)" style="fill: #eaf2f7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 1098.5868 213.237818 
+C 1095.903181 213.237818 1093.326731 211.479496 1091.429126 208.352998 
+C 1089.531521 205.2265 1088.46432 200.981536 1088.46432 196.56 
+C 1088.46432 192.138464 1089.531521 187.8935 1091.429126 184.767002 
+C 1093.326731 181.640504 1095.903181 179.882182 1098.5868 179.882182 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 1116.45 179.882182 
+C 1119.133619 179.882182 1121.710069 181.640504 1123.607674 184.767002 
+C 1125.505279 187.8935 1126.57248 192.138464 1126.57248 196.56 
+C 1126.57248 200.981536 1125.505279 205.2265 1123.607674 208.352998 
+C 1121.710069 211.479496 1119.133619 213.237818 1116.45 213.237818 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 1098.5868 403.841455 
+C 1095.903181 403.841455 1093.326731 402.083133 1091.429126 398.956635 
+C 1089.531521 395.830137 1088.46432 391.585172 1088.46432 387.163636 
+C 1088.46432 382.7421 1089.531521 378.497136 1091.429126 375.370638 
+C 1093.326731 372.24414 1095.903181 370.485818 1098.5868 370.485818 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 1116.45 370.485818 
+C 1119.133619 370.485818 1121.710069 372.24414 1123.607674 375.370638 
+C 1125.505279 378.497136 1126.57248 382.7421 1126.57248 387.163636 
+C 1126.57248 391.585172 1125.505279 395.830137 1123.607674 398.956635 
+C 1121.710069 402.083133 1119.133619 403.841455 1116.45 403.841455 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 1098.5868 594.445091 
+C 1095.903181 594.445091 1093.326731 592.686769 1091.429126 589.560271 
+C 1089.531521 586.433773 1088.46432 582.188809 1088.46432 577.767273 
+C 1088.46432 573.345737 1089.531521 569.100772 1091.429126 565.974274 
+C 1093.326731 562.847776 1095.903181 561.089455 1098.5868 561.089455 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 1116.45 561.089455 
+C 1119.133619 561.089455 1121.710069 562.847776 1123.607674 565.974274 
+C 1125.505279 569.100772 1126.57248 573.345737 1126.57248 577.767273 
+C 1126.57248 582.188809 1125.505279 586.433773 1123.607674 589.560271 
+C 1121.710069 592.686769 1119.133619 594.445091 1116.45 594.445091 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 29.772 732.037091 
+L 1161.108 732.037091 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #b9cad6"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 38.7036 175.712727 
+L 38.7036 217.407273 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 3"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 38.7036 196.56 
+L 502.84908 196.56 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 518.33052 196.56 
+L 982.476 196.56 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 502.84908 184.647273 
+L 502.84908 208.472727 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 518.33052 184.647273 
+L 518.33052 208.472727 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 982.476 196.56 
+L 1088.46432 196.56 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 1126.57248 196.56 
+L 1131.336 196.56 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 38.7036 366.316364 
+L 38.7036 408.010909 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 3"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 38.7036 387.163636 
+L 502.84908 387.163636 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 518.33052 387.163636 
+L 982.476 387.163636 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 502.84908 375.250909 
+L 502.84908 399.076364 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 518.33052 375.250909 
+L 518.33052 399.076364 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 982.476 387.163636 
+L 1088.46432 387.163636 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 1126.57248 387.163636 
+L 1131.336 387.163636 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 38.7036 556.92 
+L 38.7036 598.614545 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 3"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 38.7036 577.767273 
+L 982.476 577.767273 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 982.476 577.767273 
+L 1088.46432 577.767273 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 1126.57248 577.767273 
+L 1131.336 577.767273 
+" clip-path="url(#p32cad4d253)" style="fill: none; stroke: #183b53; stroke-width: 2"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #1467a0" x="32.7492" y="26.541068" transform="rotate(-0 32.7492 26.541068)">NETWORK 24 / 24</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #183b53" x="32.7492" y="54.87467" transform="rotate(-0 32.7492 54.87467)">Cập nhật bộ nhớ cạnh và kết thúc khởi tạo</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="32.7492" y="750.889719" transform="rotate(-0 32.7492 750.889719)">THIẾT KẾ LAD ĐỀ XUẤT • S7-1200 / TIA V16 • CHƯA COMPILE / CHƯA CHẠY PLCSIM</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="32.7492" y="766.943642" transform="rotate(-0 32.7492 766.943642)">Tên biến đúng bảng gốc. Biến mới: khoi_tao_cho, xac_nhan_loi. Các chân/lệnh hệ thống giữ tên Siemens.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1467a0" x="510.5898" y="171.280705" transform="rotate(-0 510.5898 171.280705)">"chon auto"</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1061.922405 161.583835)">"nhocanh auto"</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1088.289593 175.02121)">%M0.0</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1467a0" x="510.5898" y="361.884341" transform="rotate(-0 510.5898 361.884341)">"nut reset"</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1060.232093 352.187472)">"nhocanh reset"</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1088.289593 365.624847)">%M0.1</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1062.337718 542.624233)">"daiphunnuoc".</text>
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; fill: #1467a0" transform="translate(1069.621155 556.061608)">khoi_tao_cho</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #183b53" x="1108.70928" y="581.630398" transform="rotate(-0 1108.70928 581.630398)">R</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #5d6c79" x="38.7036" y="687.050702" transform="rotate(-0 38.7036 687.050702)">Ba rung theo đúng thứ tự, sau toàn bộ logic. Không chuyển ghi hai Mbit lên trước Network 7.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p32cad4d253">
+   <rect x="0" y="0" width="1190.88" height="786.24"/>
+  </clipPath>
+ </defs>
+</svg>

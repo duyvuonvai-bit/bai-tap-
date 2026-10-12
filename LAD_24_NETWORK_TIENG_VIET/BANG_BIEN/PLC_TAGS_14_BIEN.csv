@@ -1,0 +1,15 @@
+﻿Tên biến chính xác,Kiểu,Địa chỉ,Xử lý,Chú thích
+chon auto,Bool,%I0.0,Giữ nguyên,1 = chọn AUTO; 0 = TẮT.
+du nuoc,Bool,%I0.1,Giữ nguyên,1 = đủ nước; 0 = thiếu nước hoặc hở mạch.
+nut reset,Bool,%I0.2,Giữ nguyên,Nút NO; 1 = đang nhấn RESET.
+dung khan ok,Bool,%I0.3,Giữ nguyên,1 = mạch dừng khẩn bình thường; 0 = tác động hoặc hở mạch.
+qua tai,Bool,%I0.4,Giữ nguyên,Tên giữ theo ảnh. Tiếp điểm NC: 1 = CHƯA quá tải; 0 = quá tải hoặc hở mạch.
+stop,Bool,%I0.5,Giữ nguyên,Tên giữ theo ảnh. Nút NC: 1 = CHƯA nhấn STOP; 0 = nhấn STOP hoặc hở mạch.
+bom nuoc,Bool,%Q0.0,Giữ nguyên,Lệnh điều khiển bơm; không phải phản hồi bơm thật.
+van 1,Bool,%Q0.1,Giữ nguyên,Lệnh mở van 1.
+van 2,Bool,%Q0.2,Giữ nguyên,Lệnh mở van 2.
+van 3,Bool,%Q0.3,Giữ nguyên,Lệnh mở van 3.
+van 4,Bool,%Q0.4,Giữ nguyên,Lệnh mở van 4.
+den bao loi,Bool,%Q0.5,Giữ nguyên,Đèn báo lỗi đã chốt. STOP được lưu riêng; không tự coi STOP là lỗi thiết bị.
+nhocanh auto,Bool,%M0.0,"Giữ, dùng lại",Giá trị chon auto của vòng quét trước; chỉ cập nhật cuối OB1; không Retain.
+nhocanh reset,Bool,%M0.1,"Giữ, dùng lại",Giá trị nut reset của vòng quét trước; chỉ cập nhật cuối OB1; không Retain.

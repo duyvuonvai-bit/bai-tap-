@@ -1,0 +1,22 @@
+﻿Tên trường chính xác,Kiểu,Giá trị khởi đầu,Retain,Xử lý,Chú thích
+gio plc,DTL,DTL#1970-01-01-00:00:00.0,FALSE,Giữ nguyên tên,"Ngày giờ cục bộ do RD_LOC_T trả về; dùng các thành phần HOUR, MINUTE, SECOND."
+trangthai rtc,Int,0,FALSE,Giữ nguyên tên,Mã RET_VAL của RD_LOC_T; đọc mới trước khi tính rtc_ok.
+rtc_ok,Bool,FALSE,FALSE,Giữ nguyên tên,Đọc RTC thành công và giờ/phút/giây thuộc miền hợp lệ; không chứng minh đồng hồ đã đặt đúng giờ.
+ca_sang,Bool,FALSE,FALSE,Giữ nguyên tên,Lịch sáng: từ 06:00:00 đến trước 08:00:00.
+ca_toi,Bool,FALSE,FALSE,Giữ nguyên tên,Lịch chiều tối: từ 17:00:00 đến trước 20:30:00.
+trong_gio,Bool,FALSE,FALSE,Giữ nguyên tên,ca_sang OR ca_toi.
+an_toan,Bool,FALSE,FALSE,Giữ nguyên tên,du nuoc AND dung khan ok AND qua tai AND stop; cả bốn phải bằng 1.
+loi_hientai,Bool,FALSE,FALSE,Giữ nguyên tên,"Thiếu nước, dừng khẩn, quá tải, RTC lỗi khi chọn AUTO, hoặc buoc_hientai ngoài 0..5."
+nho_loi,Bool,FALSE,FALSE,Giữ nguyên tên,Chốt lỗi; chỉ xóa khi đủ điều kiện xac_nhan_loi.
+nho_stop,Bool,FALSE,FALSE,Giữ nguyên tên,Chốt yêu cầu STOP; chỉ xóa khi đủ điều kiện xac_nhan_loi.
+xung_reset,Bool,FALSE,FALSE,Giữ nguyên tên,Cạnh lên nut reset từ bộ nhớ nhocanh reset; chặn trong vòng quét khởi tạo.
+xung_auto,Bool,FALSE,FALSE,Giữ nguyên tên,Cạnh lên chon auto từ bộ nhớ nhocanh auto; chặn trong vòng quét khởi tạo.
+da_gat_tat,Bool,FALSE,FALSE,Giữ nguyên tên,Đã quan sát chon auto = 0 sau khởi động; dùng cuộn SET và xóa khi khởi tạo.
+huy_phep_chay,Bool,FALSE,FALSE,Giữ nguyên tên,"TẮT, mất an toàn, RTC lỗi, lỗi/STOP đã chốt hoặc đang khởi tạo. Ngoài giờ không hủy quyền AUTO."
+cho_phep_auto,Bool,FALSE,FALSE,Giữ nguyên tên,Quyền AUTO đã chốt sau thao tác TẮT rồi AUTO hợp lệ.
+tu_dong_chay,Bool,FALSE,FALSE,Giữ nguyên tên,"Quyền AUTO hợp lệ, trong giờ và không huy_phep_chay."
+buoc_hientai,Int,0,FALSE,Giữ nguyên tên,0 = dừng; 1..5 = bước hợp lệ; ngoài 0..5 phải chốt lỗi.
+buoc_tieptheo,Int,0,FALSE,Giữ nguyên tên,Bước tính cho cuối vòng quét; chỉ commit một lần sau đủ năm TON.
+co_van_mo,Bool,FALSE,FALSE,Giữ nguyên tên,Điều kiện lệnh: tu_dong_chay AND buoc_hientai trong 1..5. Không phải xác nhận van thật đã mở.
+khoi_tao_cho,Bool,TRUE,FALSE,Thêm,OB100 SET; giữ bằng 1 suốt vòng quét OB1 đầu để chặn xung/quyền chạy; RESET sau cập nhật bộ nhớ cạnh cuối OB1.
+xac_nhan_loi,Bool,FALSE,FALSE,Thêm,xung_reset AND NOT chon auto AND an_toan AND rtc_ok AND NOT loi_hientai.

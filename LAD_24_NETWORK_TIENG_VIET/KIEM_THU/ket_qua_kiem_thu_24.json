@@ -1,0 +1,356 @@
+{
+  "pham_vi": "Mô hình Python độc lập; chưa Compile TIA/PLCSIM/CPU thực tế",
+  "tong_nhom": 34,
+  "dat": 34,
+  "khong_dat": 0,
+  "gia_dinh": [
+    "Ảnh vào ổn định trong scan, một nơi ghi Mbit và mỗi Q",
+    "TON độc lập, gọi mọi scan; IN FALSE xóa Q/ET",
+    "Timer theo thời gian đơn điệu, lịch theo RTC",
+    "OB100/state không Retain; địa chỉ M không chồng lấn",
+    "Quá tải và STOP bằng 1 khi bình thường"
+  ],
+  "ket_qua": [
+    {
+      "ten": "Lịch đủ 1.440 phút",
+      "dat": true,
+      "bang_chung": {
+        "mau": 1440,
+        "tong_giay_van_hanh": 19800
+      }
+    },
+    {
+      "ten": "Lịch đủ 86.400 giây, gồm ranh giới ca",
+      "dat": true,
+      "bang_chung": {
+        "mau": 86400,
+        "tong_giay_van_hanh": 19800
+      }
+    },
+    {
+      "ten": "Hai chu trình, bơm liên tục, quét 1 ms",
+      "dat": true,
+      "bang_chung": {
+        "chu_ky_quet_ms": 1,
+        "thoi_gian_10_buoc_ms": [
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001,
+          10001
+        ]
+      }
+    },
+    {
+      "ten": "Hai chu trình, bơm liên tục, quét 10 ms",
+      "dat": true,
+      "bang_chung": {
+        "chu_ky_quet_ms": 10,
+        "thoi_gian_10_buoc_ms": [
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010,
+          10010
+        ]
+      }
+    },
+    {
+      "ten": "Hai chu trình, bơm liên tục, quét 37 ms",
+      "dat": true,
+      "bang_chung": {
+        "chu_ky_quet_ms": 37,
+        "thoi_gian_10_buoc_ms": [
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064,
+          10064
+        ]
+      }
+    },
+    {
+      "ten": "Dừng và phục hồi du nuoc ở cả năm bước",
+      "dat": true,
+      "bang_chung": {
+        "dau_vao": "du nuoc",
+        "thu_tai_buoc": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phuc_hoi": "TẮT → nhấn RESET mới → AUTO"
+      }
+    },
+    {
+      "ten": "Dừng và phục hồi dung khan ok ở cả năm bước",
+      "dat": true,
+      "bang_chung": {
+        "dau_vao": "dung khan ok",
+        "thu_tai_buoc": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phuc_hoi": "TẮT → nhấn RESET mới → AUTO"
+      }
+    },
+    {
+      "ten": "Dừng và phục hồi qua tai ở cả năm bước",
+      "dat": true,
+      "bang_chung": {
+        "dau_vao": "qua tai",
+        "thu_tai_buoc": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phuc_hoi": "TẮT → nhấn RESET mới → AUTO"
+      }
+    },
+    {
+      "ten": "Dừng và phục hồi stop ở cả năm bước",
+      "dat": true,
+      "bang_chung": {
+        "dau_vao": "stop",
+        "thu_tai_buoc": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "phuc_hoi": "TẮT → nhấn RESET mới → AUTO"
+      }
+    },
+    {
+      "ten": "RESET giữ khi khởi động, AUTO=0",
+      "dat": true,
+      "bang_chung": {
+        "AUTO_luc_cap_nguon": false,
+        "RESET_giu": "Không xóa lỗi cho đến nhả/nhấn mới"
+      }
+    },
+    {
+      "ten": "RESET giữ khi khởi động, AUTO=1",
+      "dat": true,
+      "bang_chung": {
+        "AUTO_luc_cap_nguon": true,
+        "RESET_giu": "Không xóa lỗi cho đến nhả/nhấn mới"
+      }
+    },
+    {
+      "ten": "AUTO giữ khi khởi động",
+      "dat": true,
+      "bang_chung": "Cấp nguồn AUTO=1 bị chặn, OFF→AUTO mới chạy"
+    },
+    {
+      "ten": "RESET giữ xuyên suốt phục hồi lỗi",
+      "dat": true,
+      "bang_chung": "RESET giữ không tự xác nhận khi nước trở lại"
+    },
+    {
+      "ten": "OFF→AUTO không có lỗi",
+      "dat": true,
+      "bang_chung": "OFF thông thường rồi AUTO không cần RESET"
+    },
+    {
+      "ten": "Tự chạy ca kế tiếp",
+      "dat": true,
+      "bang_chung": "Giữ quyền qua 08:00/20:30, tự chạy ca sau; không báo lỗi ngoài giờ"
+    },
+    {
+      "ten": "Lỗi RTC và phục hồi",
+      "dat": true,
+      "bang_chung": "Lỗi RTC khi AUTO chốt và yêu cầu OFF→RESET→AUTO"
+    },
+    {
+      "ten": "Trạng thái RD_LOC_T 0",
+      "dat": true,
+      "bang_chung": {
+        "ma_tra": 0,
+        "duoc_phep": true
+      }
+    },
+    {
+      "ten": "Trạng thái RD_LOC_T 1",
+      "dat": true,
+      "bang_chung": {
+        "ma_tra": 1,
+        "duoc_phep": true
+      }
+    },
+    {
+      "ten": "Trạng thái RD_LOC_T -32768",
+      "dat": true,
+      "bang_chung": {
+        "ma_tra": -32768,
+        "duoc_phep": false
+      }
+    },
+    {
+      "ten": "Trạng thái RD_LOC_T 2",
+      "dat": true,
+      "bang_chung": {
+        "ma_tra": 2,
+        "duoc_phep": false
+      }
+    },
+    {
+      "ten": "Miền RTC gio=24",
+      "dat": true,
+      "bang_chung": {
+        "gio": 24,
+        "ket_qua": "Dừng và chốt lỗi"
+      }
+    },
+    {
+      "ten": "Miền RTC phut=60",
+      "dat": true,
+      "bang_chung": {
+        "phut": 60,
+        "ket_qua": "Dừng và chốt lỗi"
+      }
+    },
+    {
+      "ten": "Miền RTC giay=60",
+      "dat": true,
+      "bang_chung": {
+        "giay": 60,
+        "ket_qua": "Dừng và chốt lỗi"
+      }
+    },
+    {
+      "ten": "Ghi sai bước khi đang ở bước 1",
+      "dat": true,
+      "bang_chung": {
+        "buoc_truoc_loi": 1,
+        "gia_tri_hong": [
+          -32768,
+          -1,
+          6,
+          100,
+          32767
+        ]
+      }
+    },
+    {
+      "ten": "Ghi sai bước khi đang ở bước 2",
+      "dat": true,
+      "bang_chung": {
+        "buoc_truoc_loi": 2,
+        "gia_tri_hong": [
+          -32768,
+          -1,
+          6,
+          100,
+          32767
+        ]
+      }
+    },
+    {
+      "ten": "Ghi sai bước khi đang ở bước 3",
+      "dat": true,
+      "bang_chung": {
+        "buoc_truoc_loi": 3,
+        "gia_tri_hong": [
+          -32768,
+          -1,
+          6,
+          100,
+          32767
+        ]
+      }
+    },
+    {
+      "ten": "Ghi sai bước khi đang ở bước 4",
+      "dat": true,
+      "bang_chung": {
+        "buoc_truoc_loi": 4,
+        "gia_tri_hong": [
+          -32768,
+          -1,
+          6,
+          100,
+          32767
+        ]
+      }
+    },
+    {
+      "ten": "Ghi sai bước khi đang ở bước 5",
+      "dat": true,
+      "bang_chung": {
+        "buoc_truoc_loi": 5,
+        "gia_tri_hong": [
+          -32768,
+          -1,
+          6,
+          100,
+          32767
+        ]
+      }
+    },
+    {
+      "ten": "STOP trùng lúc TON đủ 10 giây",
+      "dat": true,
+      "bang_chung": "STOP cùng scan TON tới hạn vẫn thắng; đủ năm TON được reset"
+    },
+    {
+      "ten": "So sánh 24 với 26 trên 50.000 scan ngẫu nhiên",
+      "dat": true,
+      "bang_chung": {
+        "so_vong_quet": 50000,
+        "hat_giong": 20261011,
+        "pham_vi": "Trạng thái, cạnh, latch, đầu ra, Q/ET timer; có lỗi bước và RTC"
+      }
+    },
+    {
+      "ten": "So sánh 4.096 cặp đầu vào startup với bản26",
+      "dat": true,
+      "bang_chung": {
+        "cap_dau_vao_scan_dau_va_scan_sau": 4096,
+        "so_dau_vao_bool": 6
+      }
+    },
+    {
+      "ten": "So sánh 24/26 khi chạy liên tục 150 giây",
+      "dat": true,
+      "bang_chung": {
+        "thoi_gian_mo_phong_ms": 150000,
+        "chu_ky_quet_ms": 37,
+        "pham_vi": "Hơn hai chu trình liên tục, so sánh từng scan và Q/ET năm TON"
+      }
+    },
+    {
+      "ten": "Khởi động lại lúc đang ở bước 5",
+      "dat": true,
+      "bang_chung": "OB100 mô phỏng reset trạng thái, OFF→AUTO lại sau khởi động"
+    },
+    {
+      "ten": "Bốn trạng thái M ban đầu không tạo cạnh giả",
+      "dat": true,
+      "bang_chung": "Cả 4 trạng thái M ban đầu đều bị chặn cạnh scan đầu; giữ RESET không xóa lỗi; OFF + cạnh RESET mới + AUTO mới chạy."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+﻿Tên instance,Lệnh,PT,Yêu cầu,Chú thích
+dem_buoc1,TON,T#10s,"Một instance riêng, gọi mỗi vòng quét",IN = tu_dong_chay AND buoc_hientai = 1; Q cho phép chuyển sang bước 2.
+dem_buoc2,TON,T#10s,"Một instance riêng, gọi mỗi vòng quét",IN = tu_dong_chay AND buoc_hientai = 2; Q cho phép chuyển sang bước 3.
+dem_buoc3,TON,T#10s,"Một instance riêng, gọi mỗi vòng quét",IN = tu_dong_chay AND buoc_hientai = 3; Q cho phép chuyển sang bước 4.
+dem_buoc4,TON,T#10s,"Một instance riêng, gọi mỗi vòng quét",IN = tu_dong_chay AND buoc_hientai = 4; Q cho phép chuyển sang bước 5.
+dem_buoc5,TON,T#10s,"Một instance riêng, gọi mỗi vòng quét",IN = tu_dong_chay AND buoc_hientai = 5; Q cho phép chuyển sang bước 1.

@@ -1,0 +1,261 @@
+{
+  "dinh_dang": "Đặc tả ngữ nghĩa LAD, không phải XML TIA hoặc mã đã biên dịch",
+  "phien_ban": "24 network, tên biến đúng bảng người dùng",
+  "OB100": {
+    "khong_doc_dau_vao": true,
+    "reset_bool": [
+      "nho_loi",
+      "nho_stop",
+      "da_gat_tat",
+      "cho_phep_auto"
+    ],
+    "reset_mbit": [],
+    "move_0": [
+      "buoc_hientai",
+      "buoc_tieptheo"
+    ],
+    "set_bool": [
+      "khoi_tao_cho"
+    ],
+    "chu_y": "Các biến trạng thái/timer không Retain; các biến tổ hợp được ghi mọi scan trước sử dụng. Hai xung được tính lại ở NW07, bị chặn trong scan đầu; hai Mbit nhận đầu vào hiện tại ở NW24 trước khi xóa khoi_tao_cho, nên không cần rung RESET riêng trong OB100."
+  },
+  "bien_DB_them": [
+    {
+      "ten": "khoi_tao_cho",
+      "kieu": "Bool",
+      "start": true,
+      "retain": false
+    },
+    {
+      "ten": "xac_nhan_loi",
+      "kieu": "Bool",
+      "start": false,
+      "retain": false
+    }
+  ],
+  "khong_con_dung_trong_thuat_toan": [
+    "xong_buoc1",
+    "xong_buoc2",
+    "xong_buoc3",
+    "xong_buoc4",
+    "xong_buoc5"
+  ],
+  "chu_y_xoa": "Chỉ xóa trường DB hoặc instance cũ sau kiểm tra cross-reference toàn dự án/HMI. Không coi bảng xuất bản là yêu cầu xóa mù.",
+  "timer": [
+    "dem_buoc1",
+    "dem_buoc2",
+    "dem_buoc3",
+    "dem_buoc4",
+    "dem_buoc5"
+  ],
+  "networks": [
+    {
+      "so": 1,
+      "ten": "Đọc đồng hồ và kiểm tra giờ hợp lệ",
+      "logic": [
+        "RD_LOC_T(RET_VAL => \"daiphunnuoc\".\"trangthai rtc\", OUT => \"daiphunnuoc\".\"gio plc\");",
+        "\"daiphunnuoc\".rtc_ok := ((\"daiphunnuoc\".\"trangthai rtc\" = 0) OR (\"daiphunnuoc\".\"trangthai rtc\" = 1)) AND (\"daiphunnuoc\".\"gio plc\".HOUR <= 23) AND (\"daiphunnuoc\".\"gio plc\".MINUTE <= 59) AND (\"daiphunnuoc\".\"gio plc\".SECOND <= 59);"
+      ],
+      "ghi_chu": "RD_LOC_T gọi vô điều kiện, sau đó mới tính rtc_ok. Các trường DTL này kiểu USInt. UTC+7, DST tắt tại Việt Nam."
+    },
+    {
+      "so": 2,
+      "ten": "Ca sáng",
+      "logic": [
+        "\"daiphunnuoc\".ca_sang := \"daiphunnuoc\".rtc_ok AND (\"daiphunnuoc\".\"gio plc\".HOUR >= 6) AND (\"daiphunnuoc\".\"gio plc\".HOUR < 8);"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 3,
+      "ten": "Ca chiều và tối",
+      "logic": [
+        "\"daiphunnuoc\".ca_toi := \"daiphunnuoc\".rtc_ok AND (((\"daiphunnuoc\".\"gio plc\".HOUR >= 17) AND (\"daiphunnuoc\".\"gio plc\".HOUR < 20)) OR ((\"daiphunnuoc\".\"gio plc\".HOUR = 20) AND (\"daiphunnuoc\".\"gio plc\".MINUTE < 30)));"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 4,
+      "ten": "Tổng hợp lịch vận hành",
+      "logic": [
+        "\"daiphunnuoc\".trong_gio := \"daiphunnuoc\".ca_sang OR \"daiphunnuoc\".ca_toi;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 5,
+      "ten": "Điều kiện đầu vào",
+      "logic": [
+        "\"daiphunnuoc\".an_toan := \"du nuoc\" AND \"dung khan ok\" AND \"qua tai\" AND \"stop\";"
+      ],
+      "ghi_chu": "I0.4 qua tai=1 là chưa quá tải; I0.5 stop=1 là chưa nhấn STOP. Giữ tên user, ghi comment để tránh đảo mức."
+    },
+    {
+      "so": 6,
+      "ten": "Lỗi công nghệ, RTC và bước không hợp lệ",
+      "logic": [
+        "\"daiphunnuoc\".loi_hientai := NOT \"du nuoc\" OR NOT \"dung khan ok\" OR NOT \"qua tai\" OR (\"chon auto\" AND NOT \"daiphunnuoc\".rtc_ok) OR (\"daiphunnuoc\".buoc_hientai < 0) OR (\"daiphunnuoc\".buoc_hientai > 5);"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 7,
+      "ten": "Tạo xung cạnh bằng hai Mbit có sẵn",
+      "logic": [
+        "\"daiphunnuoc\".xung_reset := \"nut reset\" AND NOT \"nhocanh reset\" AND NOT \"daiphunnuoc\".khoi_tao_cho;",
+        "\"daiphunnuoc\".xung_auto := \"chon auto\" AND NOT \"nhocanh auto\" AND NOT \"daiphunnuoc\".khoi_tao_cho;"
+      ],
+      "ghi_chu": "M0.0/M0.1 là trạng thái scan trước; chỉ cập nhật cuối NW24. Không dùng thêm R_TRIG/P_TRIG cho cùng bộ nhớ."
+    },
+    {
+      "so": 8,
+      "ten": "Điều kiện xác nhận phục hồi lỗi",
+      "logic": [
+        "\"daiphunnuoc\".xac_nhan_loi := \"daiphunnuoc\".xung_reset AND NOT \"chon auto\" AND \"daiphunnuoc\".an_toan AND \"daiphunnuoc\".rtc_ok AND NOT \"daiphunnuoc\".loi_hientai;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 9,
+      "ten": "Chốt lỗi",
+      "logic": [
+        "SR \"daiphunnuoc\".nho_loi: S := \"daiphunnuoc\".loi_hientai; R1 := \"daiphunnuoc\".xac_nhan_loi;"
+      ],
+      "ghi_chu": "SR/R1 ưu tiên RESET. S và R1 loại trừ nhau."
+    },
+    {
+      "so": 10,
+      "ten": "Chốt STOP",
+      "logic": [
+        "SR \"daiphunnuoc\".nho_stop: S := NOT \"stop\"; R1 := \"daiphunnuoc\".xac_nhan_loi;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 11,
+      "ten": "Ghi nhận đã gạt về TẮT",
+      "logic": [
+        "IF NOT \"chon auto\" THEN SET \"daiphunnuoc\".da_gat_tat; END_IF;"
+      ],
+      "ghi_chu": "Cuộn S, không phải cuộn thường."
+    },
+    {
+      "so": 12,
+      "ten": "Thu hồi hoặc cấp quyền AUTO",
+      "logic": [
+        "\"daiphunnuoc\".huy_phep_chay := NOT \"chon auto\" OR NOT \"daiphunnuoc\".an_toan OR NOT \"daiphunnuoc\".rtc_ok OR \"daiphunnuoc\".nho_loi OR \"daiphunnuoc\".nho_stop OR \"daiphunnuoc\".khoi_tao_cho;",
+        "SR \"daiphunnuoc\".cho_phep_auto: S := \"daiphunnuoc\".xung_auto AND \"daiphunnuoc\".da_gat_tat AND NOT \"daiphunnuoc\".huy_phep_chay; R1 := \"daiphunnuoc\".huy_phep_chay;"
+      ],
+      "ghi_chu": "Đúng thứ tự: tính hủy rồi chốt. Không đưa ngoài giờ vào hủy quyền."
+    },
+    {
+      "so": 13,
+      "ten": "Cho phép chạy chu trình",
+      "logic": [
+        "\"daiphunnuoc\".tu_dong_chay := \"daiphunnuoc\".cho_phep_auto AND \"daiphunnuoc\".trong_gio AND NOT \"daiphunnuoc\".huy_phep_chay;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 14,
+      "ten": "Bước tiếp theo mặc định",
+      "logic": [
+        "\"daiphunnuoc\".buoc_tieptheo := \"daiphunnuoc\".buoc_hientai;",
+        "IF NOT \"daiphunnuoc\".tu_dong_chay THEN \"daiphunnuoc\".buoc_tieptheo := 0; END_IF;",
+        "IF \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 0) THEN \"daiphunnuoc\".buoc_tieptheo := 1; END_IF;"
+      ],
+      "ghi_chu": "Giữ thứ tự ba rung."
+    },
+    {
+      "so": 15,
+      "ten": "Định thời bước 1, chuyển sang bước 2",
+      "logic": [
+        "\"dem_buoc1\".TON(IN := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 1), PT := T#10s);",
+        "IF \"dem_buoc1\".Q THEN \"daiphunnuoc\".buoc_tieptheo := 2; END_IF;"
+      ],
+      "ghi_chu": "Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây."
+    },
+    {
+      "so": 16,
+      "ten": "Định thời bước 2, chuyển sang bước 3",
+      "logic": [
+        "\"dem_buoc2\".TON(IN := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 2), PT := T#10s);",
+        "IF \"dem_buoc2\".Q THEN \"daiphunnuoc\".buoc_tieptheo := 3; END_IF;"
+      ],
+      "ghi_chu": "Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây."
+    },
+    {
+      "so": 17,
+      "ten": "Định thời bước 3, chuyển sang bước 4",
+      "logic": [
+        "\"dem_buoc3\".TON(IN := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 3), PT := T#10s);",
+        "IF \"dem_buoc3\".Q THEN \"daiphunnuoc\".buoc_tieptheo := 4; END_IF;"
+      ],
+      "ghi_chu": "Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây."
+    },
+    {
+      "so": 18,
+      "ten": "Định thời bước 4, chuyển sang bước 5",
+      "logic": [
+        "\"dem_buoc4\".TON(IN := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 4), PT := T#10s);",
+        "IF \"dem_buoc4\".Q THEN \"daiphunnuoc\".buoc_tieptheo := 5; END_IF;"
+      ],
+      "ghi_chu": "Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây."
+    },
+    {
+      "so": 19,
+      "ten": "Định thời bước 5, chuyển sang bước 1",
+      "logic": [
+        "\"dem_buoc5\".TON(IN := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai = 5), PT := T#10s);",
+        "IF \"dem_buoc5\".Q THEN \"daiphunnuoc\".buoc_tieptheo := 1; END_IF;"
+      ],
+      "ghi_chu": "Sơ đồ ngữ nghĩa: dùng TON, mỗi timer có instance riêng do TIA tạo đúng loại. Gọi mọi scan; IN=0 reset Q/ET. Q sau lời gọi điều khiển MOVE, không ghi buoc_hientai tại đây."
+    },
+    {
+      "so": 20,
+      "ten": "Chốt bước sau năm TON",
+      "logic": [
+        "\"daiphunnuoc\".buoc_hientai := \"daiphunnuoc\".buoc_tieptheo;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 21,
+      "ten": "Xác nhận có lệnh mở van ở bước hợp lệ",
+      "logic": [
+        "\"daiphunnuoc\".co_van_mo := \"daiphunnuoc\".tu_dong_chay AND (\"daiphunnuoc\".buoc_hientai >= 1) AND (\"daiphunnuoc\".buoc_hientai <= 5);"
+      ],
+      "ghi_chu": "Tái dùng biến có sẵn: đây là lệnh logic, không phải phản hồi van thật."
+    },
+    {
+      "so": 22,
+      "ten": "Lệnh bơm và bốn van",
+      "logic": [
+        "\"bom nuoc\" := \"daiphunnuoc\".co_van_mo;",
+        "\"van 1\" := \"daiphunnuoc\".co_van_mo AND (\"daiphunnuoc\".buoc_hientai <= 4);",
+        "\"van 2\" := \"daiphunnuoc\".co_van_mo AND (\"daiphunnuoc\".buoc_hientai >= 2);",
+        "\"van 3\" := \"daiphunnuoc\".co_van_mo AND (\"daiphunnuoc\".buoc_hientai >= 3) AND (\"daiphunnuoc\".buoc_hientai <= 4);",
+        "\"van 4\" := \"daiphunnuoc\".co_van_mo AND (\"daiphunnuoc\".buoc_hientai >= 4);"
+      ],
+      "ghi_chu": "Mỗi Q một nơi ghi. YV1 là bit thấp: mask 1,3,7,15,10."
+    },
+    {
+      "so": 23,
+      "ten": "Đèn báo lỗi",
+      "logic": [
+        "\"den bao loi\" := \"daiphunnuoc\".nho_loi;"
+      ],
+      "ghi_chu": ""
+    },
+    {
+      "so": 24,
+      "ten": "Cập nhật bộ nhớ cạnh và kết thúc khởi tạo",
+      "logic": [
+        "\"nhocanh auto\" := \"chon auto\";",
+        "\"nhocanh reset\" := \"nut reset\";",
+        "RESET \"daiphunnuoc\".khoi_tao_cho;"
+      ],
+      "ghi_chu": "Bắt buộc đặt cuối OB1, sau mọi nơi dùng xung. Không ghi các Mbit ở nơi khác."
+    }
+  ]
+}

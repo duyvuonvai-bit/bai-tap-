@@ -1,0 +1,7 @@
+{
+  "checked_physical_pin_connections": 147,
+  "netlist_mismatches": [],
+  "virtual_power_flags_excluded": 3,
+  "erc_violations": 0,
+  "scope": "Controller schematic only; not power PCB or complete charger validation"
+}

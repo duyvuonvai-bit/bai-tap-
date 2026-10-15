@@ -1,0 +1,157 @@
+[
+  {
+    "pin": "1",
+    "ST_pin_name": "VBAT",
+    "net": "3V3"
+  },
+  {
+    "pin": "7",
+    "ST_pin_name": "PG10-NRST",
+    "net": "NRST"
+  },
+  {
+    "pin": "16",
+    "ST_pin_name": "VDD",
+    "net": "3V3"
+  },
+  {
+    "pin": "32",
+    "ST_pin_name": "VDD",
+    "net": "3V3"
+  },
+  {
+    "pin": "48",
+    "ST_pin_name": "VDD",
+    "net": "3V3"
+  },
+  {
+    "pin": "64",
+    "ST_pin_name": "VDD",
+    "net": "3V3"
+  },
+  {
+    "pin": "15",
+    "ST_pin_name": "VSS",
+    "net": "GND_THU_CAP"
+  },
+  {
+    "pin": "31",
+    "ST_pin_name": "VSS",
+    "net": "GND_THU_CAP"
+  },
+  {
+    "pin": "47",
+    "ST_pin_name": "VSS",
+    "net": "GND_THU_CAP"
+  },
+  {
+    "pin": "63",
+    "ST_pin_name": "VSS",
+    "net": "GND_THU_CAP"
+  },
+  {
+    "pin": "27",
+    "ST_pin_name": "VSSA",
+    "net": "GND_THU_CAP"
+  },
+  {
+    "pin": "28",
+    "ST_pin_name": "VREF+",
+    "net": "3V3_ANALOG"
+  },
+  {
+    "pin": "29",
+    "ST_pin_name": "VDDA",
+    "net": "3V3_ANALOG"
+  },
+  {
+    "pin": "42",
+    "ST_pin_name": "PA8",
+    "net": "PWM_A_TREN"
+  },
+  {
+    "pin": "43",
+    "ST_pin_name": "PA9",
+    "net": "PWM_A_DUOI"
+  },
+  {
+    "pin": "44",
+    "ST_pin_name": "PA10",
+    "net": "PWM_B_TREN"
+  },
+  {
+    "pin": "45",
+    "ST_pin_name": "PA11",
+    "net": "PWM_B_DUOI"
+  },
+  {
+    "pin": "46",
+    "ST_pin_name": "PA12",
+    "net": "NGAT_LAI"
+  },
+  {
+    "pin": "49",
+    "ST_pin_name": "PA13",
+    "net": "SWDIO"
+  },
+  {
+    "pin": "50",
+    "ST_pin_name": "PA14",
+    "net": "SWCLK"
+  },
+  {
+    "pin": "61",
+    "ST_pin_name": "PB8-BOOT0",
+    "net": "BOOT0"
+  },
+  {
+    "pin": "12",
+    "ST_pin_name": "PA0",
+    "net": "ADC_AP_RA"
+  },
+  {
+    "pin": "13",
+    "ST_pin_name": "PA1",
+    "net": "ADC_DONG_L"
+  },
+  {
+    "pin": "14",
+    "ST_pin_name": "PA2",
+    "net": "ADC_DONG_PIN"
+  },
+  {
+    "pin": "8",
+    "ST_pin_name": "PC0",
+    "net": "ADC_NHIET_1"
+  },
+  {
+    "pin": "9",
+    "ST_pin_name": "PC1",
+    "net": "ADC_NHIET_2"
+  },
+  {
+    "pin": "10",
+    "ST_pin_name": "PC2",
+    "net": "ADC_NHIET_3"
+  },
+  {
+    "pin": "24",
+    "ST_pin_name": "PB0",
+    "net": "CHO_PHEP_CHAY"
+  },
+  {
+    "pin": "25",
+    "ST_pin_name": "PB1",
+    "net": "XOA_LOI"
+  },
+  {
+    "pin": "22",
+    "ST_pin_name": "PC4",
+    "net": "UART_TX"
+  },
+  {
+    "pin": "23",
+    "ST_pin_name": "PC5",
+    "net": "UART_RX"
+  }
+]

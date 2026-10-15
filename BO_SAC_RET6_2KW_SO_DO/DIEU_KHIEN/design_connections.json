@@ -1,0 +1,509 @@
+[
+  {
+    "ref": "U1",
+    "value": "STM32G474RET6",
+    "footprint": "Package_QFP:LQFP-64_10x10mm_P0.5mm",
+    "nets": {
+      "1": "3V3",
+      "7": "NRST",
+      "16": "3V3",
+      "32": "3V3",
+      "48": "3V3",
+      "64": "3V3",
+      "15": "GND_THU_CAP",
+      "31": "GND_THU_CAP",
+      "47": "GND_THU_CAP",
+      "63": "GND_THU_CAP",
+      "27": "GND_THU_CAP",
+      "28": "3V3_ANALOG",
+      "29": "3V3_ANALOG",
+      "42": "PWM_A_TREN",
+      "43": "PWM_A_DUOI",
+      "44": "PWM_B_TREN",
+      "45": "PWM_B_DUOI",
+      "46": "NGAT_LAI",
+      "49": "SWDIO",
+      "50": "SWCLK",
+      "61": "BOOT0",
+      "12": "ADC_AP_RA",
+      "13": "ADC_DONG_L",
+      "14": "ADC_DONG_PIN",
+      "8": "ADC_NHIET_1",
+      "9": "ADC_NHIET_2",
+      "10": "ADC_NHIET_3",
+      "24": "CHO_PHEP_CHAY",
+      "25": "XOA_LOI",
+      "22": "UART_TX",
+      "23": "UART_RX"
+    }
+  },
+  {
+    "ref": "J1",
+    "value": "5V_VAO",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "nets": {
+      "1": "5V",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "U2",
+    "value": "AP2112K-3.3",
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "nets": {
+      "1": "5V",
+      "2": "GND_THU_CAP",
+      "3": "5V",
+      "5": "3V3"
+    }
+  },
+  {
+    "ref": "C1",
+    "value": "1uF / 10V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "5V",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C2",
+    "value": "1uF / 10V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C3",
+    "value": "10uF / 10V X7R",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C4",
+    "value": "100nF / 10V",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C5",
+    "value": "100nF / 10V",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C6",
+    "value": "100nF / 10V",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C7",
+    "value": "100nF / 10V",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C8",
+    "value": "100nF / VBAT",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R1",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_A_TREN",
+      "2": "PWM_A_TREN_RA"
+    }
+  },
+  {
+    "ref": "R5",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_A_TREN_RA",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R2",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_A_DUOI",
+      "2": "PWM_A_DUOI_RA"
+    }
+  },
+  {
+    "ref": "R6",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_A_DUOI_RA",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R3",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_B_TREN",
+      "2": "PWM_B_TREN_RA"
+    }
+  },
+  {
+    "ref": "R7",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_B_TREN_RA",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R4",
+    "value": "33R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_B_DUOI",
+      "2": "PWM_B_DUOI_RA"
+    }
+  },
+  {
+    "ref": "R8",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "PWM_B_DUOI_RA",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "J2",
+    "value": "DRIVER_BAO_VE",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical",
+    "nets": {
+      "1": "3V3",
+      "2": "GND_THU_CAP",
+      "3": "PWM_A_TREN_RA",
+      "4": "PWM_A_DUOI_RA",
+      "5": "PWM_B_TREN_RA",
+      "6": "PWM_B_DUOI_RA",
+      "7": "CHO_PHEP_CHAY",
+      "8": "XOA_LOI",
+      "9": "NGAT_LAI",
+      "10": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R9",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CHO_PHEP_CHAY",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R10",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "XOA_LOI",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R11",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "NGAT_LAI"
+    }
+  },
+  {
+    "ref": "J3",
+    "value": "CAM_BIEN_ANALOG",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+    "nets": {
+      "1": "AP_RA_DA_CHIA",
+      "2": "DONG_L_DA_DO",
+      "3": "DONG_PIN_DA_DO",
+      "4": "NHIET_1_DA_DO",
+      "5": "NHIET_2_DA_DO",
+      "6": "NHIET_3_DA_DO",
+      "7": "GND_THU_CAP",
+      "8": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R12",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "AP_RA_DA_CHIA",
+      "2": "ADC_AP_RA"
+    }
+  },
+  {
+    "ref": "C9",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_AP_RA",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R13",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "DONG_L_DA_DO",
+      "2": "ADC_DONG_L"
+    }
+  },
+  {
+    "ref": "C10",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_DONG_L",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R14",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "DONG_PIN_DA_DO",
+      "2": "ADC_DONG_PIN"
+    }
+  },
+  {
+    "ref": "C11",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_DONG_PIN",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R15",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "NHIET_1_DA_DO",
+      "2": "ADC_NHIET_1"
+    }
+  },
+  {
+    "ref": "C12",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_NHIET_1",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R16",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "NHIET_2_DA_DO",
+      "2": "ADC_NHIET_2"
+    }
+  },
+  {
+    "ref": "C13",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_NHIET_2",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R17",
+    "value": "100R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "NHIET_3_DA_DO",
+      "2": "ADC_NHIET_3"
+    }
+  },
+  {
+    "ref": "C14",
+    "value": "1nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "ADC_NHIET_3",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R18",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "NRST"
+    }
+  },
+  {
+    "ref": "C15",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "NRST",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "SW1",
+    "value": "RESET",
+    "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+    "nets": {
+      "1": "NRST",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R19",
+    "value": "10k",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BOOT0",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "J4",
+    "value": "BOOT_TUY_CHON",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "nets": {
+      "1": "3V3",
+      "2": "BOOT0"
+    }
+  },
+  {
+    "ref": "J5",
+    "value": "SWD",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+    "nets": {
+      "1": "3V3",
+      "2": "SWDIO",
+      "3": "SWCLK",
+      "4": "GND_THU_CAP",
+      "5": "NRST",
+      "6": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "J6",
+    "value": "UART_TTL_3V3",
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+    "nets": {
+      "1": "3V3",
+      "2": "UART_TX",
+      "3": "UART_RX",
+      "4": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "R20",
+    "value": "0R",
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "3V3_ANALOG"
+    }
+  },
+  {
+    "ref": "C16",
+    "value": "1uF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3_ANALOG",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C17",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3_ANALOG",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C18",
+    "value": "1uF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3_ANALOG",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "C19",
+    "value": "100nF",
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3_ANALOG",
+      "2": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "#FLG01",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "5V"
+    }
+  },
+  {
+    "ref": "#FLG02",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "GND_THU_CAP"
+    }
+  },
+  {
+    "ref": "#FLG03",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "3V3_ANALOG"
+    }
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "ngay": "2026-10-16",
+  "pdf": [
+    {
+      "tep": "BO_SAC_RET6_2KW_HUONG_DAN_VA_SO_DO.pdf",
+      "trang": 15,
+      "doc_duoc": true
+    },
+    {
+      "tep": "HUONG_DAN_VA_TAI_LIEU.pdf",
+      "trang": 6,
+      "doc_duoc": true
+    },
+    {
+      "tep": "DIEU_KHIEN/BO_DIEU_KHIEN_RET6.pdf",
+      "trang": 1,
+      "doc_duoc": true
+    },
+    {
+      "tep": "HINH_TONG_THE/SO_DO_TONG_THE_VA_CONG_SUAT.pdf",
+      "trang": 3,
+      "doc_duoc": true
+    },
+    {
+      "tep": "DRIVER_DO_LUONG/SO_DO_DRIVER_VA_DO_LUONG.pdf",
+      "trang": 5,
+      "doc_duoc": true
+    }
+  ],
+  "png": 8,
+  "svg": 8,
+  "docx": 1,
+  "kiem_tra_thiet_bi_thuc": false,
+  "kiem_tra_bo_dieu_khien": {
+    "checked_physical_pin_connections": 147,
+    "netlist_mismatches": [],
+    "virtual_power_flags_excluded": 3,
+    "erc_violations": 0,
+    "scope": "Controller schematic only; not power PCB or complete charger validation"
+  }
+}

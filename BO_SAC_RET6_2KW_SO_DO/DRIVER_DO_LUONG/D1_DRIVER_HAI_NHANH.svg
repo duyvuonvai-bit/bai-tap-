@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="935.1pt" height="663.048pt" viewBox="0 0 935.1 663.048" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-15T21:56:51.398613</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 663.048 
+L 935.1 663.048 
+L 935.1 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 402.559412 131.5242 
+L 635.442353 131.5242 
+L 635.442353 315.3078 
+L 402.559412 315.3078 
+z
+" clip-path="url(#p6b7d7f4b28)" style="fill: #f3f8fc; stroke: #17324d; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 402.559412 363.9564 
+L 635.442353 363.9564 
+L 635.442353 547.74 
+L 402.559412 547.74 
+z
+" clip-path="url(#p6b7d7f4b28)" style="fill: #f3f8fc; stroke: #17324d; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 348.400588 180.1728 
+L 402.559412 180.1728 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 348.400588 207.1998 
+L 402.559412 207.1998 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 348.400588 234.2268 
+L 402.559412 234.2268 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 348.400588 261.2538 
+L 402.559412 261.2538 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 348.400588 288.2808 
+L 402.559412 288.2808 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 635.442353 174.7674 
+L 689.601176 174.7674 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 635.442353 201.7944 
+L 689.601176 201.7944 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 635.442353 228.8214 
+L 689.601176 228.8214 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 635.442353 255.8484 
+L 689.601176 255.8484 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 635.442353 282.8754 
+L 689.601176 282.8754 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 635.442353 309.9024 
+L 689.601176 309.9024 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 348.400588 412.605 
+L 402.559412 412.605 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 348.400588 439.632 
+L 402.559412 439.632 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 348.400588 466.659 
+L 402.559412 466.659 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 348.400588 493.686 
+L 402.559412 493.686 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 348.400588 520.713 
+L 402.559412 520.713 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_17">
+    <path d="M 635.442353 407.1996 
+L 689.601176 407.1996 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_18">
+    <path d="M 635.442353 434.2266 
+L 689.601176 434.2266 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_19">
+    <path d="M 635.442353 461.2536 
+L 689.601176 461.2536 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 635.442353 488.2806 
+L 689.601176 488.2806 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_21">
+    <path d="M 635.442353 515.3076 
+L 689.601176 515.3076 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 635.442353 542.3346 
+L 689.601176 542.3346 
+" clip-path="url(#p6b7d7f4b28)" style="fill: none; stroke: #1b6858; stroke-width: 1.5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="28.863529" y="39.413075" transform="rotate(-0 28.863529 39.413075)">D1 — Hai driver cách ly UCC21520DW</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="28.863529" y="63.9486" transform="rotate(-0 28.863529 63.9486)">U10 lái Q1/Q2 của nhánh A; U11 lái Q3/Q4 của nhánh B. Phía logic cùng GND_THU_CAP với MCU.</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9a4f04" x="28.863529" y="645.0372" transform="rotate(-0 28.863529 645.0372)">RET6 / 2 kW — SƠ BỘ: còn mục CHƯA CHỐT; chưa có PCB, chưa thử phần cứng, chưa dùng cấp bus 400 V.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="28.863529" y="97.040306" transform="rotate(-0 28.863529 97.040306)">Đầu vào mỗi IN: 0 Ω dự phòng trên bo driver + kéo xuống 10 kΩ tại IC. Bo MCU đã có 33 Ω nối tiếp.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="519.000882" y="150.775712" transform="rotate(-0 519.000882 150.775712)">U10 · UCC21520DW</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="182.656237" transform="rotate(-0 407.975294 182.656237)">1 INA</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="182.65405" transform="rotate(-0 337.568824 182.65405)">PWM_A_TREN_RA</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="209.683237" transform="rotate(-0 407.975294 209.683237)">2 INB</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="209.731831" transform="rotate(-0 337.568824 209.731831)">PWM_A_DUOI_RA</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="236.710237" transform="rotate(-0 407.975294 236.710237)">5 DIS</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="236.758831" transform="rotate(-0 337.568824 236.758831)">NGAT_LAI</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="263.737237" transform="rotate(-0 407.975294 263.737237)">6 DT</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="263.785831" transform="rotate(-0 337.568824 263.785831)">R_DT1 → GND_THU_CAP</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="290.764237" transform="rotate(-0 407.975294 290.764237)">4 GND</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="290.812831" transform="rotate(-0 337.568824 290.812831)">GND_THU_CAP</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="177.250837" transform="rotate(-0 630.026471 177.250837)">16 VDDA</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="177.299431" transform="rotate(-0 700.432941 177.299431)">+12V_A</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="204.277837" transform="rotate(-0 630.026471 204.277837)">15 OUTA</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="204.326431" transform="rotate(-0 700.432941 204.326431)">LAI_Q1</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="231.304837" transform="rotate(-0 630.026471 231.304837)">14 VSSA</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="231.353431" transform="rotate(-0 700.432941 231.353431)">SW_A</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="258.331837" transform="rotate(-0 630.026471 258.331837)">11 VDDB</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="258.380431" transform="rotate(-0 700.432941 258.380431)">+12V_DUOI</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="285.358837" transform="rotate(-0 630.026471 285.358837)">10 OUTB</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="285.407431" transform="rotate(-0 700.432941 285.407431)">LAI_Q2</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="312.385837" transform="rotate(-0 630.026471 312.385837)">9 VSSB</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="312.434431" transform="rotate(-0 700.432941 312.434431)">DC_AM</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9a4f04" x="28.863529" y="334.391344" transform="rotate(-0 28.863529 334.391344)">U10: VCCI chân 3 → 3V3. DT và chân 8 chưa chốt; xem ghi chú bên dưới.</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17324d" x="519.000882" y="383.207912" transform="rotate(-0 519.000882 383.207912)">U11 · UCC21520DW</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="415.088437" transform="rotate(-0 407.975294 415.088437)">1 INA</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="415.08625" transform="rotate(-0 337.568824 415.08625)">PWM_B_TREN_RA</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="442.115437" transform="rotate(-0 407.975294 442.115437)">2 INB</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="442.164031" transform="rotate(-0 337.568824 442.164031)">PWM_B_DUOI_RA</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="469.142437" transform="rotate(-0 407.975294 469.142437)">5 DIS</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="469.191031" transform="rotate(-0 337.568824 469.191031)">NGAT_LAI</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="496.169437" transform="rotate(-0 407.975294 496.169437)">6 DT</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="496.218031" transform="rotate(-0 337.568824 496.218031)">R_DT2 → GND_THU_CAP</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="407.975294" y="523.196438" transform="rotate(-0 407.975294 523.196438)">4 GND</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="337.568824" y="523.245031" transform="rotate(-0 337.568824 523.245031)">GND_THU_CAP</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="409.683037" transform="rotate(-0 630.026471 409.683037)">16 VDDA</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="409.731631" transform="rotate(-0 700.432941 409.731631)">+12V_B</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="436.710037" transform="rotate(-0 630.026471 436.710037)">15 OUTA</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="436.758631" transform="rotate(-0 700.432941 436.758631)">LAI_Q3</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="463.737037" transform="rotate(-0 630.026471 463.737037)">14 VSSA</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="463.785631" transform="rotate(-0 700.432941 463.785631)">SW_B</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="490.764037" transform="rotate(-0 630.026471 490.764037)">11 VDDB</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="490.812631" transform="rotate(-0 700.432941 490.812631)">+12V_DUOI</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="517.791038" transform="rotate(-0 630.026471 517.791038)">10 OUTB</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="517.839631" transform="rotate(-0 700.432941 517.839631)">LAI_Q4</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #17324d" x="630.026471" y="544.818037" transform="rotate(-0 630.026471 544.818037)">9 VSSB</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="700.432941" y="544.866631" transform="rotate(-0 700.432941 544.866631)">DC_AM</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9a4f04" x="28.863529" y="566.823544" transform="rotate(-0 28.863529 566.823544)">U11: VCCI chân 3 → 3V3. DT và chân 8 chưa chốt; xem ghi chú bên dưới.</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17324d" x="28.863529" y="588.471159" transform="rotate(-0 28.863529 588.471159)">Mỗi cặp nguồn–mass của IC: 100 nF // 1 µF đặt sát chân. Ba miền nguồn lái: +12V_A/SW_A, +12V_B/SW_B, +12V_DUOI/DC_AM.</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #9a4f04" x="28.863529" y="616.156988" transform="rotate(-0 28.863529 616.156988)">CHƯA CHỐT: pin 8 và R_DT phải kiểm tra bằng datasheet đúng mã/revision. Không suy ra dead-time từ thư viện KiCad.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p6b7d7f4b28">
+   <rect x="7.2" y="7.2" width="920.7" height="648.648"/>
+  </clipPath>
+ </defs>
+</svg>

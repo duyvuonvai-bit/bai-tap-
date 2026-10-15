@@ -1,0 +1,16 @@
+{
+  "pages": 5,
+  "page_titles": [
+    "D1 — Hai driver cách ly UCC21520DW",
+    "D2 — Cổng MOSFET và khóa driver mặc định",
+    "D3 — Hai kênh đo dòng INA240A1D",
+    "D4 — Đo điện áp ra: còn thiếu bảo vệ khi mất nguồn MCU",
+    "D5 — Ba kênh NTC cho tản nhiệt, biến áp và cuộn cảm"
+  ],
+  "all_pages_have_text": true,
+  "png_count": 5,
+  "svg_count": 5,
+  "hardware_tested": false,
+  "ucc_pin8_deadtime_manufacturer_confirmed": false,
+  "external_protection_and_poweroff_disconnect_implemented": false
+}

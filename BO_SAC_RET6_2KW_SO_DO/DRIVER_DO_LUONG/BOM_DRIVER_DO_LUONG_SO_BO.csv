@@ -1,0 +1,27 @@
+﻿Nhóm,Linh kiện / giá trị,Số lượng,Trạng thái,Ghi chú
+Driver,UCC21520DW,2,CHƯA CHỐT PIN 8 / DT,Cần đúng datasheet và hậu tố package
+Driver,Điện trở 0 Ω 0805,4,Vị trí dự phòng,Mỗi đường PWM; core đã có 33 Ω
+Driver,Điện trở 10 kΩ 0805,4,Sơ bộ,Kéo xuống mỗi IN
+Driver,R_DT,2,CHƯA CHỌN,Không tự suy ra dead-time
+Cổng MOSFET,Điện trở 10 Ω 1206,4,Giá trị khởi đầu,Chỉnh theo dạng sóng cổng
+Cổng MOSFET,Điện trở 10 kΩ 0805,4,Sơ bộ,Gate-source
+Cổng MOSFET,BZT52C15,4,Sơ bộ,Kẹp gate-source; kiểm tra MOSFET thực tế
+Khóa driver,2N7002,2,Sơ bộ,Hai transistor nối tiếp; kiểm tra pin package
+Khóa driver,Điện trở 100 kΩ 0805,2,Sơ bộ,Kéo xuống gate hai 2N7002
+Khóa driver,Điện trở 4.7 kΩ 0805,1,Sơ bộ,Kéo lên NGAT_LAI
+Bảo vệ,Mạch BAO_VE_OK_3V3 / OCP / OVP / chốt lỗi,1,CHƯA THIẾT KẾ,Không có mã linh kiện thay thế
+Nguồn lái,Nguồn cách ly 12 V,3,CHƯA CHỌN,Ba miền cách ly; kiểm tra cách điện/CMTI/công suất
+Driver và đo dòng,Tụ gốm 100 nF,8,Sơ bộ,6 cặp nguồn driver + 2 INA240; chọn điện áp và dielectric phù hợp
+Driver và đo dòng,Tụ gốm 1 µF,8,Sơ bộ,6 cặp nguồn driver + 2 INA240
+Đo dòng,INA240A1D,2,Sơ bộ,Gain20; nguồn3V3; kiểm tra power-off
+Đo dòng,Shunt 1 mΩ 5 W bốn đầu Kelvin,2,Cần chọn mã thực tế,Không nhầm với điện trở2đầu thông thường
+Đo dòng,Điện trở 100 Ω 0805,2,Sơ bộ,Lọc đầu ra INA240
+Đo dòng,Tụ 2.2 nF,2,Sơ bộ,Lọc đầu ra INA240
+Đo áp,Điện trở 110 kΩ 0.1% 0805,2,Sơ bộ,Hai điện trở phía trên bộ chia
+Đo áp,Điện trở 10 kΩ 0.1% 0805,1,Sơ bộ,Điện trở phía dưới bộ chia
+Đo áp,Điện trở 100 Ω 0805,1,Sơ bộ,Đầu ra bộ chia
+Đo áp,Tụ 10 nF,1,Sơ bộ,Đầu ra bộ chia
+Đo áp,Ngắt đo pin / power-off protection,1,CHƯA THIẾT KẾ,Chưa có sơ đồ linh kiện; không nối tắt khối
+Đo nhiệt,NTC10k B3950 có cách điện,3,Cần chọn đầu dò thực tế,Xác minh B25/85 và cách lắp
+Đo nhiệt,Điện trở 10 kΩ 1% 0805,3,Sơ bộ,Kéo lên3V3
+Giắc,Giắc10chân ghép J2 và giắc8chân ghép J3,1,Chọn loại đồng bộ bo MCU,Chỉ tín hiệu; không mang dòng pin

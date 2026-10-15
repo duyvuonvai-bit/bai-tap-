@@ -1,0 +1,34 @@
+{
+  "so_mau": 96,
+  "chu_ky_lay_mau_s": 10,
+  "nhiet_do_dau_C": 29.2,
+  "nhiet_do_xac_lap_cho_truoc_C": 44.3,
+  "do_tang_nhiet_C": 15.099999999999998,
+  "buoc_pwm_diem_phan_tram": 55.0,
+  "he_so_K_C_tren_diem_phan_tram": 0.2745454545454545,
+  "he_so_K_C_tren_duty_0_1": 27.45454545454545,
+  "hang_so_thoi_gian_s": 194.50112616600097,
+  "do_tre_s": 32.35285943712355,
+  "RMSE_C": 0.4942555241805061,
+  "MAE_C": 0.37999304122644495,
+  "sai_so_tuyet_doi_lon_nhat_C": 1.6651049345965987,
+  "R_binh_phuong": 0.9866630437996884,
+  "phuong_phap_hai_diem": {
+    "ty_le_1": 0.28346868942621073,
+    "ty_le_2": 0.6321205588285577,
+    "muc_1_C": 33.48037721033578,
+    "muc_2_C": 38.745020438311215,
+    "thoi_diem_1_s": 98.50471512919725,
+    "thoi_diem_2_s": 222.07172054730307,
+    "hang_so_thoi_gian_s": 185.35050812715872,
+    "do_tre_s": 36.721212420144326,
+    "RMSE_C": 0.5063571711709061
+  },
+  "gia_thiet": [
+    "Bước thay đổi PWM được đặt tại t=0 s.",
+    "Thời gian ghi trong ảnh được hiểu là giây.",
+    "55% được hiểu là độ tăng 55 điểm phần trăm PWM.",
+    "Giữ T0=29.2 và T_xac_lap=44.3 theo thông số người dùng.",
+    "RMSE tính trên chính 96 mẫu dùng nhận dạng, không phải bộ kiểm định độc lập."
+  ]
+}

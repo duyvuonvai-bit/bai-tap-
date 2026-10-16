@@ -1,0 +1,17 @@
+{
+  "ngay": "2026-10-16",
+  "pcb_gerber_da_tao": false,
+  "kiem_tra_phan_cung": false,
+  "tep": [
+    {
+      "ten": "SO_DO_KET_NOI_DA_SUA.pdf",
+      "trang": 1,
+      "doc_duoc": true
+    },
+    {
+      "ten": "BAO_CAO_PSFB_84V_2KW.pdf",
+      "trang": 13,
+      "doc_duoc": true
+    }
+  ]
+}

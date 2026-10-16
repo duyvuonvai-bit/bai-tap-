@@ -1,0 +1,1273 @@
+{
+  "status": "PRELIMINARY_PARAMETRIC_NOT_A_FABRICATION_DESIGN",
+  "battery_selection": "CONFIRMED: 20S lithium. Authorized design target 50Ah, 4.2V/cell, CV84V, BMS continuous charge>=30A. Actual cells/BMS not verified. Old58V appendix only",
+  "assumptions": {
+    "Pout_max_W": 2000.0,
+    "Vbus_image_nominal_range_V": [
+      390,
+      400
+    ],
+    "Vbus_proposed_design_range_V": [
+      380,
+      420
+    ],
+    "Vbus_proposed_setpoint_V": 400,
+    "Np": 25,
+    "Ns": 8,
+    "n": 0.32,
+    "fs_bridge_Hz": 50000.0,
+    "rectified_ripple_Hz": 100000.0,
+    "L_H": 3.3e-05,
+    "C_F": 0.00112,
+    "diode_Vf_V": 0.8,
+    "eta_dc": 0.95,
+    "eta_pfc": 0.97,
+    "PF": 0.99,
+    "shunt_Ohm": 0.0005,
+    "full_range_20S_V": [
+      60,
+      84
+    ],
+    "CC_current_20S_A": 23.80952380952381,
+    "CC_current_old58V_A": 34.48275862068966,
+    "caveat": "frequency, losses and efficiencies illustrative; fixed 2kW at all battery voltages is not CC charging"
+  },
+  "points": [
+    {
+      "Vout_V": 58,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 34.48275862068966,
+      "Pout_W": 2000.0000000000002,
+      "D_ideal": 0.46474358974358976,
+      "D_with_2diode_drop": 0.4775641025641026,
+      "phase_ideal_deg": 83.65384615384616,
+      "phase_with_drop_deg": 85.96153846153847,
+      "delta_IL_pp_A": 9.407536907536906,
+      "IL_peak_A": 39.18652707445811,
+      "IL_valley_A": 29.778990166921204,
+      "IL_rms_A": 34.58953292517313,
+      "Ic_rms_ideal_A": 2.7157219829888866,
+      "delta_Vc_ideal_pp_V": 0.010499483155733156,
+      "P_shunt_DC_W": 0.5945303210463735,
+      "V_shunt_DC_V": 0.01724137931034483,
+      "P_diode_bridge_W": 55.17241379310346,
+      "P_copper_per_1mohm_W": 1.189060642092747
+    },
+    {
+      "Vout_V": 58,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 34.48275862068966,
+      "Pout_W": 2000.0000000000002,
+      "D_ideal": 0.453125,
+      "D_with_2diode_drop": 0.465625,
+      "phase_ideal_deg": 81.5625,
+      "phase_with_drop_deg": 83.8125,
+      "delta_IL_pp_A": 9.611742424242424,
+      "IL_peak_A": 39.28862983281087,
+      "IL_valley_A": 29.676887408568447,
+      "IL_rms_A": 34.594211097550875,
+      "Ic_rms_ideal_A": 2.774671038008855,
+      "delta_Vc_ideal_pp_V": 0.01072739109848485,
+      "P_shunt_DC_W": 0.5945303210463735,
+      "V_shunt_DC_V": 0.01724137931034483,
+      "P_diode_bridge_W": 55.17241379310346,
+      "P_copper_per_1mohm_W": 1.189060642092747
+    },
+    {
+      "Vout_V": 60,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 33.333333333333336,
+      "Pout_W": 2000.0000000000002,
+      "D_ideal": 0.4807692307692308,
+      "D_with_2diode_drop": 0.4935897435897436,
+      "phase_ideal_deg": 86.53846153846155,
+      "phase_with_drop_deg": 88.84615384615385,
+      "delta_IL_pp_A": 9.440559440559438,
+      "IL_peak_A": 38.053613053613056,
+      "IL_valley_A": 28.613053613053616,
+      "IL_rms_A": 33.444552989343514,
+      "Ic_rms_ideal_A": 2.725254767153827,
+      "delta_Vc_ideal_pp_V": 0.01053633866133866,
+      "P_shunt_DC_W": 0.5555555555555557,
+      "V_shunt_DC_V": 0.01666666666666667,
+      "P_diode_bridge_W": 53.33333333333334,
+      "P_copper_per_1mohm_W": 1.1111111111111114
+    },
+    {
+      "Vout_V": 60,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 33.333333333333336,
+      "Pout_W": 2000.0000000000002,
+      "D_ideal": 0.46875,
+      "D_with_2diode_drop": 0.48125,
+      "phase_ideal_deg": 84.375,
+      "phase_with_drop_deg": 86.625,
+      "delta_IL_pp_A": 9.659090909090908,
+      "IL_peak_A": 38.16287878787879,
+      "IL_valley_A": 28.503787878787882,
+      "IL_rms_A": 33.44975257821227,
+      "Ic_rms_ideal_A": 2.7883393682453517,
+      "delta_Vc_ideal_pp_V": 0.01078023538961039,
+      "P_shunt_DC_W": 0.5555555555555557,
+      "V_shunt_DC_V": 0.01666666666666667,
+      "P_diode_bridge_W": 53.33333333333334,
+      "P_copper_per_1mohm_W": 1.1111111111111114
+    },
+    {
+      "Vout_V": 72,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 27.77777777777778,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.576923076923077,
+      "D_with_2diode_drop": 0.5897435897435898,
+      "phase_ideal_deg": 103.84615384615385,
+      "phase_with_drop_deg": 106.15384615384616,
+      "delta_IL_pp_A": 9.230769230769228,
+      "IL_peak_A": 32.39316239316239,
+      "IL_valley_A": 23.162393162393165,
+      "IL_rms_A": 27.905295733741674,
+      "Ic_rms_ideal_A": 2.6646935501059645,
+      "delta_Vc_ideal_pp_V": 0.0103021978021978,
+      "P_shunt_DC_W": 0.3858024691358025,
+      "V_shunt_DC_V": 0.01388888888888889,
+      "P_diode_bridge_W": 44.44444444444445,
+      "P_copper_per_1mohm_W": 0.771604938271605
+    },
+    {
+      "Vout_V": 72,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 27.77777777777778,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.5625,
+      "D_with_2diode_drop": 0.575,
+      "phase_ideal_deg": 101.25,
+      "phase_with_drop_deg": 103.49999999999999,
+      "delta_IL_pp_A": 9.545454545454545,
+      "IL_peak_A": 32.55050505050505,
+      "IL_valley_A": 23.005050505050505,
+      "IL_rms_A": 27.914116741860497,
+      "Ic_rms_ideal_A": 2.755535375677759,
+      "delta_Vc_ideal_pp_V": 0.010653409090909092,
+      "P_shunt_DC_W": 0.3858024691358025,
+      "V_shunt_DC_V": 0.01388888888888889,
+      "P_diode_bridge_W": 44.44444444444445,
+      "P_copper_per_1mohm_W": 0.771604938271605
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.6730769230769231,
+      "D_with_2diode_drop": 0.6858974358974359,
+      "phase_ideal_deg": 121.15384615384616,
+      "phase_with_drop_deg": 123.46153846153847,
+      "delta_IL_pp_A": 8.32167832167832,
+      "IL_peak_A": 27.97036297036297,
+      "IL_valley_A": 19.64868464868465,
+      "IL_rms_A": 23.930405029524096,
+      "Ic_rms_ideal_A": 2.4022616095652256,
+      "delta_Vc_ideal_pp_V": 0.009287587412587412,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.65625,
+      "D_with_2diode_drop": 0.66875,
+      "phase_ideal_deg": 118.125,
+      "phase_with_drop_deg": 120.37499999999999,
+      "delta_IL_pp_A": 8.75,
+      "IL_peak_A": 28.18452380952381,
+      "IL_valley_A": 19.43452380952381,
+      "IL_rms_A": 23.94313330309161,
+      "Ic_rms_ideal_A": 2.5259074277046127,
+      "delta_Vc_ideal_pp_V": 0.009765625000000002,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    }
+  ],
+  "battery_design_target": {
+    "series_cells": 20,
+    "capacity_Ah": 50,
+    "CV_V": 84,
+    "CC_A": 23.80952380952381,
+    "charge_C_rate": 0.4761904761904762,
+    "BMS_continuous_charge_min_A": 30,
+    "actual_product_verified": false
+  },
+  "20S_CC_points": [
+    {
+      "Vout_V": 60,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1428.5714285714287,
+      "D_ideal": 0.4807692307692308,
+      "D_with_2diode_drop": 0.4935897435897436,
+      "phase_ideal_deg": 86.53846153846155,
+      "phase_with_drop_deg": 88.84615384615385,
+      "delta_IL_pp_A": 9.440559440559438,
+      "IL_peak_A": 28.52980352980353,
+      "IL_valley_A": 19.08924408924409,
+      "IL_rms_A": 23.96498357149814,
+      "Ic_rms_ideal_A": 2.725254767153827,
+      "delta_Vc_ideal_pp_V": 0.01053633866133866,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 60,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1428.5714285714287,
+      "D_ideal": 0.46875,
+      "D_with_2diode_drop": 0.48125,
+      "phase_ideal_deg": 84.375,
+      "phase_with_drop_deg": 86.625,
+      "delta_IL_pp_A": 9.659090909090908,
+      "IL_peak_A": 28.639069264069263,
+      "IL_valley_A": 18.979978354978357,
+      "IL_rms_A": 23.9722393711724,
+      "Ic_rms_ideal_A": 2.7883393682453517,
+      "delta_Vc_ideal_pp_V": 0.01078023538961039,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 62.4,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1485.7142857142858,
+      "D_ideal": 0.5,
+      "D_with_2diode_drop": 0.5128205128205129,
+      "phase_ideal_deg": 90.0,
+      "phase_with_drop_deg": 92.30769230769232,
+      "delta_IL_pp_A": 9.454545454545453,
+      "IL_peak_A": 28.536796536796537,
+      "IL_valley_A": 19.082251082251084,
+      "IL_rms_A": 23.965443034689624,
+      "Ic_rms_ideal_A": 2.729292181623685,
+      "delta_Vc_ideal_pp_V": 0.010551948051948052,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 62.4,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1485.7142857142858,
+      "D_ideal": 0.4875,
+      "D_with_2diode_drop": 0.5,
+      "phase_ideal_deg": 87.75,
+      "phase_with_drop_deg": 90.0,
+      "delta_IL_pp_A": 9.69090909090909,
+      "IL_peak_A": 28.654978354978354,
+      "IL_valley_A": 18.964069264069266,
+      "IL_rms_A": 23.97330947714499,
+      "Ic_rms_ideal_A": 2.7975244861642774,
+      "delta_Vc_ideal_pp_V": 0.010815746753246753,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 64,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1523.8095238095239,
+      "D_ideal": 0.5128205128205129,
+      "D_with_2diode_drop": 0.5256410256410257,
+      "phase_ideal_deg": 92.30769230769232,
+      "phase_with_drop_deg": 94.61538461538461,
+      "delta_IL_pp_A": 9.448329448329446,
+      "IL_peak_A": 28.533688533688533,
+      "IL_valley_A": 19.085359085359087,
+      "IL_rms_A": 23.965238745941214,
+      "Ic_rms_ideal_A": 2.7274977751926373,
+      "delta_Vc_ideal_pp_V": 0.010545010545010544,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 64,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1523.8095238095239,
+      "D_ideal": 0.5,
+      "D_with_2diode_drop": 0.5125,
+      "phase_ideal_deg": 90.0,
+      "phase_with_drop_deg": 92.24999999999999,
+      "delta_IL_pp_A": 9.696969696969695,
+      "IL_peak_A": 28.658008658008658,
+      "IL_valley_A": 18.961038961038962,
+      "IL_rms_A": 23.973513700434978,
+      "Ic_rms_ideal_A": 2.799274032434549,
+      "delta_Vc_ideal_pp_V": 0.010822510822510822,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 72,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1714.2857142857142,
+      "D_ideal": 0.576923076923077,
+      "D_with_2diode_drop": 0.5897435897435898,
+      "phase_ideal_deg": 103.84615384615385,
+      "phase_with_drop_deg": 106.15384615384616,
+      "delta_IL_pp_A": 9.230769230769228,
+      "IL_peak_A": 28.424908424908423,
+      "IL_valley_A": 19.194139194139197,
+      "IL_rms_A": 23.95817221225896,
+      "Ic_rms_ideal_A": 2.6646935501059645,
+      "delta_Vc_ideal_pp_V": 0.0103021978021978,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 72,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 1714.2857142857142,
+      "D_ideal": 0.5625,
+      "D_with_2diode_drop": 0.575,
+      "phase_ideal_deg": 101.25,
+      "phase_with_drop_deg": 103.49999999999999,
+      "delta_IL_pp_A": 9.545454545454545,
+      "IL_peak_A": 28.582251082251084,
+      "IL_valley_A": 19.036796536796537,
+      "IL_rms_A": 23.96844590796184,
+      "Ic_rms_ideal_A": 2.755535375677759,
+      "delta_Vc_ideal_pp_V": 0.010653409090909092,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 390,
+      "Vsecondary_pulse_V": 124.8,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.6730769230769231,
+      "D_with_2diode_drop": 0.6858974358974359,
+      "phase_ideal_deg": 121.15384615384616,
+      "phase_with_drop_deg": 123.46153846153847,
+      "delta_IL_pp_A": 8.32167832167832,
+      "IL_peak_A": 27.97036297036297,
+      "IL_valley_A": 19.64868464868465,
+      "IL_rms_A": 23.930405029524096,
+      "Ic_rms_ideal_A": 2.4022616095652256,
+      "delta_Vc_ideal_pp_V": 0.009287587412587412,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 400,
+      "Vsecondary_pulse_V": 128.0,
+      "Iout_A": 23.80952380952381,
+      "Pout_W": 2000.0,
+      "D_ideal": 0.65625,
+      "D_with_2diode_drop": 0.66875,
+      "phase_ideal_deg": 118.125,
+      "phase_with_drop_deg": 120.37499999999999,
+      "delta_IL_pp_A": 8.75,
+      "IL_peak_A": 28.18452380952381,
+      "IL_valley_A": 19.43452380952381,
+      "IL_rms_A": 23.94313330309161,
+      "Ic_rms_ideal_A": 2.5259074277046127,
+      "delta_Vc_ideal_pp_V": 0.009765625000000002,
+      "P_shunt_DC_W": 0.2834467120181406,
+      "V_shunt_DC_V": 0.011904761904761906,
+      "P_diode_bridge_W": 38.095238095238095,
+      "P_copper_per_1mohm_W": 0.5668934240362812
+    }
+  ],
+  "ripple_maximum_ideal": [
+    {
+      "Vbus_V": 390,
+      "Vout_at_max_V": 62.4,
+      "delta_IL_pp_A": 9.454545454545453,
+      "peak_20S_CC_A": 28.536796536796537,
+      "Isat_with_25pct_design_margin_A": 35.67099567099567,
+      "Ic_rms_A": 2.729292181623685,
+      "cap_ripple_ideal_V": 0.010551948051948052,
+      "cap_ripple_with_10mohm_ESR_V": 0.10509740259740258,
+      "cap_ripple_with_25mohm_ESR_V": 0.2469155844155844
+    },
+    {
+      "Vbus_V": 400,
+      "Vout_at_max_V": 64.0,
+      "delta_IL_pp_A": 9.696969696969695,
+      "peak_20S_CC_A": 28.658008658008658,
+      "Isat_with_25pct_design_margin_A": 35.82251082251082,
+      "Ic_rms_A": 2.799274032434549,
+      "cap_ripple_ideal_V": 0.010822510822510822,
+      "cap_ripple_with_10mohm_ESR_V": 0.10779220779220777,
+      "cap_ripple_with_25mohm_ESR_V": 0.2532467532467532
+    }
+  ],
+  "input": [
+    {
+      "Vac_V": 198,
+      "Pin_W": 2170.374389582203,
+      "Iac_rms_A": 11.072208905122961,
+      "sinusoidal_peak_approx_A": 15.658467999053052,
+      "rectified_line_peak_V": 280.01428534987286
+    },
+    {
+      "Vac_V": 220,
+      "Pin_W": 2170.374389582203,
+      "Iac_rms_A": 9.964988014610666,
+      "sinusoidal_peak_approx_A": 14.092621199147747,
+      "rectified_line_peak_V": 311.1269837220809
+    },
+    {
+      "Vac_V": 242,
+      "Pin_W": 2170.374389582203,
+      "Iac_rms_A": 9.059080013282424,
+      "sinusoidal_peak_approx_A": 12.811473817407045,
+      "rectified_line_peak_V": 342.23968209428904
+    }
+  ],
+  "bulk": [
+    {
+      "C_uF": 680.0,
+      "Vbus_V": 400,
+      "delta_V_100Hz_pp_V": 24.63698809472064,
+      "energy_at_400V_J": 54.400000000000006,
+      "I_ripple_100Hz_rms_approx_A": 3.7216146378239348
+    },
+    {
+      "C_uF": 1000.0,
+      "Vbus_V": 400,
+      "delta_V_100Hz_pp_V": 16.75315190441004,
+      "energy_at_400V_J": 80.0,
+      "I_ripple_100Hz_rms_approx_A": 3.7216146378239348
+    },
+    {
+      "C_uF": 1500.0,
+      "Vbus_V": 400,
+      "delta_V_100Hz_pp_V": 11.168767936273358,
+      "energy_at_400V_J": 120.0,
+      "I_ripple_100Hz_rms_approx_A": 3.7216146378239348
+    },
+    {
+      "C_uF": 2000.0,
+      "Vbus_V": 400,
+      "delta_V_100Hz_pp_V": 8.37657595220502,
+      "energy_at_400V_J": 160.0,
+      "I_ripple_100Hz_rms_approx_A": 3.7216146378239348
+    },
+    {
+      "C_uF": 2200.0,
+      "Vbus_V": 400,
+      "delta_V_100Hz_pp_V": 7.615069047459108,
+      "energy_at_400V_J": 176.0,
+      "I_ripple_100Hz_rms_approx_A": 3.7216146378239348
+    }
+  ],
+  "magnetics": [
+    {
+      "Ae_mm2": 250,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.256,
+      "Np_min_for_Bpeak_0p16T": 40.0
+    },
+    {
+      "Ae_mm2": 250,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.32,
+      "Np_min_for_Bpeak_0p16T": 50.0
+    },
+    {
+      "Ae_mm2": 350,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.18285714285714286,
+      "Np_min_for_Bpeak_0p16T": 28.57142857142857
+    },
+    {
+      "Ae_mm2": 350,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.22857142857142856,
+      "Np_min_for_Bpeak_0p16T": 35.71428571428571
+    },
+    {
+      "Ae_mm2": 400,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.16,
+      "Np_min_for_Bpeak_0p16T": 25.0
+    },
+    {
+      "Ae_mm2": 400,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.2,
+      "Np_min_for_Bpeak_0p16T": 31.25
+    },
+    {
+      "Ae_mm2": 500,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.128,
+      "Np_min_for_Bpeak_0p16T": 20.0
+    },
+    {
+      "Ae_mm2": 500,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.16,
+      "Np_min_for_Bpeak_0p16T": 25.0
+    }
+  ],
+  "shunt_and_gain": [
+    {
+      "Vout_V": 58,
+      "Iout_A": 34.48275862068966,
+      "gain": 10,
+      "Vsignal_REF0_V": 0.17241379310344832,
+      "Vsignal_REF1p65_V": 1.8224137931034483,
+      "Itrip_at2p70_REF0_A": 540.0,
+      "Itrip_at2p70_REF1p65_A": 210.00000000000006
+    },
+    {
+      "Vout_V": 58,
+      "Iout_A": 34.48275862068966,
+      "gain": 20,
+      "Vsignal_REF0_V": 0.34482758620689663,
+      "Vsignal_REF1p65_V": 1.9948275862068965,
+      "Itrip_at2p70_REF0_A": 270.0,
+      "Itrip_at2p70_REF1p65_A": 105.00000000000003
+    },
+    {
+      "Vout_V": 58,
+      "Iout_A": 34.48275862068966,
+      "gain": 50,
+      "Vsignal_REF0_V": 0.8620689655172415,
+      "Vsignal_REF1p65_V": 2.5120689655172415,
+      "Itrip_at2p70_REF0_A": 108.0,
+      "Itrip_at2p70_REF1p65_A": 42.00000000000001
+    },
+    {
+      "Vout_V": 58,
+      "Iout_A": 34.48275862068966,
+      "gain": 100,
+      "Vsignal_REF0_V": 1.724137931034483,
+      "Vsignal_REF1p65_V": 3.374137931034483,
+      "Itrip_at2p70_REF0_A": 54.0,
+      "Itrip_at2p70_REF1p65_A": 21.000000000000004
+    },
+    {
+      "Vout_V": 58,
+      "Iout_A": 34.48275862068966,
+      "gain": 200,
+      "Vsignal_REF0_V": 3.448275862068966,
+      "Vsignal_REF1p65_V": 5.0982758620689665,
+      "Itrip_at2p70_REF0_A": 27.0,
+      "Itrip_at2p70_REF1p65_A": 10.500000000000002
+    },
+    {
+      "Vout_V": 84,
+      "Iout_A": 23.80952380952381,
+      "gain": 10,
+      "Vsignal_REF0_V": 0.11904761904761905,
+      "Vsignal_REF1p65_V": 1.769047619047619,
+      "Itrip_at2p70_REF0_A": 540.0,
+      "Itrip_at2p70_REF1p65_A": 210.00000000000006
+    },
+    {
+      "Vout_V": 84,
+      "Iout_A": 23.80952380952381,
+      "gain": 20,
+      "Vsignal_REF0_V": 0.2380952380952381,
+      "Vsignal_REF1p65_V": 1.888095238095238,
+      "Itrip_at2p70_REF0_A": 270.0,
+      "Itrip_at2p70_REF1p65_A": 105.00000000000003
+    },
+    {
+      "Vout_V": 84,
+      "Iout_A": 23.80952380952381,
+      "gain": 50,
+      "Vsignal_REF0_V": 0.5952380952380953,
+      "Vsignal_REF1p65_V": 2.2452380952380953,
+      "Itrip_at2p70_REF0_A": 108.0,
+      "Itrip_at2p70_REF1p65_A": 42.00000000000001
+    },
+    {
+      "Vout_V": 84,
+      "Iout_A": 23.80952380952381,
+      "gain": 100,
+      "Vsignal_REF0_V": 1.1904761904761907,
+      "Vsignal_REF1p65_V": 2.8404761904761906,
+      "Itrip_at2p70_REF0_A": 54.0,
+      "Itrip_at2p70_REF1p65_A": 21.000000000000004
+    },
+    {
+      "Vout_V": 84,
+      "Iout_A": 23.80952380952381,
+      "gain": 200,
+      "Vsignal_REF0_V": 2.3809523809523814,
+      "Vsignal_REF1p65_V": 4.030952380952382,
+      "Itrip_at2p70_REF0_A": 27.0,
+      "Itrip_at2p70_REF1p65_A": 10.500000000000002
+    }
+  ],
+  "NTC_example_B3950": [
+    {
+      "temp_C": 25,
+      "Rntc_Ohm": 100000.0,
+      "Vadc_with_10kohm_pullup_V": 3.0
+    },
+    {
+      "temp_C": 60,
+      "Rntc_Ohm": 24861.647514733817,
+      "Vadc_with_10kohm_pullup_V": 2.3534010193851858
+    },
+    {
+      "temp_C": 80,
+      "Rntc_Ohm": 12703.202348436205,
+      "Vadc_with_10kohm_pullup_V": 1.8464605612224108
+    },
+    {
+      "temp_C": 100,
+      "Rntc_Ohm": 6975.19772986188,
+      "Vadc_with_10kohm_pullup_V": 1.3559872983424444
+    }
+  ],
+  "bus390to400_if_absolute_limits": {
+    "C_effective_min_uF": 1696.521711838991,
+    "C_nominal_min_with_minus20percent_tolerance_uF": 2120.652139798739,
+    "caveat": "Only 100Hz ripple; no hold-up, transient, control, tolerance or life qualification"
+  },
+  "film_3x4p7uF": {
+    "C_total_uF": 14.1,
+    "energy_at400V_J": 1.1280000000000001,
+    "time_from400to390_atPbus_us": 26.455125
+  },
+  "magnetics_operating_examples": [
+    {
+      "Vout_V": 58,
+      "Ae_mm2": 250,
+      "Bpeak_with_diode_drop_T": 0.149
+    },
+    {
+      "Vout_V": 58,
+      "Ae_mm2": 350,
+      "Bpeak_with_diode_drop_T": 0.10642857142857143
+    },
+    {
+      "Vout_V": 58,
+      "Ae_mm2": 400,
+      "Bpeak_with_diode_drop_T": 0.093125
+    },
+    {
+      "Vout_V": 58,
+      "Ae_mm2": 500,
+      "Bpeak_with_diode_drop_T": 0.0745
+    },
+    {
+      "Vout_V": 84,
+      "Ae_mm2": 250,
+      "Bpeak_with_diode_drop_T": 0.214
+    },
+    {
+      "Vout_V": 84,
+      "Ae_mm2": 350,
+      "Bpeak_with_diode_drop_T": 0.15285714285714286
+    },
+    {
+      "Vout_V": 84,
+      "Ae_mm2": 400,
+      "Bpeak_with_diode_drop_T": 0.13375
+    },
+    {
+      "Vout_V": 84,
+      "Ae_mm2": 500,
+      "Bpeak_with_diode_drop_T": 0.107
+    }
+  ],
+  "divider": {
+    "Rtop_Ohm": 390000,
+    "Rbottom_Ohm": 10000,
+    "ratio": 0.025,
+    "Rthevenin_Ohm": 9750,
+    "V_at58_V": 1.45,
+    "V_at84_V": 2.1,
+    "V_at100_V": 2.5,
+    "V_trip_from2p7_V": 108.0,
+    "ideal_12bit_ADC_output_resolution_V": 0.03223443223443223,
+    "P_Rtop_at84_W": 0.017199000000000002,
+    "time_constant_with_1kohm_and_101nF_s": 0.0010857500000000001,
+    "fc_with_1kohm_and_101nF_Hz": 146.58525728012464
+  },
+  "L_needed_for_20pct_ripple_worst_bus": [
+    {
+      "Vout_full_charge_V": 58,
+      "I_CC_A": 34.48275862068966,
+      "L_min_uH": 46.400000000000006
+    },
+    {
+      "Vout_full_charge_V": 84,
+      "I_CC_A": 23.80952380952381,
+      "L_min_uH": 67.19999999999999
+    }
+  ],
+  "output_cap_energy_J": {
+    "58": 1.8838399999999997,
+    "84": 3.9513599999999998,
+    "100": 5.6
+  },
+  "constant_power_range20S_peak": {
+    "Vout_V": 60,
+    "Vbus_V": 400,
+    "Vsecondary_pulse_V": 128.0,
+    "Iout_A": 33.333333333333336,
+    "Pout_W": 2000.0000000000002,
+    "D_ideal": 0.46875,
+    "D_with_2diode_drop": 0.48125,
+    "phase_ideal_deg": 84.375,
+    "phase_with_drop_deg": 86.625,
+    "delta_IL_pp_A": 9.659090909090908,
+    "IL_peak_A": 38.16287878787879,
+    "IL_valley_A": 28.503787878787882,
+    "IL_rms_A": 33.44975257821227,
+    "Ic_rms_ideal_A": 2.7883393682453517,
+    "delta_Vc_ideal_pp_V": 0.01078023538961039,
+    "P_shunt_DC_W": 0.5555555555555557,
+    "V_shunt_DC_V": 0.01666666666666667,
+    "P_diode_bridge_W": 53.33333333333334,
+    "P_copper_per_1mohm_W": 1.1111111111111114
+  },
+  "current_saturation_notes": {
+    "sat_margin_example": 1.25,
+    "at58V_Ipeak_A": 39.28862983281087,
+    "at58V_Isat_example_A": 49.11078729101359,
+    "constant_power60V_Isat_example_A": 47.703598484848484
+  },
+  "active20S_recommended_Lout": [
+    {
+      "L_nom_uH": 68.0,
+      "L_effective_uH": 68.0,
+      "delta_IL_max_pp_A": 4.9411764705882355,
+      "ripple_fraction_CC": 0.20752941176470588,
+      "IL_peak_A": 26.280112044817926,
+      "IL_rms_A": 23.852212184877228,
+      "Isat_example_25pct_margin_A": 32.85014005602241,
+      "cap_ripple_ideal_V": 0.005514705882352942,
+      "cap_current_rms_A": 1.4263947827037815
+    },
+    {
+      "L_nom_uH": 68.0,
+      "L_effective_uH": 54.4,
+      "delta_IL_max_pp_A": 6.176470588235294,
+      "ripple_fraction_CC": 0.25941176470588234,
+      "IL_peak_A": 26.89775910364146,
+      "IL_rms_A": 23.876190855750544,
+      "Isat_example_25pct_margin_A": 33.622198879551824,
+      "cap_ripple_ideal_V": 0.006893382352941178,
+      "cap_current_rms_A": 1.7829934783797268
+    },
+    {
+      "L_nom_uH": 100.0,
+      "L_effective_uH": 100.0,
+      "delta_IL_max_pp_A": 3.3600000000000003,
+      "ripple_fraction_CC": 0.14112000000000002,
+      "IL_peak_A": 25.48952380952381,
+      "IL_rms_A": 23.829272419364408,
+      "Isat_example_25pct_margin_A": 31.86190476190476,
+      "cap_ripple_ideal_V": 0.0037500000000000007,
+      "cap_current_rms_A": 0.9699484522385714
+    },
+    {
+      "L_nom_uH": 100.0,
+      "L_effective_uH": 80.0,
+      "delta_IL_max_pp_A": 4.2,
+      "ripple_fraction_CC": 0.1764,
+      "IL_peak_A": 25.90952380952381,
+      "IL_rms_A": 23.84037382333342,
+      "Isat_example_25pct_margin_A": 32.386904761904766,
+      "cap_ripple_ideal_V": 0.004687500000000001,
+      "cap_current_rms_A": 1.2124355652982142
+    }
+  ],
+  "PFC_CCM_65kHz": [
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.25790910954416263,
+      "delta_I_at_line_crest_pp_A": 3.589560425544559,
+      "IL_peak_at_line_crest_A": 17.45324821182533,
+      "Isat_25pct_margin_A": 21.81656026478166
+    },
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.2865656772712918,
+      "delta_I_at_line_crest_pp_A": 3.1019535863804015,
+      "IL_peak_at_line_crest_A": 15.643597992337947,
+      "Isat_25pct_margin_A": 19.554497490422435
+    },
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.315222244998421,
+      "delta_I_at_line_crest_pp_A": 2.437057369926866,
+      "IL_peak_at_line_crest_A": 14.030002502370474,
+      "Isat_25pct_margin_A": 17.53750312796309
+    },
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 320.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 5.0480769230769225,
+      "max_ripple_fraction_line_peak": 0.3223863869302033,
+      "delta_I_at_line_crest_pp_A": 4.486950531930698,
+      "IL_peak_at_line_crest_A": 17.9019432650184,
+      "Isat_25pct_margin_A": 22.377429081273
+    },
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 320.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 5.0480769230769225,
+      "max_ripple_fraction_line_peak": 0.3582070965891147,
+      "delta_I_at_line_crest_pp_A": 3.877441982975502,
+      "IL_peak_at_line_crest_A": 16.0313421906355,
+      "Isat_25pct_margin_A": 20.039177738294374
+    },
+    {
+      "Lnom_uH": 400.0,
+      "L_eff_uH": 320.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 5.0480769230769225,
+      "max_ripple_fraction_line_peak": 0.39402780624802625,
+      "delta_I_at_line_crest_pp_A": 3.046321712408582,
+      "IL_peak_at_line_crest_A": 14.334634673611331,
+      "Isat_25pct_margin_A": 17.918293342014163
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 500.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 3.230769230769231,
+      "max_ripple_fraction_line_peak": 0.20632728763533012,
+      "delta_I_at_line_crest_pp_A": 2.8716483404356468,
+      "IL_peak_at_line_crest_A": 17.094292169270872,
+      "Isat_25pct_margin_A": 21.36786521158859
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 500.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 3.230769230769231,
+      "max_ripple_fraction_line_peak": 0.22925254181703345,
+      "delta_I_at_line_crest_pp_A": 2.4815628691043212,
+      "IL_peak_at_line_crest_A": 15.333402633699908,
+      "Isat_25pct_margin_A": 19.166753292124884
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 500.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 3.230769230769231,
+      "max_ripple_fraction_line_peak": 0.2521777959987368,
+      "delta_I_at_line_crest_pp_A": 1.9496458959414926,
+      "IL_peak_at_line_crest_A": 13.786296765377788,
+      "Isat_25pct_margin_A": 17.232870956722234
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.25790910954416263,
+      "delta_I_at_line_crest_pp_A": 3.589560425544559,
+      "IL_peak_at_line_crest_A": 17.45324821182533,
+      "Isat_25pct_margin_A": 21.81656026478166
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.2865656772712918,
+      "delta_I_at_line_crest_pp_A": 3.1019535863804015,
+      "IL_peak_at_line_crest_A": 15.643597992337947,
+      "Isat_25pct_margin_A": 19.554497490422435
+    },
+    {
+      "Lnom_uH": 500.0,
+      "L_eff_uH": 400.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 4.038461538461538,
+      "max_ripple_fraction_line_peak": 0.315222244998421,
+      "delta_I_at_line_crest_pp_A": 2.437057369926866,
+      "IL_peak_at_line_crest_A": 14.030002502370474,
+      "Isat_25pct_margin_A": 17.53750312796309
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 560.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 2.8846153846153846,
+      "max_ripple_fraction_line_peak": 0.18422079253154475,
+      "delta_I_at_line_crest_pp_A": 2.5639717325318276,
+      "IL_peak_at_line_crest_A": 16.940453865318965,
+      "Isat_25pct_margin_A": 21.175567331648708
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 560.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 2.8846153846153846,
+      "max_ripple_fraction_line_peak": 0.20468976947949413,
+      "delta_I_at_line_crest_pp_A": 2.215681133128858,
+      "IL_peak_at_line_crest_A": 15.200461765712175,
+      "Isat_25pct_margin_A": 19.000577207140218
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 560.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 2.8846153846153846,
+      "max_ripple_fraction_line_peak": 0.22515874642744357,
+      "delta_I_at_line_crest_pp_A": 1.7407552642334756,
+      "IL_peak_at_line_crest_A": 13.681851449523778,
+      "Isat_25pct_margin_A": 17.102314311904724
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 448.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 3.605769230769231,
+      "max_ripple_fraction_line_peak": 0.23027599066443094,
+      "delta_I_at_line_crest_pp_A": 3.2049646656647846,
+      "IL_peak_at_line_crest_A": 17.260950331885443,
+      "Isat_25pct_margin_A": 21.576187914856803
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 448.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 3.605769230769231,
+      "max_ripple_fraction_line_peak": 0.2558622118493677,
+      "delta_I_at_line_crest_pp_A": 2.769601416411073,
+      "IL_peak_at_line_crest_A": 15.477421907353284,
+      "Isat_25pct_margin_A": 19.346777384191604
+    },
+    {
+      "Lnom_uH": 560.0,
+      "L_eff_uH": 448.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 3.605769230769231,
+      "max_ripple_fraction_line_peak": 0.2814484330343045,
+      "delta_I_at_line_crest_pp_A": 2.175944080291844,
+      "IL_peak_at_line_crest_A": 13.899445857552964,
+      "Isat_25pct_margin_A": 17.374307321941206
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 600.0,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 2.6923076923076925,
+      "max_ripple_fraction_line_peak": 0.1719394063627751,
+      "delta_I_at_line_crest_pp_A": 2.3930402836963722,
+      "IL_peak_at_line_crest_A": 16.854988140901234,
+      "Isat_25pct_margin_A": 21.068735176126545
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 600.0,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 2.6923076923076925,
+      "max_ripple_fraction_line_peak": 0.19104378484752788,
+      "delta_I_at_line_crest_pp_A": 2.0679690575869345,
+      "IL_peak_at_line_crest_A": 15.126605727941214,
+      "Isat_25pct_margin_A": 18.908257159926517
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 600.0,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 2.6923076923076925,
+      "max_ripple_fraction_line_peak": 0.2101481633322807,
+      "delta_I_at_line_crest_pp_A": 1.624704913284577,
+      "IL_peak_at_line_crest_A": 13.62382627404933,
+      "Isat_25pct_margin_A": 17.029782842561662
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 479.99999999999994,
+      "Vac_V": 198,
+      "Iline_rms_A": 11.072208905122961,
+      "Iline_peak_A": 15.65846799905305,
+      "delta_I_max_pp_A": 3.365384615384616,
+      "max_ripple_fraction_line_peak": 0.21492425795346892,
+      "delta_I_at_line_crest_pp_A": 2.9913003546204657,
+      "IL_peak_at_line_crest_A": 17.154118176363284,
+      "Isat_25pct_margin_A": 21.442647720454104
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 479.99999999999994,
+      "Vac_V": 220,
+      "Iline_rms_A": 9.964988014610666,
+      "Iline_peak_A": 14.092621199147747,
+      "delta_I_max_pp_A": 3.365384615384616,
+      "max_ripple_fraction_line_peak": 0.23880473105940986,
+      "delta_I_at_line_crest_pp_A": 2.5849613219836685,
+      "IL_peak_at_line_crest_A": 15.385101860139581,
+      "Isat_25pct_margin_A": 19.231377325174478
+    },
+    {
+      "Lnom_uH": 600.0,
+      "L_eff_uH": 479.99999999999994,
+      "Vac_V": 242,
+      "Iline_rms_A": 9.059080013282422,
+      "Iline_peak_A": 12.811473817407041,
+      "delta_I_max_pp_A": 3.365384615384616,
+      "max_ripple_fraction_line_peak": 0.2626852041653509,
+      "delta_I_at_line_crest_pp_A": 2.0308811416057218,
+      "IL_peak_at_line_crest_A": 13.826914388209902,
+      "Isat_25pct_margin_A": 17.28364298526238
+    }
+  ],
+  "bulk_2x470uF": [
+    {
+      "Vbus_V": 390,
+      "Cnom_uF": 940,
+      "Ceff_uF": 940,
+      "ripple_pp_V": 18.279489257403206,
+      "Vmin_approx_V": 380.8602553712984,
+      "Vmax_approx_V": 399.1397446287016,
+      "I_100Hz_rms_A": 3.8170406541783946
+    },
+    {
+      "Vbus_V": 390,
+      "Cnom_uF": 940,
+      "Ceff_uF": 752.0,
+      "ripple_pp_V": 22.849361571754006,
+      "Vmin_approx_V": 378.575319214123,
+      "Vmax_approx_V": 401.424680785877,
+      "I_100Hz_rms_A": 3.8170406541783946
+    },
+    {
+      "Vbus_V": 400,
+      "Cnom_uF": 940,
+      "Ceff_uF": 940,
+      "ripple_pp_V": 17.822502025968127,
+      "Vmin_approx_V": 391.08874898701595,
+      "Vmax_approx_V": 408.91125101298405,
+      "I_100Hz_rms_A": 3.7216146378239348
+    },
+    {
+      "Vbus_V": 400,
+      "Cnom_uF": 940,
+      "Ceff_uF": 752.0,
+      "ripple_pp_V": 22.278127532460157,
+      "Vmin_approx_V": 388.8609362337699,
+      "Vmax_approx_V": 411.1390637662301,
+      "I_100Hz_rms_A": 3.7216146378239348
+    }
+  ],
+  "power_semiconductor_current_illustration": {
+    "secondary_pulse_max_V": 134.4,
+    "rectifier_reverse_V_preliminary_class": 200,
+    "caveat": "200V is candidate only; 250V class may be necessary after ringing; confirm high-temperature losses and transient margin",
+    "IL_peak_at_100uH_minus20pct_A": 25.90952380952381,
+    "Ipri_reflected_peak_at_100uH_minus20pct_A": 8.29104761904762
+  },
+  "proposed_bus380to420_active_points": [
+    {
+      "Vout_V": 60,
+      "Vbus_V": 380,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.4934210526315789,
+      "D_with_1p6V_drop": 0.506578947368421,
+      "ripple_at_100uH_A": 3.039473684210526,
+      "ripple_at_80uH_A": 3.7993421052631575
+    },
+    {
+      "Vout_V": 60,
+      "Vbus_V": 420,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.4464285714285714,
+      "D_with_1p6V_drop": 0.4583333333333333,
+      "ripple_at_100uH_A": 3.3214285714285716,
+      "ripple_at_80uH_A": 4.151785714285714
+    },
+    {
+      "Vout_V": 67.2,
+      "Vbus_V": 380,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.5526315789473684,
+      "D_with_1p6V_drop": 0.5657894736842105,
+      "ripple_at_100uH_A": 3.0063157894736845,
+      "ripple_at_80uH_A": 3.757894736842106
+    },
+    {
+      "Vout_V": 67.2,
+      "Vbus_V": 420,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.5,
+      "D_with_1p6V_drop": 0.5119047619047619,
+      "ripple_at_100uH_A": 3.3600000000000003,
+      "ripple_at_80uH_A": 4.2
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 380,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.6907894736842105,
+      "D_with_1p6V_drop": 0.7039473684210525,
+      "ripple_at_100uH_A": 2.5973684210526318,
+      "ripple_at_80uH_A": 3.24671052631579
+    },
+    {
+      "Vout_V": 84,
+      "Vbus_V": 420,
+      "I_CC_A": 23.80952380952381,
+      "D_ideal": 0.625,
+      "D_with_1p6V_drop": 0.6369047619047619,
+      "ripple_at_100uH_A": 3.15,
+      "ripple_at_80uH_A": 3.9375
+    }
+  ],
+  "magnetics_proposed420V": [
+    {
+      "Ae_mm2": 250,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.2688
+    },
+    {
+      "Ae_mm2": 250,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.336
+    },
+    {
+      "Ae_mm2": 350,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.192
+    },
+    {
+      "Ae_mm2": 350,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.24
+    },
+    {
+      "Ae_mm2": 400,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.168
+    },
+    {
+      "Ae_mm2": 400,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.21
+    },
+    {
+      "Ae_mm2": 420,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.16
+    },
+    {
+      "Ae_mm2": 420,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.2
+    },
+    {
+      "Ae_mm2": 500,
+      "D_power_limit": 0.8,
+      "Bpeak_T": 0.1344
+    },
+    {
+      "Ae_mm2": 500,
+      "D_power_limit": 1.0,
+      "Bpeak_T": 0.168
+    }
+  ]
+}
